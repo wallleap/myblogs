@@ -1,7 +1,24 @@
-# Table of contents
+# 目录
 
-- [README](README.md)
+- [首页](README.md)
 - 技术杂谈
+  - [毁灭者 DC W650DC 装黑苹果心得](技术杂谈/%E6%AF%81%E7%81%AD%E8%80%85%20DC%20W650DC%20%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%BF%83%E5%BE%97.md)
+  - [HCL 的安装和使用](技术杂谈/HCL%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8.md)
+  - [安装华为模拟器 eNSP](技术杂谈/%E5%AE%89%E8%A3%85%E5%8D%8E%E4%B8%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%20eNSP.md)
+  - [eNSP 使用](技术杂谈/eNSP%20%E4%BD%BF%E7%94%A8.md)
+  - [HCL 配置之 ping 通及 Telnet](技术杂谈/HCL%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20ping%20%E9%80%9A%E5%8F%8A%20Telnet.md)
+  - [HCNA 学习之两种主要的网络参考模型](技术杂谈/HCNA%20%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%B8%A4%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84%E7%BD%91%E7%BB%9C%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B.md)
+  - [HCNA 学习之交换机基础配置](技术杂谈/HCNA%20%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE.md)
+  - [HCNA 学习之虚拟局域网 VLAN](技术杂谈/HCNA%20%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91%20VLAN.md)
+  - [HCL 配置之 VLAN 间通信](技术杂谈/HCL%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20VLAN%20%E9%97%B4%E9%80%9A%E4%BF%A1.md)
+  - [HCL 配置之 DHCP](技术杂谈/HCL%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20DHCP.md)
+  - [HCL 配置之 DHCP 中继](技术杂谈/HCL%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20DHCP%20%E4%B8%AD%E7%BB%A7.md)
+  - [HCNA 配置之 STP 及 VRRP](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20STP%20%E5%8F%8A%20VRRP.md)
+  - [HCNA 配置之 RIP](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20RIP.md)
+  - [HCNA 配置之 OSPF](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20OSPF.md)
+  - [HCNA 配置之 ACL 和 NAT](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20ACL%20%E5%92%8C%20NAT.md)
+  - [使用 eNSP 搭建中小型企业网](技术杂谈/%E4%BD%BF%E7%94%A8%20eNSP%20%E6%90%AD%E5%BB%BA%E4%B8%AD%E5%B0%8F%E5%9E%8B%E4%BC%81%E4%B8%9A%E7%BD%91.md)
+  - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 - 设计相关
 - 生活随笔
 - 转载内容

@@ -1,4 +1,4 @@
-[pixiv: 55373591]: # "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/bg/bg047.jpg"
+[pixiv: 55373591]: # "https://cdn.wallleap.cn/img/bg/bg047.jpg"
 
 
 
