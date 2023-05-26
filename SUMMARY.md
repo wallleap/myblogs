@@ -29,6 +29,12 @@
   - [调试向 Chrome 打造](技术杂谈/%E8%B0%83%E8%AF%95%E5%90%91%20Chrome%20%E6%89%93%E9%80%A0.md)
   - [使用 Markdown Here 对微信公众号文章进行排版](技术杂谈/%E4%BD%BF%E7%94%A8%20Markdown%20Here%20%E5%AF%B9%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E8%BF%9B%E8%A1%8C%E6%8E%92%E7%89%88.md)
   - [valine 评论系统使用教程](技术杂谈/valine%20%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
+  - [HTML 知识点大全](技术杂谈/HTML%20%E7%9F%A5%E8%AF%86%E7%82%B9%E5%A4%A7%E5%85%A8.md)
+  - [你必须知道的 CSS](技术杂谈/%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84%20CSS.md)
+  - [打牢 JS 基础](技术杂谈/%E6%89%93%E7%89%A2%20JS%20%E5%9F%BA%E7%A1%80.md)
+  - [深入学习 JS 高级](技术杂谈/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%20JS%20%E9%AB%98%E7%BA%A7.md)
+  - [2020 年了，jQuery 是否还值得学](技术杂谈/2020%20%E5%B9%B4%E4%BA%86%EF%BC%8CjQuery%20%E6%98%AF%E5%90%A6%E8%BF%98%E5%80%BC%E5%BE%97%E5%AD%A6.md)
+  - [一文总结 ES 新特性](技术杂谈/%E4%B8%80%E6%96%87%E6%80%BB%E7%BB%93%20ES%20%E6%96%B0%E7%89%B9%E6%80%A7.md)
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 - 设计相关
 - 生活随笔
