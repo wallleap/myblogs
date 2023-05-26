@@ -25,9 +25,15 @@
   - [Win10 启用其子系统 Ubuntu 并安装图形界面](技术杂谈/Win10%20%E5%90%AF%E7%94%A8%E5%85%B6%E5%AD%90%E7%B3%BB%E7%BB%9F%20Ubuntu%20%E5%B9%B6%E5%AE%89%E8%A3%85%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2.md)
   - [闲着也是闲着，不如搭个免费的博客玩玩](技术杂谈/%E9%97%B2%E7%9D%80%E4%B9%9F%E6%98%AF%E9%97%B2%E7%9D%80%EF%BC%8C%E4%B8%8D%E5%A6%82%E6%90%AD%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%8E%A9%E7%8E%A9.md)
   - [Hexo 主题 Sakura 美化](技术杂谈/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura%20%E7%BE%8E%E5%8C%96.md)
+  - [web 入门基础知识](技术杂谈/web%20%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md)
+  - [调试向 Chrome 打造](技术杂谈/%E8%B0%83%E8%AF%95%E5%90%91%20Chrome%20%E6%89%93%E9%80%A0.md)
+  - [使用 Markdown Here 对微信公众号文章进行排版](技术杂谈/%E4%BD%BF%E7%94%A8%20Markdown%20Here%20%E5%AF%B9%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E6%96%87%E7%AB%A0%E8%BF%9B%E8%A1%8C%E6%8E%92%E7%89%88.md)
+  - [valine 评论系统使用教程](技术杂谈/valine%20%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 - 设计相关
 - 生活随笔
+  - [尝试学习五笔加快打字速度](生活随笔/%E5%B0%9D%E8%AF%95%E5%AD%A6%E4%B9%A0%E4%BA%94%E7%AC%94%E5%8A%A0%E5%BF%AB%E6%89%93%E5%AD%97%E9%80%9F%E5%BA%A6.md)
 - 转载内容
   - [Hexo 主题 Sakura](转载内容/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura.md)
+  - [Markdown 语法大全](转载内容/Markdown%20%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.md)
 - 资源分享
