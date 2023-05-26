@@ -24,7 +24,7 @@ description: Win10 启用其子系统 Ubuntu 并安装图形界面
 
 方法二：搜索 Poweshell，选择`以管理员身份运行`
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/wlu/1572956839709.png)
+![](https://cdn.wallleap.cn/img/pic/wlu/1572956839709.png)
 
 输入命令
 
@@ -38,7 +38,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 打开 Win10 自带的 Microsoft Store，选择自己需要的版本下载
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/wlu/1572957066606.png)
+![](https://cdn.wallleap.cn/img/pic/wlu/1572957066606.png)
 
 单击以下链接会打开每个分发版的 Microsoft Store 页面：
 
@@ -95,7 +95,7 @@ deb http://extras.ubuntu.com/ubuntu/ boinc main
 
 (2)编辑
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/wlu/1572958785969.png)
+![](https://cdn.wallleap.cn/img/pic/wlu/1572958785969.png)
 
 所有的源都是这种模式，我们需要改的是红绿部分，红色的为源地址，绿色的为Ubuntu版本代号
 
@@ -107,7 +107,7 @@ Ubuntu 版本代号通过命令查看：
 lsb_release -a
 ```
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/wlu/1572958997879.png)
+![](https://cdn.wallleap.cn/img/pic/wlu/1572958997879.png)
 
 故修改后为
 
@@ -216,7 +216,7 @@ sudo tar -C / -zxvf download_file?file_path=tigervnc-1.9.0.x86_64.tar.gz
 
 Win10 打开 [Windows 端 vnc 客户端](https://bintray.com/tigervnc/stable/download_file?file_path=vncviewer64-1.9.0.exe)，输入 IP(可用环回地址)和对于端口号即可进入图形界面。若为第 0 个端口（即 5900）可省略。
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/wlu/1572961279619.png)
+![](https://cdn.wallleap.cn/img/pic/wlu/1572961279619.png)
 
 通过客户端我们会发现，进入后为黑屏无图像显示。这是因为 lxde 桌面没启动。
 

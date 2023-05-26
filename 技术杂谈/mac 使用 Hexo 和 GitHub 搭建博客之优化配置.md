@@ -121,7 +121,7 @@ hexo new page "about"
 
 about 页还需要修改主题 `_config.yml`：
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic1.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic1.jpg)
 
 ## 三、域名解析
 
@@ -129,29 +129,29 @@ about 页还需要修改主题 `_config.yml`：
 
 进入到购买域名的控制台，找到域名服务或解析服务
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic2.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic2.jpg)
 
 点击自己域名后的解析设置
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic3.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic3.jpg)
 
 点击添加记录
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic4.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic4.jpg)
 
 按照下图填写，注意记录值填 `自己的用户名.github.io`
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic5.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic5.jpg)
 
 也可以再添加主机记录用 www 的，这样输入 www 也能访问
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic6.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic6.jpg)
 
 ### 2、添加文件
 
 做完了解析工作还是不行的，需要在仓库加上 CNAME 文件，文件中只需要填写域名，比如我的：
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic7.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic7.jpg)
 
 由于仓库中上传时会自动删除，因此放到 `~/blog/source/` 下
 
@@ -163,11 +163,11 @@ about 页还需要修改主题 `_config.yml`：
 
 首先打开主题配置文件(`~/blog/themes/3-hexo/_config.yml`)，找到评论设置，将 `comment` 字段的 `on` 设为 `true`，`type` 设为 `gitalk`。找到 `gitalk` 字段，添加 `on:true`,其他的评论系统字段添加 `on:false`.接着打开链接 [https://github.com/settings/applications/new](https://github.com/settings/applications/new)，登录 GitHub 账户
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic8.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic8.jpg)
 
 注意 callbalk URL 一定要是自己域名的地址，接着点击绿色按钮，把 Client ID 和 Client Secret 复制到主题配置文件的 gitalk 字段相应位置，接着 githubID 和 adminUser 填自己的用户名即可，repo 填博客的仓库(即`用户名.github.io`)
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog2/pic9.jpg)
+![](https://cdn.wallleap.cn/img/pic/mac-blog2/pic9.jpg)
 
 ## 五、博客美化
 

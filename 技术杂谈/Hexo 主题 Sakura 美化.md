@@ -29,7 +29,7 @@ description: Hexo 主题 Sakura 美化
 
 现在我们来分析一下 `thems/Sakura` 目录结构和文件
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic1.jpg)
+![](https://cdn.wallleap.cn
 
 首先分析下目录，主要包括以下几个
 
@@ -81,7 +81,7 @@ description: Hexo 主题 Sakura 美化
 - 个人化的站点标题、副标题、描述、关键词等
 - 导航栏的修改、添加、删除等
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic2.jpg)
+![](https://cdn.wallleap.cn
 
 - 通知的修改
 - startdash 的图片、链接修改
@@ -437,7 +437,7 @@ links:
 
 添加之后离开和回到这个页面时显示
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic3.jpg)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic3.jpg)
 
 >  挺多的 js 都直接集合到我的 cdn 中了，大部分都是网上到处搜查的
 
@@ -449,7 +449,7 @@ links:
 
 例如加入到 `head.ejs` 的该位置
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic4.jpg)
+![](https://cdn.wallleap.cnme-sakura-pic4.jpg)
 
 加入之后刷新就能生效了
 
@@ -474,11 +474,11 @@ links:
 
 下面是前两者结合的效果：
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic5.gif)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic5.gif)
 
 最后一种：
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic6.gif)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic6.gif)
 
 ## 4、鼠标滑过的特效
 
@@ -492,7 +492,7 @@ links:
 
 效果如下：
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic7.gif)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic7.gif)
 
 ## 5、背景显示飘动的彩带
 
@@ -502,7 +502,7 @@ links:
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
 ```
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic8.gif)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic8.gif)
 
 ## 6、背景添加动态线条，随鼠标动
 
@@ -512,7 +512,7 @@ links:
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
 ```
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic9.gif)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic9.gif)
 
 ## 7、樱花飘落或雪花飘落
 
@@ -593,7 +593,7 @@ LeanCloud 我使用起来并不理想，因此不讲，想要了解自己去官�
 
 我们将这个诗词放到以前的描述那里，社交图标的上方
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic10.jpg)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic10.jpg)
 
 修改 `headertop.ejs`，找到下面的代码
 
@@ -717,7 +717,7 @@ LeanCloud 我使用起来并不理想，因此不讲，想要了解自己去官�
 
 可以选用小视图，添加到 `link.ejs` 中
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic11.jpg)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic11.jpg)
 
 ## 17、顶部加载条
 
@@ -767,13 +767,13 @@ sakura 自带的系统为 valine，我们可以自行替换成其他的
 
 注册登录后，点击菜单栏的【安装】，出现这个界面，直接点击【现在安装】
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic12.jpg)
+![](https://cdn.wallleap.cn
 
 前往管理页，点击左边的【代码管理】
 
 你将会看到这样的代码
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic13.jpg)
+![](https://cdn.wallleap.cnpg)
 
 data-uid 后面的双引号中的内容剪切出来
 
@@ -830,7 +830,7 @@ DaoVoice 在线联系
 
 邀请码填：`da070d64`
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic14.jpg)
+![](https://cdn.wallleap.cnpg)
 
 进入之后点击应用设置，再点击安装到网站
 
@@ -840,7 +840,7 @@ DaoVoice 在线联系
 
 这个标签页和分类页提取自 matery，不得不说 matery 真的很漂亮
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic15.jpg)
+![](https://cdn.wallleap.cnme-sakura-pic15.jpg)
 
 首先我们要创建几个文件，文件所在目录如下
 
@@ -1034,7 +1034,7 @@ layout: tags
 
 ## 22、添加优美的分类页
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic16.jpg)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic16.jpg)
 
 接着创建几个文件，文件所在目录如下
 
@@ -1300,7 +1300,7 @@ bilibili：
 
 复制到 `common-article.ejs` 的这个位置
 
-![](https://cdn.jsdelivr.net/gh/wallleap/cdn/img/pic/test/theme-sakura-pic17.jpg)
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic17.jpg)
 
 将 CSS 代码复制到 style.css 中
 
