@@ -36,31 +36,31 @@ brew install git
 
 进入 [GitHub官网](https://github.com)，Sign up 页面输入相关信息，没有错误之后点击 <font color="green">Sign up for GitHub</font>，注册账号
 
-![2-1](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github1.png)
+![2-1](https://cdn.wallleap.cn/img/pic/mac-blog1/github1.png)
 
 接着点击右上角头像，点击 Your repositories
 
-![2-2](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github2.png)
+![2-2](https://cdn.wallleap.cn/img/pic/mac-blog1/github2.png)
 
 到达仓库(repositories)界面，点击 <font color="green">New</font>
 
-![2-3](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github3.png)
+![2-3](https://cdn.wallleap.cn/img/pic/mac-blog1/github3.png)
 
 如图 2-4，前面是用户名，仓库名设置为 `用户名.github.io`，点击 <font color="green">Create repository</font>，创建仓库
 
-![2-4](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github4.jpg)
+![2-4](https://cdn.wallleap.cn/img/pic/mac-blog1/github4.jpg)
 
 接着进入图 2-5 界面，左边的暂时不用管，直接点击头像
 
-![2-5](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github5.jpg)
+![2-5](https://cdn.wallleap.cn/img/pic/mac-blog1/github5.jpg)
 
 点击 Settings
 
-![2-6](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github6.jpg)
+![2-6](https://cdn.wallleap.cn/img/pic/mac-blog1/github6.jpg)
 
 点击左侧导航栏中 SSH and GPG keys
 
-![2-7](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github7.jpg)
+![2-7](https://cdn.wallleap.cn/img/pic/mac-blog1/github7.jpg)
 
 接着打开 iTerm2 或者终端输入以下命令
 
@@ -75,7 +75,7 @@ cat ~/.ssh/id_rsa.pub
 
 回到网页，单击 <font color="green">New SSH key</font>
 
-![2-8](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github8.jpg)
+![2-8](https://cdn.wallleap.cn/img/pic/mac-blog1/github8.jpg)
 
 `Title` 随意填，将刚复制的 key 粘贴到 `Key` 的文本框中，点击 <font color="green">Add SSH key</font>
 
@@ -83,7 +83,7 @@ cat ~/.ssh/id_rsa.pub
 
 输入命令 `ssh -T git@github.com`，显示如下字样，说明连接成功
 
-![3](https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/img/pic/mac-blog1/github9.png)
+![3](https://cdn.wallleap.cn/img/pic/mac-blog1/github9.png)
 
 ### （二）安装 node.js
 
