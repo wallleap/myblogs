@@ -3,6 +3,10 @@
 - [首页](README.md)
 - 技术杂谈
   - [毁灭者 DC W650DC 装黑苹果心得](技术杂谈/%E6%AF%81%E7%81%AD%E8%80%85%20DC%20W650DC%20%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%BF%83%E5%BE%97.md)
+  - [mac 使用 Hexo 和 GitHub 搭建博客之开始搭建](技术杂谈/mac%20%E4%BD%BF%E7%94%A8%20Hexo%20%E5%92%8C%20GitHub%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA.md)
+  - [mac 使用 Hexo 和 GitHub 搭建博客之优化配置](技术杂谈/mac%20%E4%BD%BF%E7%94%A8%20Hexo%20%E5%92%8C%20GitHub%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE.md)
+  - [mac 使用 Hexo 和 GitHub 搭建博客之发布文章](技术杂谈/mac%20%E4%BD%BF%E7%94%A8%20Hexo%20%E5%92%8C%20GitHub%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0.md)
+  - [mac 使用 Hexo 和 GitHub 搭建博客之博客维护](技术杂谈/mac%20%E4%BD%BF%E7%94%A8%20Hexo%20%E5%92%8C%20GitHub%20%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4.md)
   - [HCL 的安装和使用](技术杂谈/HCL%20%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8.md)
   - [安装华为模拟器 eNSP](技术杂谈/%E5%AE%89%E8%A3%85%E5%8D%8E%E4%B8%BA%E6%A8%A1%E6%8B%9F%E5%99%A8%20eNSP.md)
   - [eNSP 使用](技术杂谈/eNSP%20%E4%BD%BF%E7%94%A8.md)
@@ -18,8 +22,12 @@
   - [HCNA 配置之 OSPF](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20OSPF.md)
   - [HCNA 配置之 ACL 和 NAT](技术杂谈/HCNA%20%E9%85%8D%E7%BD%AE%E4%B9%8B%20ACL%20%E5%92%8C%20NAT.md)
   - [使用 eNSP 搭建中小型企业网](技术杂谈/%E4%BD%BF%E7%94%A8%20eNSP%20%E6%90%AD%E5%BB%BA%E4%B8%AD%E5%B0%8F%E5%9E%8B%E4%BC%81%E4%B8%9A%E7%BD%91.md)
+  - [Win10 启用其子系统 Ubuntu 并安装图形界面](技术杂谈/Win10%20%E5%90%AF%E7%94%A8%E5%85%B6%E5%AD%90%E7%B3%BB%E7%BB%9F%20Ubuntu%20%E5%B9%B6%E5%AE%89%E8%A3%85%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2.md)
+  - [闲着也是闲着，不如搭个免费的博客玩玩](技术杂谈/%E9%97%B2%E7%9D%80%E4%B9%9F%E6%98%AF%E9%97%B2%E7%9D%80%EF%BC%8C%E4%B8%8D%E5%A6%82%E6%90%AD%E4%B8%AA%E5%85%8D%E8%B4%B9%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%8E%A9%E7%8E%A9.md)
+  - [Hexo 主题 Sakura 美化](技术杂谈/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura%20%E7%BE%8E%E5%8C%96.md)
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
 - 设计相关
 - 生活随笔
 - 转载内容
+  - [Hexo 主题 Sakura](转载内容/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura.md)
 - 资源分享
