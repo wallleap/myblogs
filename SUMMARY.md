@@ -45,6 +45,10 @@
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
   - [利用 OneManager 和 Heroku 搭建自己的网盘](技术杂谈/%E5%88%A9%E7%94%A8%20OneManager%20%E5%92%8C%20Heroku%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%9B%98.md)
 - 设计相关
+  - [PS 学习案例之蒙版](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%92%99%E7%89%88.md)
+  - [PS 学习案例之草莓小屋](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%8D%89%E8%8E%93%E5%B0%8F%E5%B1%8B.md)
+  - [在搭建信息流广告时的一些小技巧](设计相关/%E5%9C%A8%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF%E6%B5%81%E5%B9%BF%E5%91%8A%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7.md)
+  - [一款好用的 Figma 数据填充插件 Google Sheets Sync](设计相关/%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%20Figma%20%E6%95%B0%E6%8D%AE%E5%A1%AB%E5%85%85%E6%8F%92%E4%BB%B6%20Google%20Sheets%20Sync.md)
 - 生活随笔
   - [尝试学习五笔加快打字速度](生活随笔/%E5%B0%9D%E8%AF%95%E5%AD%A6%E4%B9%A0%E4%BA%94%E7%AC%94%E5%8A%A0%E5%BF%AB%E6%89%93%E5%AD%97%E9%80%9F%E5%BA%A6.md)
 - 转载内容
