@@ -224,4 +224,4 @@ Win10 打开 [Windows 端 vnc 客户端](https://bintray.com/tigervnc/stable/dow
 
 通过 `vncserver -kill :0;vncserver :0` 重启端口即可进入桌面。
 
- 安装到此结束，然后就可以愉快地使用了。
+安装到此结束，然后就可以愉快地使用了。

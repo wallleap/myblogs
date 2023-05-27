@@ -44,6 +44,11 @@
   - [React 教程之从概念到实战](技术杂谈/React%20%E6%95%99%E7%A8%8B%E4%B9%8B%E4%BB%8E%E6%A6%82%E5%BF%B5%E5%88%B0%E5%AE%9E%E6%88%98.md)
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
   - [利用 OneManager 和 Heroku 搭建自己的网盘](技术杂谈/%E5%88%A9%E7%94%A8%20OneManager%20%E5%92%8C%20Heroku%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%9B%98.md)
+  - [利用 frp 进行远程桌面控制](技术杂谈/%E5%88%A9%E7%94%A8%20frp%20%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%8E%A7%E5%88%B6.md)
+  - [Win11 安装 Arch 子系统并配置开发环境](技术杂谈/Win11%20%E5%AE%89%E8%A3%85%20Arch%20%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.md)
+  - [用 CSS 实现固定宽高比](技术杂谈/%E7%94%A8%20CSS%20%E5%AE%9E%E7%8E%B0%E5%9B%BA%E5%AE%9A%E5%AE%BD%E9%AB%98%E6%AF%94.md)
+  - [CSS 世界笔记](技术杂谈/CSS%20%E4%B8%96%E7%95%8C%E7%AC%94%E8%AE%B0.md)
+  - [使用 CSS 计数器更改有序列表序号样式](技术杂谈/%E4%BD%BF%E7%94%A8%20CSS%20%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%94%B9%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%8F%E5%8F%B7%E6%A0%B7%E5%BC%8F.md)
 - 设计相关
   - [PS 学习案例之蒙版](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%92%99%E7%89%88.md)
   - [PS 学习案例之草莓小屋](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%8D%89%E8%8E%93%E5%B0%8F%E5%B1%8B.md)
@@ -54,4 +59,5 @@
 - 转载内容
   - [Hexo 主题 Sakura](转载内容/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura.md)
   - [Markdown 语法大全](转载内容/Markdown%20%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.md)
+  - [规范化 Commit 提交信息](转载内容/%E8%A7%84%E8%8C%83%E5%8C%96%20Commit%20%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF.md)
 - 资源分享
