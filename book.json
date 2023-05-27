@@ -10,7 +10,10 @@
   "structure": {
     "readme": "README.md",
     "summary": "SUMMARY.md",
-    "glossary": "GLOSSARY.md"
+    "glossary": "GLOSSARY.md",
+    "langs": [
+      "zh-CN"
+    ]
   },
   "variables": {
     "blog": "https://myblog.wallleap.cn"
