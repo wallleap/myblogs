@@ -1,0 +1,75 @@
+{
+  "root": ".",
+  "author": "luwang",
+  "title": "luwang's blog",
+  "language": "zh-CN",
+  "description": "This is my blog",
+  "isbn": "000-0-00-000000-0",
+  "direction": "ltr",
+  "gitbook": ">=3.2.3",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md",
+    "glossary": "GLOSSARY.md"
+  },
+  "variables": {
+    "blog": "https://myblog.wallleap.cn"
+  },
+  "links": {
+    "sidebar": {
+      "Github": "https://github.com/wallleap"
+    }
+  },
+  "styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+  },
+  "pdf": {
+    "pageNumbers": true,
+    "fontFamily": "Arial",
+    "fontSize": 12,
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 56,
+      "bottom": 56
+    }
+  },
+  "plugins": [
+    "-lunr",
+    "-search",
+    "advanced-emoji",
+    "search-plus",
+    "github",
+    "back-to-top-button",
+    "valine",
+    "splitter",
+    "anchor-navigation-ex",
+    "chapter-fold",
+    "expandable-chapters-small",
+    "code",
+    "alerts",
+    "flexible-alerts"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/wallleap"
+    },
+    "valine": {
+      "appId": "QJ9DOyDBoS58ftQA7k8xPjLp-MdYXbMMI",
+      "appKey": "w7UYogW4I9RIHFg2MTvANUoe"
+    },
+    "flexible-alerts": {
+      "style": "callout",
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+    }
+  }
+}
