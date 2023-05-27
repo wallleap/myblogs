@@ -35,7 +35,15 @@
   - [深入学习 JS 高级](技术杂谈/%E6%B7%B1%E5%85%A5%E5%AD%A6%E4%B9%A0%20JS%20%E9%AB%98%E7%BA%A7.md)
   - [2020 年了，jQuery 是否还值得学](技术杂谈/2020%20%E5%B9%B4%E4%BA%86%EF%BC%8CjQuery%20%E6%98%AF%E5%90%A6%E8%BF%98%E5%80%BC%E5%BE%97%E5%AD%A6.md)
   - [一文总结 ES 新特性](技术杂谈/%E4%B8%80%E6%96%87%E6%80%BB%E7%BB%93%20ES%20%E6%96%B0%E7%89%B9%E6%80%A7.md)
+  - [JS 组织代码方式演变——模块化](技术杂谈/JS%20%E7%BB%84%E7%BB%87%E4%BB%A3%E7%A0%81%E6%96%B9%E5%BC%8F%E6%BC%94%E5%8F%98%E2%80%94%E2%80%94%E6%A8%A1%E5%9D%97%E5%8C%96.md)
+  - [AngularJs 学习笔记](技术杂谈/AngularJs%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
+  - [Git 命令总结](技术杂谈/Git%20%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.md)
+  - [作为前端需要了解的 Node 知识](技术杂谈/%E4%BD%9C%E4%B8%BA%E5%89%8D%E7%AB%AF%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84%20Node%20%E7%9F%A5%E8%AF%86.md)
+  - [在 Node 中使用非关系型数据库 MongoDB](技术杂谈/%E5%9C%A8%20Node%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%20MongoDB.md)
+  - [学习 Ajax 并学会浏览器跨域解决方案](技术杂谈/%E5%AD%A6%E4%B9%A0%20Ajax%20%E5%B9%B6%E5%AD%A6%E4%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md)
+  - [React 教程之从概念到实战](技术杂谈/React%20%E6%95%99%E7%A8%8B%E4%B9%8B%E4%BB%8E%E6%A6%82%E5%BF%B5%E5%88%B0%E5%AE%9E%E6%88%98.md)
   - [主题 Aurora 使用记录](技术杂谈/%E4%B8%BB%E9%A2%98%20aurora%20%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95.md)
+  - [利用 OneManager 和 Heroku 搭建自己的网盘](技术杂谈/%E5%88%A9%E7%94%A8%20OneManager%20%E5%92%8C%20Heroku%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%9B%98.md)
 - 设计相关
 - 生活随笔
   - [尝试学习五笔加快打字速度](生活随笔/%E5%B0%9D%E8%AF%95%E5%AD%A6%E4%B9%A0%E4%BA%94%E7%AC%94%E5%8A%A0%E5%BF%AB%E6%89%93%E5%AD%97%E9%80%9F%E5%BA%A6.md)
