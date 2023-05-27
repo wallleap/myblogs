@@ -27,12 +27,13 @@ description: Hexo 主题 Sakura 美化
 
 ### 目录和文件分析
 
-现在我们来分析一下 `thems/Sakura` 目录结构和文件
+现在我们来分析一下 `themes/Sakura` 目录结构和文件
 
-![](https://cdn.wallleap.cn
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic1.jpg)
 
 首先分析下目录，主要包括以下几个
 
+```md
 - languages    这个文件夹中存放的是语言文件，主要是博客中的一些字符以简体中文、繁体中文、英文显示的定义
 - layout   这个是布局文件夹，所有的博客页面HTML和JavaScript以ejs模板存放在这
   - _partial   这里的和下面的都是公共的页面，可以引入到HTML的任意位置
@@ -43,6 +44,7 @@ description: Hexo 主题 Sakura 美化
   - fonts   字体文件
   - images   图片
   - js   js文件
+```
 
 ### 代码插入位置
 
@@ -81,7 +83,7 @@ description: Hexo 主题 Sakura 美化
 - 个人化的站点标题、副标题、描述、关键词等
 - 导航栏的修改、添加、删除等
 
-![](https://cdn.wallleap.cn
+![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic2.jpg)
 
 - 通知的修改
 - startdash 的图片、链接修改
@@ -439,7 +441,7 @@ links:
 
 ![](https://cdn.wallleap.cn/img/pic/test/theme-sakura-pic3.jpg)
 
->  挺多的 js 都直接集合到我的 cdn 中了，大部分都是网上到处搜查的
+> 挺多的 js 都直接集合到我的 cdn 中了，大部分都是网上到处搜查的
 
 为了达到上述效果,我们可以在 `head.ejs` 或者 `footer.ejs` 中加入代码
 
@@ -767,7 +769,7 @@ sakura 自带的系统为 valine，我们可以自行替换成其他的
 
 注册登录后，点击菜单栏的【安装】，出现这个界面，直接点击【现在安装】
 
-![](https://cdn.wallleap.cn
+![](<https://cdn.wallleap.cn>
 
 前往管理页，点击左边的【代码管理】
 
@@ -1220,7 +1222,7 @@ layout: categories
 修改主题配置文件，将这两行代码放到留言板之前
 
 ```yml
-	标签: {path: /tags/, fa: fa-tag }
+ 标签: {path: /tags/, fa: fa-tag }
   分类: {path: /categories/, fa: fa-bookmark }
 ```
 
@@ -1283,7 +1285,7 @@ bilibili：
           icon: "success", 
           showConfirmButton: true
           });
-	});
+ });
     });  
 </script>
 ```
@@ -1422,7 +1424,7 @@ function zeroPadding(num, digit) {
 
 部署到 GitHub 之后，访问不存在的页面就会跳出来了
 
-## 26、域名绑定
+##
 
 在博客根目录下的 source 目录下新建 CNAME 文件，如果主题 source 目录下有这个文件请删除
 
