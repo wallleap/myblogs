@@ -49,6 +49,8 @@
   - [用 CSS 实现固定宽高比](技术杂谈/%E7%94%A8%20CSS%20%E5%AE%9E%E7%8E%B0%E5%9B%BA%E5%AE%9A%E5%AE%BD%E9%AB%98%E6%AF%94.md)
   - [CSS 世界笔记](技术杂谈/CSS%20%E4%B8%96%E7%95%8C%E7%AC%94%E8%AE%B0.md)
   - [使用 CSS 计数器更改有序列表序号样式](技术杂谈/%E4%BD%BF%E7%94%A8%20CSS%20%E8%AE%A1%E6%95%B0%E5%99%A8%E6%9B%B4%E6%94%B9%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%8F%E5%8F%B7%E6%A0%B7%E5%BC%8F.md)
+  - [git pull 未发送所有必需的对象](技术杂谈/git%20pull%20%E6%9C%AA%E5%8F%91%E9%80%81%E6%89%80%E6%9C%89%E5%BF%85%E9%9C%80%E7%9A%84%E5%AF%B9%E8%B1%A1.md)
+  - [个人输入法调教之 Rime](技术杂谈/%E4%B8%AA%E4%BA%BA%E8%BE%93%E5%85%A5%E6%B3%95%E8%B0%83%E6%95%99%E4%B9%8B%20Rime.md)
 - 设计相关
   - [PS 学习案例之蒙版](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%92%99%E7%89%88.md)
   - [PS 学习案例之草莓小屋](设计相关/PS%20%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%E4%B9%8B%E8%8D%89%E8%8E%93%E5%B0%8F%E5%B1%8B.md)
@@ -56,8 +58,10 @@
   - [一款好用的 Figma 数据填充插件 Google Sheets Sync](设计相关/%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%20Figma%20%E6%95%B0%E6%8D%AE%E5%A1%AB%E5%85%85%E6%8F%92%E4%BB%B6%20Google%20Sheets%20Sync.md)
 - 生活随笔
   - [尝试学习五笔加快打字速度](生活随笔/%E5%B0%9D%E8%AF%95%E5%AD%A6%E4%B9%A0%E4%BA%94%E7%AC%94%E5%8A%A0%E5%BF%AB%E6%89%93%E5%AD%97%E9%80%9F%E5%BA%A6.md)
+  - [五笔难记，改用更易上手的双拼输入法](生活随笔/%E4%BA%94%E7%AC%94%E9%9A%BE%E8%AE%B0%EF%BC%8C%E6%94%B9%E7%94%A8%E6%9B%B4%E6%98%93%E4%B8%8A%E6%89%8B%E7%9A%84%E5%8F%8C%E6%8B%BC%E8%BE%93%E5%85%A5%E6%B3%95.md)
 - 转载内容
   - [Hexo 主题 Sakura](转载内容/Hexo%20%E4%B8%BB%E9%A2%98%20Sakura.md)
   - [Markdown 语法大全](转载内容/Markdown%20%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8.md)
   - [规范化 Commit 提交信息](转载内容/%E8%A7%84%E8%8C%83%E5%8C%96%20Commit%20%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF.md)
 - 资源分享
+  - [使用 Cacher 更好地管理代码片段](资源分享/%E4%BD%BF%E7%94%A8%20Cacher%20%E6%9B%B4%E5%A5%BD%E5%9C%B0%E7%AE%A1%E7%90%86%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.md)
