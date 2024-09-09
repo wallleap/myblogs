@@ -14,9 +14,16 @@ description: 一款好用的 Figma 数据填充插件 Google Sheets Sync
 
 ## 一、前言
 
-最近使用 [Figma](https://www.figma.com/)，发现它是真的好用啊。UI 组件化，修改主组件可以统一修改衍生的组件，变体组件（组件集）的使用能很方便切换样式…… [Figma 社区](https://www.figma.com/community/explore)提供了很多插件、使用教程、案例等。这次分享的是插件 [Google Sheets Sync](https://www.figma.com/community/plugin/735770583268406934/Google-Sheets-Sync)，插件的[官方文档](https://docs.sheetssync.app/)在这，条理挺清晰的。
+最近使用 [Figma](https://www.figma.com/)，发现它是真的好用啊
+
+UI 组件化，修改主组件可以统一修改衍生的组件，变体组件（组件集）的使用能很方便切换样式……
+
+[Figma 社区](https://www.figma.com/community/explore)提供了很多插件、使用教程、案例等
+
+这次分享的是插件 [Google Sheets Sync](https://www.figma.com/community/plugin/735770583268406934/Google-Sheets-Sync)，插件的[官方文档](https://docs.sheetssync.app/)在这，条理挺清晰的
 
 > What can this plugin do?
+>
 > - Change the content in your Text layers
 > - Download and set image backgrounds from URLs
 > - Swap out Components for specific instances (including Variants)
@@ -85,9 +92,9 @@ description: 一款好用的 Figma 数据填充插件 Google Sheets Sync
 
 ![标题](https://cdn.wallleap.cn/img/pic/illustration/202305280031942.png)
 
-按 Alt +鼠标拖动复制出一个，接着按快捷键 `Ctrl+D` 复制其他的
+按 <kbd>Alt</kbd> + 鼠标拖动复制出一个，接着按快捷键 <kbd>Ctrl</kbd> + <kbd>d</kbd> 复制其他的
 
-可以选中需要填充的，右击-plugins-Google Sheets Sync
+可以选中需要填充的，右击 → plugins → Google Sheets Sync
 
 ![调用插件](https://cdn.wallleap.cn/img/pic/illustration/202305280031943.png)
 
@@ -119,7 +126,7 @@ description: 一款好用的 Figma 数据填充插件 Google Sheets Sync
 
 1. 获取表格分享链接，注意权限问题
 
-2. 命名图层，以 `#` 号开头(还有进阶操作)
+2. 命名图层，以 `#` 号开头（还有进阶操作）
 
 3. 运行插件，输入分享链接获取并同步
 
@@ -133,7 +140,7 @@ description: 一款好用的 Figma 数据填充插件 Google Sheets Sync
 
 ![组件和组件集](https://cdn.wallleap.cn/img/pic/illustration/202305280031948.png)
 
-Alt +拖动任一组件进行复制
+<kbd>Alt</kbd> + 鼠标左键长按拖动任一组件进行复制
 
 ![生成组件](https://cdn.wallleap.cn/img/pic/illustration/202305280031949.png)
 
@@ -141,7 +148,7 @@ Alt +拖动任一组件进行复制
 
 ![重命名画框](https://cdn.wallleap.cn/img/pic/illustration/202305280031950.png)
 
-选中这些组件/组件集，Ctrl+R 重命名为 `#Component`
+选中这些组件/组件集，<kbd>Ctrl</kbd> + <kbd>R</kbd> 重命名为 `#Component`
 
 ![批量重命名](https://cdn.wallleap.cn/img/pic/illustration/202305280031951.png)
 
@@ -161,9 +168,9 @@ Alt +拖动任一组件进行复制
 >
 > 如果您的图层是 `Text Layer`（文字）或 `Component Instance layer`（里面包含文字），那么您需要在 Google Sheets 中的 Value 前面加上`/`以便插件知道您指定的是特殊数据类型（而不是内容或组件名称）—— 对于所有其他图层类型，您无需执行此操作。
 
-#### （1）图层显示
+#### 图层显示
 
-表格中数据值为 `show` 或者 `hide`，如果是文本的话，值为 `/show` 或 `hide`
+表格中数据值为 `show` 或者 `hide`，如果是文本的话，值为 `/show` 或 `/hide`
 
 示例：
 
@@ -179,9 +186,9 @@ Alt +拖动任一组件进行复制
 
 ![同步后](https://cdn.wallleap.cn/img/pic/illustration/202305280031956.png)
 
-#### （2）填充颜色
+#### 填充颜色
 
-可以改变图层的颜色，表格中值只能是以 `#` 开头的16进制的Hex颜色值，如果图层为文字，需要加上 `/`
+可以改变图层的颜色，表格中值只能是以 `#` 开头的16进制的 Hex 颜色值，如果图层为文字，需要加上 `/`
 
 ![填充颜色](https://cdn.wallleap.cn/img/pic/illustration/202305280031957.png)
 
@@ -197,7 +204,7 @@ Alt +拖动任一组件进行复制
 
 这样就 OK 了
 
-#### （3）图层不透明度
+#### 图层不透明度
 
 如果值以 `%` 结尾，则获取到时会修改图层不透明度
 
@@ -207,7 +214,7 @@ Alt +拖动任一组件进行复制
 
 ![不透明度](https://cdn.wallleap.cn/img/pic/illustration/202305280031960.png)
 
-注意需要修改格式-数字-百分比
+注意需要修改格式 → 数字 → 百分比
 
 ![数字格式](https://cdn.wallleap.cn/img/pic/illustration/202305280031961.png)
 
@@ -219,21 +226,16 @@ Alt +拖动任一组件进行复制
 
 更新一下即可
 
-#### （4）尺寸大小
+#### 尺寸大小
 
 值的格式为`数字+以下三个字母之一`
 
 - `s`：设定图层的宽高为前面的数字
-
-- 比如 `32s` 是同时设置宽高为 32px
-
+  - 比如 `32s` 是同时设置宽高为 32px
 - `w`：设定图层的宽度为数字
-
-- `43w` 代表将图层的宽设置为 43px
-
+  - `43w` 代表将图层的宽设置为 43px
 - `h`：设定图层的高度为数字
-
-- `54h`表示将图层的搞设置为 54px
+  - `54h`表示将图层的搞设置为 54px
 
 在表格中填入数据
 
@@ -241,11 +243,11 @@ Alt +拖动任一组件进行复制
 
 - 后面的三列分别填充 `s`、`w`、`h`
 
-- 三列需要使用的分别命名为 `size_s`、`size_w`、`size_h`，公式是`=数字列&字母列`
+- 三列需要使用的分别命名为 `size_s`、`size_w`、`size_h`，公式是 `=数字列&字母列`
 
 ![表格数据](https://cdn.wallleap.cn/img/pic/illustration/202305280031965.png)
 
-Figma中绘制如下形状，红蓝矩形大小大于 1000px，蓝色中的小画框名字为 `#size_s.x`，红色中的小画框命名为 `#size_w.x #size_h.x`
+Figma 中绘制如下形状，红蓝矩形大小大于 1000px，蓝色中的小画框名字为 `#size_s.x`，红色中的小画框命名为 `#size_w.x #size_h.x`
 
 ![矩形](https://cdn.wallleap.cn/img/pic/illustration/202305280031966.png)
 
@@ -253,19 +255,14 @@ Figma中绘制如下形状，红蓝矩形大小大于 1000px，蓝色中的小�
 
 ![大小随机](https://cdn.wallleap.cn/img/pic/illustration/202305280031967.png)
 
-#### （5）位置
+#### 位置
 
 - 相对位置
-
-- `数字x`：该图层相对于父元素向右偏移数字 px
-
-- `数字y`：该图层相对于父元素向下偏移数字 px
-
+  - `数字x`：该图层相对于父元素向右偏移数字 px
+  - `数字y`：该图层相对于父元素向下偏移数字 px
 - 绝对位置
-
-- `数字xx`：该图层在页面中 x 轴的位置为数字 px
-
-- `数字yy`：该图层在页面中 y 轴的位置为数字 px
+  - `数字xx`：该图层在页面中 x 轴的位置为数字 px
+  - `数字yy`：该图层在页面中 y 轴的位置为数字 px
 
 和上面方式相同，拼接出位置的数据
 
@@ -285,48 +282,30 @@ Figma中绘制如下形状，红蓝矩形大小大于 1000px，蓝色中的小�
 
 可以发现，蓝色下的是相对于页面原点的偏移，不是相对于父元素蓝色画框；而红色下的矩形是相对于父元素红色画框原点的偏移
 
-#### （8）角度
+#### 角度
 
 表格中的值以 `°` 结尾的话，会以该数值进行图层旋转
 
-#### （7）文本相关
+#### 文本相关
 
 - 字体大小
-
   - `font-size:数值`，例如 `font-size:12`
-
 - 文本对齐
-
   - 水平
-
     - `text-align:left`
-
     - `text-align:right`
-
     - `text-align:center`
-
     - `text-align:justified`
-
   - 垂直
-
     - `text-align-vertical:top`
-
     - `text-align-vertical:center`
-
     - `text-align-vertical:bottom`
-
 - 行高
-
   - auto：`line-height:auto`
-
   - 数值：`line-height:30`
-
   - 百分比：`line-height:150%`
-
 - 间距
-
   - 数值：`letter-spacing:12`
-
   - 百分比：`letter-spacing:200%`
 
 ### 3、调用表格中其他工作表

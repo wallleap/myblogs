@@ -1,0 +1,27 @@
+.cm-header,
+.inline-title,
+h1, h2, h3, h4, h5, h6,
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3,
+.markdown-rendered h4, .markdown-rendered h5, .markdown-rendered h6 {
+  font-family: 'SmileySans-Oblique';
+  font-weight: bold;
+  background: linear-gradient(135deg, #FEC194, #FF0061);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*
+.cm-sizer .inline-title {
+  margin-left: 1.3em;
+}
+*/
+
+body {
+  --h1-size: 2.4rem;
+  --h2-size: 2rem;
+  --h3-size: 1.6rem;
+  --h4-size: 1.4rem;
+  --h5-size: 1.3rem;
+  --h6-size: 1.2rem;
+}

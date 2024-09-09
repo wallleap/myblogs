@@ -43,7 +43,8 @@ Rime 是一种输入法框架，各平台可以下载相应发行版进行安装
 - macOS 下鼠须管 [Squirrel](https://github.com/rime/squirrel/releases/latest)
 - Linux 下 [ibus-rime](https://github.com/rime/home/wiki/RimeWithIBus)、[fcitx-rime](https://github.com/fcitx/fcitx-rime)
 - Android 下[同文输入法](https://github.com/osfans/trime/releases)
-（个人只用了 macOS 和 Win，所以后面的配置应该不会出现 Linux 的）
+
+*个人只用了 macOS 和 Win，所以后面的配置应该不会出现 Linux 的*
 
 修改配置
 
@@ -57,16 +58,19 @@ Rime 有专门的指南可以查阅：[WIKI](https://github.com/rime/home/wiki)
 
 建议通篇阅读之后再进行配置的修改
 
-<https://github.com/rime/home/wiki/UserGuide>（用户指南）  
-<https://github.com/rime/home/wiki/Configuration>（配置文件）  
-<https://github.com/rime/home/wiki/CustomizationGuide>（定制指南、必知必会）  
-<https://github.com/rime/home/wiki/RimeWithSchemata>(設定項速查手冊、Schema.yaml 詳解)
+- <https://github.com/rime/home/wiki/UserGuide>（用户指南）  
+- <https://github.com/rime/home/wiki/Configuration>（配置文件）  
+- <https://github.com/rime/home/wiki/CustomizationGuide>（定制指南、必知必会）  
+- <https://github.com/rime/home/wiki/RimeWithSchemata>(設定項速查手冊、Schema.yaml 詳解)
 
 **其他**
-基础配置文件可以在这里下载：[rime-prelude](https://github.com/rime/rime-prelude/tree/master)  
-[Schema.yaml 详解](https://github.com/KyleBing/rime-wubi86-jidian/wiki/Schema.yaml-%E8%AF%A6%E8%A7%A3)  
-`Schema.yaml` 詳解 [Rime_descriptionb](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)  
-更多输入方案 <https://gist.github.com/lotem/2309739>  
+
+基础配置文件可以在这里下载：
+
+- [rime-prelude](https://github.com/rime/rime-prelude/tree/master)
+- [Schema.yaml 详解](https://github.com/KyleBing/rime-wubi86-jidian/wiki/Schema.yaml-%E8%AF%A6%E8%A7%A3)
+- `Schema.yaml` 詳解 [Rime_descriptionb](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+- 更多输入方案 <https://gist.github.com/lotem/2309739>
 
 ## 调教中文输入法
 
@@ -104,7 +108,7 @@ patch:
 		- schema: emoji # emoji 表情
 ```
 
-代码片段来自：[在Rime輸入方案選單中添加五筆、雙拼、粵拼、注音，保留你需要的 (github.com)](https://gist.github.com/lotem/2309739)
+代码片段来自：[在Rime輸入方案選單中添加五筆、雙拼、粵拼、注音](https://gist.github.com/lotem/2309739)
 
 个人一般只用小鹤双拼，因此其他的都去掉了，`default.custom.yaml` 文件中只保留小鹤双拼（也可以直接使用 [rime/plum: 東風破](https://github.com/rime/plum)以命令的方式安装）
 
@@ -116,9 +120,9 @@ patch:
 
 除了需要在用户自定义全局配置文件中加入上述字段，还需要新增相应的方案文件（`对应方案名称.schema.yaml`），例如小鹤双拼：需要下载 `double_pinyin_flypy.schema.yaml` 这个文件放到用户文件夹下
 
-小鹤双拼的这个文件可以直接到官方仓库下载：[rime/rime-double-pinyin: 雙拼輸入方案 (github.com)](https://github.com/rime/rime-double-pinyin)
+小鹤双拼的这个文件可以直接到官方仓库下载：[雙拼輸入方案](https://github.com/rime/rime-double-pinyin)
 
-其他的方案可以去找相应的官方仓库：[RIME (github.com)](https://github.com/orgs/rime/repositories)
+其他的方案可以去找相应的官方仓库：[RIME](https://github.com/orgs/rime/repositories)
 
 把 `double_pinyin_flypy.schema.yaml` 放到用戶文件夹且新增了 `patch-schema_list-schema` 字段之后，重新部署，这个时候就可以使用小鹤双拼了，但是输入文字会发现是繁体字
 
@@ -193,7 +197,7 @@ patch:
       text_color: 0x2E2E2E # 高亮选中词颜色
 ```
 
-配色到这里调整：[Rime西米 (bennyyip.github.io)](https://bennyyip.github.io/Rime-See-Me/)
+配色到这里调整：[Rime西米](https://bennyyip.github.io/Rime-See-Me/)
 
 ### 鼠鬚管
 
@@ -234,13 +238,13 @@ patch:
       text_color: 0x2E2E2E # 高亮选中词颜色
 ```
 
-除了上面这个，也可以参照这个模板配置：[【鼠鬚管】定製檔 (github.com)](https://gist.github.com/lotem/2290714)
+除了上面这个，也可以参照这个模板配置：[【鼠鬚管】定製檔](https://gist.github.com/lotem/2290714)
 
 具体样子是这样的：
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/202303091415860.png)
 
-配色到这里调整：[Rime 西米 for Squirrel (gjrobert.github.io)](https://gjrobert.github.io/Rime-See-Me-squirrel/)
+配色到这里调整：[Rime 西米 for Squirrel](https://gjrobert.github.io/Rime-See-Me-squirrel/)
 
 ## 中英文切换
 
@@ -258,7 +262,7 @@ macOS 和 Win 下我都使用 <kbd>Ctrl</kbd> + <kbd>Space</kbd> 进行切换中
 
 ## emoji 输入
 
-具体的仓库是 [rime/rime-emoji: Emoji / 繪文字輸入方案 (github.com)](https://github.com/rime/rime-emoji)
+具体的仓库是 [rime/rime-emoji](https://github.com/rime/rime-emoji)
 
 **方式一**：直接按照 README 里的自动安装使用命令安装
 
@@ -295,6 +299,7 @@ engine:
 ![](https://cdn.wallleap.cn/img/pic/illustration/202303091513765.png)
 
 不过我还是喜欢通过快捷键直接调用系统自带的 emoji：
+
 - Win 下 <kbd>Win</kbd> + <kbd>.</kbd> / <kbd>;</kbd>（如果和我一样该了键盘映射那么快捷键就是 <kbd>Ctrl</kbd> + <kbd>.</kbd> / <kbd>;</kbd>）
 - macOS 下 <kbd>Command</kbd> + <kbd>Control</kbd> + <kbd>Space</kbd>）
 

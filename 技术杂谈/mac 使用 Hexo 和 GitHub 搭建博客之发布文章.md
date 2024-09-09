@@ -14,7 +14,6 @@ description: mac 使用 Hexo 和 GitHub 搭建博客之发布文章
 
 ## 0.准备工作
 
-
 ### 修改文章模板
 
 上一个文章有提到过修改 `scaffolds/post.md` 达到修改博文模板的作用
@@ -128,7 +127,7 @@ data[key] = $.html();
 
 ### 文中图片之搭建自己的图床
 
-这里我们使用的是 GitHub 仓库+ jsDelivr 的 cdn 加速服务
+这里我们使用的是 GitHub 仓库 + jsDelivr 的 cdn 加速服务
 
 主要就是 GitHub 仓库放置你的 js、img、css 等文件，然后通过 jsDelivr 的域名进行访问
 

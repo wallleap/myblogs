@@ -62,7 +62,9 @@ description: 使用 Markdown Here 对微信公众号文章进行排版
 
 但是还是推荐到谷歌商店下载
 
-若你想访问谷歌，可以使用这个插件 <https://github.com/haotian-wang/google-access-helper>
+若你想访问谷歌，可以使用这个插件
+
+<https://github.com/haotian-wang/google-access-helper>
 
 ## 2、修改 CSS 渲染
 
@@ -85,9 +87,9 @@ description: 使用 Markdown Here 对微信公众号文章进行排版
 ```css
 /* This is the overall wrapper, it should be treated as the `body` section. */
 .markdown-here-wrapper {
-   font-size: 14px;
-   color: #595959;
-   padding: 16px;
+  font-size: 14px;
+  color: #595959;
+  padding: 16px;
 }
 ```
 
@@ -159,7 +161,7 @@ p {
 }
 ```
 
-每个段落在下方加外边距1.2个文字大小，即 `1.2*14px`
+每个段落在下方加外边距 1.2 个文字大小，即 `1.2*14px`
 
 ### 表格、引用、列表等
 
@@ -389,11 +391,11 @@ img {
 ```css
 /* 这个是分隔符 */
 hr {
-    width:30%;
-    height:1px;
-    border:2px;
-    background:#efefef;
-    margin:20px auto;
+  width:30%;
+  height:1px;
+  border:2px;
+  background:#efefef;
+  margin:20px auto;
 }
 /* 这是强调的 */
 strong {

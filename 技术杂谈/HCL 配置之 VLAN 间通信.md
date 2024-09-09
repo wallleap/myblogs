@@ -38,7 +38,7 @@ VLANIP 规划：
 
 配置好 IP 地址，掩码，网关（网关是 VLAN 的 IP）
 
-### 2、最上面的交换机S0
+### 2、最上面的交换机 S0
 
 > 命名
 
@@ -87,7 +87,7 @@ System View: return to User View with Ctrl+Z.
 [LWS0-GigabitEthernet1/0/2]port t p vlan all
 ```
 
-### 3、左边交换机S1
+### 3、左边交换机 S1
 
 > 命名
 
@@ -123,7 +123,7 @@ System View: return to User View with Ctrl+Z.
 [LWS1-GigabitEthernet1/0/3]quit
 ```
 
-### 4、右边交换机S2
+### 4、右边交换机 S2
 
 ```sh
 [LWS2]vlan 30

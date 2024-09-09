@@ -41,7 +41,7 @@ description: HCL 配置之 ping 通及 Telnet
 
 ![](https://cdn.wallleap.cn/img/pic/web-HCL1/pic4.png)
 
-属性--找到 Internet 协议版本4(TCP/IPv4)，双击后配置静态 IP
+属性--找到 Internet 协议版本4（TCP/IPv4），双击后配置静态 IP
 
 ![](https://cdn.wallleap.cn/img/pic/web-HCL1/pic5.png)
 

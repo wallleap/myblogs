@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "6865797af7a3fcc9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c06deb7a1c54731",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c90ca2a341f5ee12",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "其他/ethereal 使用.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8d212b53d88248b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1e6a60f9143378f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2593df5e9e1e3ee0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ff8c25c265759039",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8b376e1b13958909",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "93cbef1fe30b28e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "1abb10932ff11b1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4871a5354bfa61c7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "其他/ethereal 使用.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d9c66854f25c7033",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "其他/ethereal 使用.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "87d6c3ba3acc2c4c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ed12c57c6eca836b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "其他/ethereal 使用.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "c90ca2a341f5ee12",
+  "lastOpenFiles": [
+    "其他/ethereal 使用.md",
+    "其他",
+    "技术杂谈/主题 aurora 使用记录.md"
+  ]
+}

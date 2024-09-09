@@ -12,14 +12,14 @@ description: 利用 OneManager 和 Heroku 搭建自己的网盘
 
 白嫖搭建自己的网盘并进行适度美化
 
-## 0、准备
+## 准备
 
 最简单的两个就不放到教程里了
 
-- 一个 Microsoft 账号(个人、E1、E5等都行)
+- 一个 Microsoft 账号（个人、E1、E5等都行）
 - 一个 GitHub 账号(自行注册)
 
-## 1、fork 项目
+## fork 项目
 
 项目地址：[OneManager-php](https://github.com/qkqpttgf/OneManager-php)
 
@@ -35,15 +35,15 @@ fork 成功
 
 ![Fork到自己仓库中](https://cdn.wallleap.cn/img/pic/illustration/20200816170809.png)
 
-## 2、注册 Heroku 账号
+## 注册 Heroku 账号
 
 如果没有 heroku 账号，[点击这里进行注册](https://signup.heroku.com/login)（有的话跳过第二步）
 
-这里注意下：邮箱QQ、163的都不行，可以用 outlook 或 gmail 的(疏忽了)
+这里注意下：邮箱 QQ、163 的都不行，可以用 outlook 或 gmail 的
 
 ![注册](https://cdn.wallleap.cn/img/pic/illustration/20200816170817.png)
 
-填完之后点击验证，选出符合条件的图片就行
+填完之后点击验证，选出符合条件的图片，点击 `VERIFY`
 
 ![验证](https://cdn.wallleap.cn/img/pic/illustration/20200816170825.png)
 
@@ -67,13 +67,13 @@ fork 成功
 
 ![点击按钮](https://cdn.wallleap.cn/img/pic/illustration/20200816170905.png)
 
-## 3、创建应用
+## 创建应用
 
 点击 `Create new app` 创建应用
 
 ![创建应用](https://cdn.wallleap.cn/img/pic/illustration/20200816170911.png)
 
-输入一个可用的 app 名字，点击`Create app`
+输入一个可用的 app 名字，点击 `Create app`
 
 ![输入信息](https://cdn.wallleap.cn/img/pic/illustration/20200816170919.png)
 
@@ -89,7 +89,7 @@ fork 成功
 
 ![认证](https://cdn.wallleap.cn/img/pic/illustration/20200816170941.png)
 
-按照如下图所示的操作，输入 `OneManager` ——>点击 `Search` ——>点击 `Connect`
+按照如下图所示的操作，输入 `OneManager` → 点击 `Search` → 点击 `Connect`
 
 ![Connect](https://cdn.wallleap.cn/img/pic/illustration/20200816170949.png)
 
@@ -101,13 +101,13 @@ fork 成功
 
 ![查看](https://cdn.wallleap.cn/img/pic/illustration/20200816171004.png)
 
-## 4、安装 OneManage
+## 安装 OneManage
 
-在弹出来的页面中点击超链接`点击开始安装程序`
+在弹出来的页面中点击超链接 `点击开始安装程序`
 
 ![开始安装](https://cdn.wallleap.cn/img/pic/illustration/20200816171011.png)
 
-点击`新建 API Key`
+点击 `新建 API Key`
 
 ![新建 API Key](https://cdn.wallleap.cn/img/pic/illustration/20200816171019.png)
 
@@ -139,7 +139,7 @@ fork 成功
 
 ![刷新](https://cdn.wallleap.cn/img/pic/illustration/20200816171108.png)
 
-将会回到这里，点击`添加 OneDrive 盘`
+将会回到这里，点击 `添加 OneDrive 盘`
 
 ![添加](https://cdn.wallleap.cn/img/pic/illustration/20200816171114.png)
 
@@ -195,7 +195,7 @@ fork 成功
 
 其他文件夹下也可以这样设置
 
-如果需要加密某个文件夹，可以在文件夹中新建 `.password` 文件(按照你前面设置的)，填入密码
+如果需要加密某个文件夹，可以在文件夹中新建 `.password` 文件（按照你前面设置的），填入密码
 
 ```md
 12345678
@@ -205,19 +205,19 @@ fork 成功
 
 ![访问](https://cdn.wallleap.cn/img/pic/illustration/20200816171253.png)
 
-提供了图床功能，允许游客上传文件，需要在设置中填入图床目录(先创建好)
+提供了图床功能，允许游客上传文件，需要在设置中填入图床目录（先创建好）
 
 ![图床](https://cdn.wallleap.cn/img/pic/illustration/20200816171300.png)
 
 可以添加多个网盘
 
-自定义整个页面(如果觉得设置页面太丑可以自己写 CSS 美化)
+自定义整个页面（如果觉得设置页面太丑可以自己写 CSS 美化）
 
 其他功能自己去发掘
 
-## 5、阿里云服务监控
+## 阿里云服务监控
 
-点击[云监控](https://cloudmonitor.console.aliyun.com/)，登录，点击站点监控——>站点管理
+点击[云监控](https://cloudmonitor.console.aliyun.com/)，登录，点击站点监控 → 站点管理
 
 ![云监控](https://cdn.wallleap.cn/img/pic/illustration/20200816171307.png)
 
@@ -225,7 +225,7 @@ fork 成功
 
 ![监控任务](https://cdn.wallleap.cn/img/pic/illustration/20200816171314.png)
 
-默认协议，随便输入一个名称，输入 herokuapp 的域名，选择30分钟，点击相应时间取消上面的可用性，点击 info
+默认协议，随便输入一个名称，输入 herokuapp 的域名，选择 30 分钟，点击相应时间取消上面的可用性，点击 info
 
 ![域名](https://cdn.wallleap.cn/img/pic/illustration/20200816171322.png)
 

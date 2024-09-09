@@ -14,15 +14,15 @@ description: PS 学习案例之蒙版
 
 ## 一、简介
 
-- 在 PS 中的蒙版可以分为**图层蒙版**、**矢量蒙版**、**剪切蒙版**、**快速蒙版**四类。
+PS 中的蒙版可以分为**图层蒙版**、**矢量蒙版**、**剪切蒙版**、**快速蒙版**四类。
 
-- 蒙版可以理解为浮在图层上面的一块玻璃，它本身不包含图像数据，只是对图层的部分起到遮挡的作用，当我们对图层进行操作时，被挡的数据是不会受到影响的(这样可以不需要直接在原图层上修改，达到保护图片的作用)。
+- 蒙版可以理解为浮在图层上面的一块**玻璃**，它本身不包含图像数据，只是对图层的部分起到遮挡的作用，当我们对图层进行操作时，被挡的数据是不会受到影响的(这样可以不需要直接在原图层上修改，达到保护图片的作用)
 
-- 蒙板是将不同灰度色值转化为不同的透明度值，并作用到它所在的图层，让图层不同地方透明度发生相应的变化。纯黑色表示完全透明，纯白色表示完全不透明。
+- 蒙版是将不同**灰度色值**转化为不同的**透明度值**，并作用到它所在的图层，让图层不同地方透明度发生相应的变化。纯黑色表示完全透明，纯白色表示完全不透明。
 
-- PS 中蒙版有两种，一种是白蒙版，另一种是黑蒙版(反向蒙版)，添加蒙版之后一般用颜色相反的画笔进行涂抹，并且画笔的不透明度一般设置在20%-25%，画笔笔尖采用柔笔。
+- PS 可以直接新建的有两种，一种是白蒙版，另一种是黑蒙版(反向蒙版)，添加蒙版之后一般用颜色相反的画笔进行涂抹，并且画笔的不透明度一般设置在 20%-25%，画笔笔尖采用柔笔
 
-- 白蒙版直接新建蒙版，黑蒙版 <kbd>Alt</kbd>+创建蒙版：
+- 白蒙版直接新建蒙版，黑蒙版 <kbd>Alt</kbd> + 创建蒙版：
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309152659135.png)
 
@@ -30,17 +30,13 @@ description: PS 学习案例之蒙版
 
 ### 1、剪切蒙版
 
-步骤1、将形状图层放下面；
+步骤1、将形状图层放下面
 
-步骤2、将需要剪贴的图层放上面(主体物在上方——第一视觉看到的)；
+步骤2、将需要剪贴的图层放上面(主体物在上方——第一视觉看到的)
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304111427253.png)
 
-步骤3、点击创建蒙版按钮；
-
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304111504959.png)
-
-步骤4、按住 <kbd>Alt</kbd> +点击两个图层的中间即可创建剪贴蒙版(以后也可以用这个方式把图层样式、图层放到某个图层里/下)。
+步骤3、按住 <kbd>Alt</kbd> + 点击两个图层的中间即可创建剪贴蒙版(以后也可以用这个方式把图层样式、图层放到某个图层里/下)
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304111829545.png)
 
@@ -48,95 +44,93 @@ description: PS 学习案例之蒙版
 
 #### (1) 鸡身鸭蹼
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304131348101.png)
+![效果](https://cdn.wallleap.cn/img/pic/illustration/image-20210304131348101.png)
 
 1、将鸡、鸭拖入 PS，鸡图层在上面，鸭图层在下面
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132101200.png)
+![拖入素材](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132101200.png)
 
-2、把鸡图层透明度调小一点
+2、把鸡图层透明度调小一点，方便看到下一个图层
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132205094.png)
+![调整透明度](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132205094.png)
 
 3、移动鸭图层，让鸭的脚蹼到鸡的合适的位置（选中鸭图层，将自动选择前复选框的√去掉）
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132413074.png)
+![移动](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132413074.png)
 
-4、点击鸡图层，将不透明度改为100%，并且新建一个蒙版
+4、点击鸡图层，将不透明度改为 100%，并且新建一个蒙版
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132640380.png)
+![新建蒙版](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132640380.png)
 
-5、点击画笔工具，对椭圆部位进行涂抹
+5、点击画笔工具，对脚的部位进行涂抹
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132600987.png)
+![画笔涂抹](https://cdn.wallleap.cn/img/pic/illustration/image-20210304132600987.png)
 
 6、涂抹完成
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142035401.png)
+![完成](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142035401.png)
 
 #### (2) 人物森林（双重曝光）
 
 1、拖入风景、人物两张图片，人物图层放在下方，风景图层放在上方
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113216340.png)
+![拖入素材](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113216340.png)
 
 2、将背景图层的锁取消，点击上面的图层的眼睛，把它隐藏掉，使用快速选择工具选出人物
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113509514.png)
+![建立选区](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113509514.png)
 
 3、回到风景图层，点击左边的眼睛，让该图层显示出来，点击创建蒙版按钮
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113601309.png)
+![创建蒙版](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113601309.png)
 
 4、点击画笔工具，画笔笔尖形状用【柔角30】，硬度为【0%】，画笔模式为【正常】，不透明度【28%】
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113703527.png)
+![画笔涂抹](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113703527.png)
 
 5、把人脸涂抹出来
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113743938.png)
+![涂抹脸部](https://cdn.wallleap.cn/img/pic/illustration/image-20210304113743938.png)
 
-#### (3) 桥和湖面
+#### (3) 桥和湖面（倒影）
 
-![](https://cdn.wallleap.cn/img/pic/illustration/40.jpg)
+![倒影](https://cdn.wallleap.cn/img/pic/illustration/40.jpg)
 
 1、将两张图片拖到PS中，蓝色湖面的图层在下面，桥的图层在上面
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154334518.png)
+![拖入素材](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154334518.png)
 
 2、给桥的图层添加一个蒙版
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154609069.png)
+![添加蒙版](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154609069.png)
 
 3、在工具组中选择`渐变工具`
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154729153.png)
+![渐变工具](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154729153.png)
 
-4、在上面设置中把渐变颜色改为【从前景色到背景色渐变】，【线性渐变】，并且把前景色调为白背景色调黑(如果正好相反，可以用快捷键 <kbd>X</kbd> 调换前背景色，或者勾选上方渐变设置中的反向)
+4、在上面设置中把渐变颜色改为【从前景色到背景色渐变】，【线性渐变】，并且把前景色调为白背景色调黑（如果正好相反，可以用快捷键 <kbd>X</kbd> 调换前背景色，或者勾选上方渐变设置中的反向，按 <kbd>D</kbd> 可以快速恢复前景色、背景色为黑白）
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154917995.png)
+![调整渐变](https://cdn.wallleap.cn/img/pic/illustration/image-20210309154917995.png)
 
 5、之后在合适的位置拉一条渐变
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155450740.png)
+![拉渐变](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155450740.png)
 
 6、这样蓝色湖面就出来了，接下来就需要把倒影弄出来
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155606605.png)
+![蓝色湖面](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155606605.png)
 
 7、再把桥的图片拖进来并进行垂直翻转
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155827140.png)
+![复制桥图层](https://cdn.wallleap.cn/img/pic/illustration/image-20210309155827140.png)
 
 8、把这个图层移到蒙版的下面，并且把透明度调低
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309160105389.png)
+![移动图层顺序](https://cdn.wallleap.cn/img/pic/illustration/image-20210309160105389.png)
 
 9、选中移动工具，把自动选择前的勾去掉，把图片移到合适的位置
 
-![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309160239538.png)
-
----
+![移动](https://cdn.wallleap.cn/img/pic/illustration/image-20210309160239538.png)
 
 ### 3、利用蒙版进行人物精修
 
@@ -146,15 +140,15 @@ description: PS 学习案例之蒙版
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142349456.png)
 
-2、滤镜-模糊-**高斯模糊**，半径数值调整到图片上看不到斑点为止(调的数值决定了能够淡斑的最终程度)
+2、滤镜-模糊-**高斯模糊**，半径数值调整到图片上看不到斑点为止（调的数值决定了能够淡斑的最终程度）
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142659034.png)
 
-3、<kbd>Alt</kbd> +创建蒙版创建反向(黑色)蒙版
+3、<kbd>Alt</kbd> + 创建蒙版创建反向(黑色)蒙版
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142756605.png)
 
-4、使用画笔进行涂抹（不透明度在20%-25%）
+4、使用画笔进行涂抹（不透明度在 20%-25%）
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304142918909.png)
 
@@ -180,7 +174,7 @@ description: PS 学习案例之蒙版
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309160924836.png)
 
-5、选中复制图层，按住<kbd>Alt</kbd>键单击蒙版，创建黑色蒙版
+5、选中复制图层，按住 <kbd>Alt</kbd> 键单击蒙版，创建黑色蒙版
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309161020192.png)
 
@@ -268,7 +262,7 @@ description: PS 学习案例之蒙版
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304150519053.png)
 
-19、<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>e</kbd>盖印两个图层
+19、按两次快捷键 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>e</kbd> 盖印两个图层
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210304150549180.png)
 
@@ -279,3 +273,8 @@ description: PS 学习案例之蒙版
 21、给图层创建反向蒙版，用画笔淡斑
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/image-20210309163720634.png)
+
+其他两个蒙版不经常使用，这里就不做演示了
+
+- 矢量蒙版：使用矢量工具创建矢量路径，然后创建矢量蒙版，矢量路径内的区域显示，外的区域隐藏
+- 快速蒙版：使用快速选择工具选中区域，然后创建快速蒙版，选中区域显示，未选中区域隐藏

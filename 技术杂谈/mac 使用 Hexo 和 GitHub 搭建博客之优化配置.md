@@ -171,6 +171,8 @@ about 页还需要修改主题 `_config.yml`：
 
 ## 五、博客美化
 
+大概可以分成以下几个部分：
+
 ### 1、了解hexo博客layout
 
 ### 2、修改layout中各布局代码
@@ -178,3 +180,5 @@ about 页还需要修改主题 `_config.yml`：
 ### 3、css美化
 
 ### 4、其他小部件
+
+推荐阅读 https://myblog.wallleap.cn/#/post/30

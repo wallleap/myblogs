@@ -16,9 +16,9 @@ HTML 搭建网页的结构，相当于人体骨架
 
 ### 1、HTML
 
-全称为超文本标记语言(Hypetext Markup Language)
+全称为超文本标记语言（Hypetext Markup Language）
 
-- 其中<font color=orange>超文本</font>是相对纯文本来说的，HTML 除了纯文本内容(文字、字符)还可以包括图片、音频、视频
+- 其中<font color=orange>超文本</font>是相对纯文本来说的，HTML 除了纯文本内容（文字、字符）还可以包括超链接、图片、音频、视频
 
 - 负责网页三要素中的结构
 
@@ -32,10 +32,12 @@ HTML 搭建网页的结构，相当于人体骨架
 
 一个简单的网页可以只有文本内容，也就是内容只写入纯文本，文件名后缀为 `.html` 或 `.htm`，浏览器将会把文本内容自动加到 `body` 标签中，基本内容如下
 
-- `<html></html>` 根标签 有且只有一个 网页内容写到里面
-- html两个子标签：
-  -  `<head></head>` 设置网页头部信息 不会在网页中直接显示 给浏览器看 解析网页
-  -  `<body></body>` 网页主体 页面中可见部分写在这
+- `<html></html>` 根标签，有且只有一个，网页内容写到里面
+
+- html 两个子标签：
+
+  - `<head></head>` 设置网页头部信息 不会在网页中直接显示 给浏览器看 解析网页
+  - `<body></body>` 网页主体 页面中可见部分写在这
   - `head` 子标签：
     - `<title></title>` 网页标题 将在浏览器标签栏显示
     - `<meta >` 元信息
@@ -116,7 +118,7 @@ html4.01 和 xhtml 的文档声明这么麻烦，还好我们只要使用 HTML 5
 <!DOCTYPE html>
 ```
 
-不写文档声明，有些浏览器会进入**怪异模式**(解析网页是出现异常)
+不写文档声明，有些浏览器会进入**怪异模式**（解析网页时出现异常）
 
 （2）一个最基本的 HTML 5 页面
 
@@ -154,20 +156,20 @@ html4.01 和 xhtml 的文档声明这么麻烦，还好我们只要使用 HTML 5
 
 ### 1、标记
 
-又称标签，标签注重的是语义化，即什么标签做什么事(比如一个标题那么就用 `h$` 包裹)
+又称标签，标签注重的是语义化，即什么标签做什么事（比如一个标题那么就用 `h$` 包裹）
 
 ### 2、元素
 
-一个完整的标签(包含标签括起来的内容)
+一个完整的标签（包含标签括起来的内容）
 
 ### 3、标签分类
 
 （1）根据是否有结束标签
 
-- 单标签：又称自结束标签，例如 `<img src='../img/1.png' >`，推荐在后面的 `>` 之前不加上 `/`
+- 单标签：又称自结束标签，例如 `<img src='../img/1.png' >`，推荐在后面的 `>` 之前不加上 `/`（如果在 xml 中，必须加上 `/`）
 - 双标签：具有开始标签和结束标签，内容写在开始标签和结束标签之间，例如 `<h1>一级标题</h1>`
 
-（2）根据内容是否是替换的
+（2）根据内容是否可替换
 
 - 替换，例如图片标签中没有内容，但是它会被 `src` 中图片替换
 - 非替换，常规的文本相关的标签，标签中是什么内容就显示什么内容
@@ -177,13 +179,13 @@ html4.01 和 xhtml 的文档声明这么麻烦，还好我们只要使用 HTML 5
 - 有内容：有结束标签，内容放在开始标签和结束标签中
 - 空元素：没有闭合的标签，例如后面讲的 link、hr、br、img 等标签
 
-（4）根据显示模式(这个需要掌握，一般说 HTML 标签，就按这个分)
+（4）根据显示模式（这个需要掌握，一般说 HTML 标签，就按这个分）
 
 - 行内元素：`b、big、i、small、tt、abbr、acronym、cite、code、dfn、em、kbd、strong、samp、var、a、bbdo、br、img、map、object、q、script、span、sub、sup、button、input、label、select、textarea`——只占据它对应标签的边框所包含的空间
 - 块级元素：`address、article、aside、audio、blockquote、canvas、dd、div、dl、fieldset、figcaption、figure、footer、form、h1-6、header、hgroup、hr、noscript、ol、output、p、pre、section、table、tfoot、ul、video`——独占一行
 - 行内块元素：`input、td`
 
-这个是常用的分类(然而 MDN 中并没有分行块元素)，CSS 中还会再提到
+这个是常用的分类（然而 MDN 中并没有分行块元素），CSS 中还会再提到
 
 可以看下[HTML行内元素、块状元素、行内块状元素的区别](https://blog.csdn.net/yayedecsdn/article/details/100864500)标签，[HTML元素分类](https://blog.csdn.net/COCOLI_BK/article/details/85553078)特点
 
@@ -214,7 +216,7 @@ HTML 文档中的注释使用 `<!--  -->` 包裹，写在这里面的内容浏�
 
 - `p` 就是标签名，这是一个段落标签
 - `align`、`style` 就是这个标签的属性名
-- 属性名等号后的就是属性值，属性值需要用引号引起来，属性名和属性值一般成对出现(如果属性值为 BOOL 类型，有些可以省略属性值，只写属性名)
+- 属性名等号后的就是属性值，属性值需要用引号引起来，属性名和属性值一般成对出现（如果属性值为 BOOL 类型，有些可以省略属性值，只写属性名）
 - 常见的全局属性
   - `lang` 属性
   - `title` 属性
@@ -225,7 +227,7 @@ HTML 文档中的注释使用 `<!--  -->` 包裹，写在这里面的内容浏�
 
 - 绝对路径：相对于根目录，`/目录`
 
-- **相对路径：**相对于当前资源所在目录的位置
+- **相对路径**：相对于当前资源所在目录的位置
 
   - `../` 上层路径
 
@@ -261,18 +263,18 @@ eg：
 满几进一
 
 - 二进制：满二进一，由 0、1 组成，例如 `11111110` 这八位表示 `2^0^ *0+2^1^ *1+2^2^+2^3^+2^4^+2^5^+2^6^+2^7^`，即十进制 254
-- 八进制：满八进一，由 0~7 组成，例如 `O12` 表示十进制 10(`8^0^*2+8^1^*1`)
+- 八进制：满八进一，由 0~7 组成，例如 `O12` 表示十进制 10（`8^0^*2+8^1^*1`）
 - 十进制：满十进一，由 0~9 组成
 - 十六进制：由 `0~9、A~F` 组成，例如 `oX1e` 表示十进制 30
 
 ### 8、单位
 
-- 1，看情况，有的是 1=100%，有的1指的是 1px
+- 1，看情况，有的是 1=100%，有的 1 指的是 1px
 - % 百分比，相同百分比参照物不同，得到的结果不同
 - px 像素，有物理像素、CSS 像素、设备像素
-- vw/vh 1vw等于视口(PC端浏览器可视区域/移动端涉及3个)宽/高度的1%
-- em  1em为一个字体大小
-- rem  根标签的字体大小
+- vw/vh 1vw 等于视口宽/高度的 1%
+- em 1em 为一个字体大小
+- rem 根标签的字体大小
 
 ## 五、标签
 
@@ -302,54 +304,54 @@ eg：
 
   - 编码
 
-    乱码问题原因：计算机只认识0、1，计算机中保存的内容需要转化为二进制编码来保存，读取内容时需要转换成正确的内容----编码、解码  编码和解码采用的字符集不同
+    - 乱码问题原因：计算机只认识 0、1，计算机中保存的内容需要转化为二进制编码来保存，读取内容时需要转换成正确的内容----编码、解码  编码和解码采用的字符集不同
 
-    常见字符集：ASCII、ISO-8859-1、GBK、GB2312(中文系统的默认编码)、UTF-8(万国码)
+    - 常见字符集：ASCII、ISO-8859-1、GBK、GB2312（中文系统的默认编码）、UTF-8（万国码）
 
-    解决：在中文系统的浏览器中，默认的都是GB2312编码，更改编码Unicode，解码 head中告诉浏览采用的编码字符集
+    - 解决：在中文系统的浏览器中，默认的都是 GB2312 编码，更改编码 Unicode，解码 head 中告诉浏览采用的编码字符集
 
-    ```html
-    <meta charset=”utf-8”/>  <!-- 编写使用的编码、字符集一致 -->
-    ```
+      ```html
+      <meta charset=”utf-8”/>  <!-- 编写使用的编码、字符集一致 -->
+      ```
 
   - 重定向
 
-    ```html
-    <meta http-equiv=”refresh” conternt=”秒数;url=网址” />
-    ```
+      ```html
+      <meta http-equiv=”refresh” content=”秒数;url=网址” />
+      ```
 
   - 网页关键字
 
-    ```html
-    <meta name="keywords" content="关键字内容1,2,3" />
-    ```
+      ```html
+      <meta name="keywords" content="关键字内容1,2,3" />
+      ```
 
   - 网页描述
 
-    ```html
-    <meta name="description" content="描述" />
-    ```
+      ```html
+      <meta name="description" content="描述" />
+      ```
 
-    搜索引擎在检索页面时，会同时检索页面中的关键字和描述，但是不会影响页面在搜索引擎中的排名
+    - 搜索引擎在检索页面时，会同时检索页面中的关键字和描述，但是不会影响页面在搜索引擎中的排名
 
   - 与移动开发有关
 
-    ```html
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    ```
+      ```html
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      ```
 
 - `link`：定义文档与外部资源的关系
 
-  ```html
-  属性 
-  href -- 指定需要加载的资源的地址URI 
-  media -- 媒体类型
-  rel -- 指定链接类型,设定是指对象和链接目标的关系,可选值, link 还可以用 Shortcut Icon 等
-  rev -- 指定链接类型 
-  type -- 指定所连接文档的MIME类型，css 的 MIME 是 type/css,一般使用 type="text/css" 
-  ```
+    ```html
+    属性 
+    href -- 指定需要加载的资源的地址URI 
+    media -- 媒体类型
+    rel -- 指定链接类型，设定是指对象和链接目标的关系，可选值，link 还可以用 Shortcut Icon 等
+    rev -- 指定链接类型 
+    type -- 指定所连接文档的MIME类型，css 的 MIME 是 type/css，一般使用 type="text/css" 
+    ```
 
-  其中 `rel` 和 `href` 是必须要设置的
+  - 其中 `rel` 和 `href` 是必须要设置的
 
   - 引入CSS样式
 
@@ -359,11 +361,11 @@ eg：
   
   - 引入网页 icon 图标
 
-    ```hmtl
+    ```html
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     ```
 
-  - 很久以前，网速非常慢，网站主要就是分享文章的，就可以标识文档开始(告知搜索引擎)、文档上一页(浏览器可以回退)、下一页(浏览器可以提前加载此页)
+  - 很久以前，网速非常慢，网站主要就是分享文章的，就可以标识文档开始（告知搜索引擎）、文档上一页（浏览器可以回退）、下一页（浏览器可以提前加载此页）
 
     ```html
     <link rel="start" type="text/html" href="http://www.dreamdu.com/xhtml/" />
@@ -371,7 +373,7 @@ eg：
     <link rel="next" type="text/html" href="http://www.dreamdu.com/xhtml/attribute_rel/" />
     ```
 
-  如果还想了解 link 标签的话，自己可以到 [html 中 link 的用法](https://www.cnblogs.com/chenkg/p/5003426.html)去看下
+  - 如果还想了解 link 标签的话，自己可以到 [html 中 link 的用法](https://www.cnblogs.com/chenkg/p/5003426.html) 去看下
 
 - `style`：包含文档的样式信息或者文档的部分内容。默认情况下，该标签的样式信息通常是 CSS 的格式。
 
@@ -442,7 +444,7 @@ JS DOM 中 `document.body` 属性提供了可以轻松访问文档的 body 元�
 
 **`<strong>`**：强调
 
-`b` 和 `strong` 的区别就在于前者是物理元素，仅表示加粗，后者是逻辑元素，表示强调的意思，`<b>`是在html中的标签，而在 xhtml 中只能使用 `<strong>`，后者兼容性更好。
+`b` 和 `strong` 的区别就在于前者是物理元素，仅表示加粗，后者是逻辑元素，表示强调的意思，`<b>` 是在 html 中的标签，而在 xhtml 中只能使用 `<strong>`，后者兼容性更好。
 
 **`<i>`**：斜体，现在主要用于文本图标
 
@@ -476,17 +478,15 @@ a 标签可以将包含内容设置为超链接，设置了 href 属性后点击
   - mailto：打开默认邮件应用发送邮件到该邮箱 `<a href="mailto:15579576761@163.com">发送邮件</a>`，也可以设置好主题、内容：`<a href="mailto:15579576761@163.com?subject=Re:wallleap.cn%20某文章&body=发送自wallleap">发送邮件</a>`（还可以有拨号等，具体的可以查看 MDN）
 
 - target:
-  - `_self`：默认
+  - `_self`：默认，当前页面打开
   - `_blank`：设置为内联框架的名称，可以在内联框架中打开页面
-  - `_top`：
+  - `_top`：在当前窗口中载入整个页面
 
-> **提示：**如果不使用 href 属性，则不可以使用如下属性：download, hreflang, media, rel, target 以及 type 属性。
+> **提示**：如果不使用 href 属性，则不可以使用如下属性：download, hreflang, media, rel, target 以及 type 属性。
 >
-> **提示：**被链接页面通常显示在当前浏览器窗口中，除非您规定了另一个目标（target 属性）。
+> **提示**：被链接页面通常显示在当前浏览器窗口中，除非您规定了另一个目标（target 属性）。
 >
-> **提示：**请使用 CSS 来设置链接的样式。
-
-
+> **提示**：请使用 CSS 来设置链接的样式。
 
 ### 8、图片标签
 
@@ -498,7 +498,7 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 图片格式：
 
-- JEPG(JPG) 支持颜色多，可压缩，不支持透明；
+- JPEG(JPG) 支持颜色多，可压缩，不支持透明；
 
 - GIF 支持颜色少，支持简单的透明，支持动态图；
 
@@ -506,7 +506,7 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 - webp 提供了有损压缩与无损压缩（可逆压缩）的图片文件格式，
 
-- base64：当图片很小时(一般小于8kb)，或者需要先加载的图片，可以转为base64
+- base64：当图片很小时（一般小于8kb），或者需要先加载的图片，可以转为base64
 
 效果不一致，使用效果好的；效果一致，使用小的。
 
@@ -553,33 +553,33 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200810164728.png)
 
-`ul`:无序列表，`li` 子元素显示为默认的黑色圆点，也可通过参数自定义列表的符号，常用于新闻列表展示
+`ul`：无序列表，`li` 子元素显示为默认的黑色圆点，也可通过参数自定义列表的符号，常用于新闻列表展示
 
-`ol`:有序列表，可以在列表前增加序号，如1，2，3，4；适用于排行榜；
+`ol`：有序列表，可以在列表前增加序号，如1，2，3，4；适用于排行榜；
 
-`dl`:自定义列表，可以包括标题及内容，可适合用制作风箱结构；
+`dl`：自定义列表，可以包括标题及内容，可适合用制作风箱结构；
 
 ### 9、表格标签
 
-`table`:表格，适合于超过两行以上的数据呈现
+`table`：表格，适合于超过两行以上的数据呈现
 
 一个表格 `<table>` 是由每行 `<tr>` 组成的，每行是由列 `<td>` 组成的。
 
-> 所以我们要记住，一个表格是由行组成的（行是由列组成的），而不是由行和列组成的。（td是嵌套在tr中的）
+> 所以我们要记住，一个表格是由行组成的（行是由列组成的），而不是由行和列组成的。（td 是嵌套在 tr 中的）
 
-`<table>`下的 `<caption>`标签、 `<thead>`标签、`<tbody>`标签、`<tfoot>`标签
+`<table>` 下的 `<caption>` 标签、 `<thead>` 标签、`<tbody>` 标签、`<tfoot>` 标签
 
-- `<caption>`——表格的标题，一般是`table`的第一个子元素*(零个或一个)*
-- `<colgroup>`——表格列组标签，用来定义表中的一组列表*(零个或多个)*
-- `<thead>`——表头，表格的最上面一行*(零个或一个)*
-  - `<tr>`定义表格中的行
-    - `<th>`定义表格内的表头单元格(列)，此元素内部的文本通常会呈现为粗体。
-- `<tbody>`——表的主体部分*(零个或多个)*
-  - `<tr>`行
-    - `<th>`表头列(如果没有`<thead>`就需要写上，显示在最上方；有`<thead>`可以`tr*3>th+td*2`这种形式，位于最左一列)
-  - `<tr>`行
-    - `<td>`列
-- `<tfoot>`——汇总行*(零个或一个)*
+- `<caption>`——表格的标题，一般是 `table` 的第一个子元素（*零个或一个*）
+- `<colgroup>`——表格列组标签，用来定义表中的一组列表（*零个或多个*）
+- `<thead>`——表头，表格的最上面一行（*零个或一个*）
+  - `<tr>` 定义表格中的行
+    - `<th>` 定义表格内的表头单元格（列），此元素内部的文本通常会呈现为粗体。
+- `<tbody>`——表的主体部分（*零个或多个*）
+  - `<tr>` 行
+    - `<th>` 表头列（如果没有`<thead>` 就需要写上，显示在最上方；有 `<thead>` 可以 `tr*3>th+td*2` 这种形式，位于最左一列）
+  - `<tr>` 行
+    - `<td>` 列
+- `<tfoot>`——汇总行（*零个或一个*）
 
 注：
 
@@ -587,29 +587,29 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 2、当表格非常大内容非常多的时候，如果用 `thead`、`tbody`、`tfoot` 标签的话，那么**数据可以边获取边显示**。如果不写，则必须等表格的内容全部从服务器获取完成才能显示出来。
 
-3、`tbody` 标签是“必须的”(并不是要求一定写)，即使你在代码中并没有写，在浏览器渲染之后 `tr` 和 `td` 还是会在 `tbody` 中
+3、`tbody` 标签是“必须的”（并不是要求一定写），即使你在代码中并没有写，在浏览器渲染之后 `tr` 和 `td` 还是会在 `tbody` 中
 
-属性：表格中的属性差不多都是不推荐使用的(可以写样式)，但由于开发的时候写属性更方便一点，因此列出来
+属性：表格中的属性差不多都是不推荐使用的（可以写样式），但由于开发的时候写属性更方便一点，因此列出来
 
 表格 `<table>` 的属性：
 
-- `border`：边框，单位px。
+- `border`：边框，单位 px。
 - `style="border-collapse:collapse;"`：单元格的线和表格的边框线合并。
-- `width`：宽度，单位px。
-- `height`：高度，单位px。
+- `width`：宽度，单位 px。
+- `height`：高度，单位 px。
 - `bordercolor`：表格的边框颜色。
 - `align`：**表格**的水平对齐方式，属性值可以填：`left` 、`right`、 `center`。
-  注意：这里不是设置表格里内容的对齐方式，如果想设置内容的对齐方式，要对单元格标签`<td>`进行设置）
-- `cellpadding`：单元格内容到边的距离，单位px。默认情况下，文字是紧挨着左边那条线的，即默认情况下的值为0。
-  注意不是单元格内容到四条边的距离，而是到一条边的距离，默认是与左边那条线的距离。如果设置属性`dir="rtl"`(在下面有讲)，那就指的是内容到右边那条线的距离。
-- `cellspacing`：单元格和单元格之间的距离（外边距），单位px。默认情况下的值为0。
+  - 注意：这里不是设置表格里内容的对齐方式，如果想设置内容的对齐方式，要对单元格标签 `<td>` 进行设置）
+- `cellpadding`：单元格内容到边的距离，单位 px。默认情况下，文字是紧挨着左边那条线的，即默认情况下的值为 0。
+  - 注意不是单元格内容到四条边的距离，而是到一条边的距离，默认是与左边那条线的距离。如果设置属性 `dir="rtl"`（在下面有讲），那就指的是内容到右边那条线的距离。
+- `cellspacing`：单元格和单元格之间的距离（外边距），单位 px。默认情况下的值为0。
 - `bgcolor="#99cc66"`：表格的背景颜色。
 - `background="路径src/..."`：背景图片。
-  背景图片的优先级大于背景颜色。
+  - 背景图片的优先级大于背景颜色。
 - `bordercolorlight`：表格的上、左边框，以及单元格的右、下边框的颜色。
 - `bordercolordark`：表格的右、下边框，以及单元格的上、左的边框的颜色。
   这两个属性的目的是为了设置3D的效果。
-- `dir`：公有属性，单元格内容的排列方式(direction)。 可以 取值：`ltr`：从左到右（left-to-right，默认），`rtl`：从右到左（right-to-left）   既然说`dir`是共有属性，如果把这个属性放在任意标签中，那表明这个标签的位置可能会从右开始排列。
+- `dir`：公有属性，单元格内容的排列方式(direction)。 可以取值：`ltr`：从左到右（left-to-right，默认），`rtl`：从右到左（right-to-left），既然说`dir`是共有属性，如果把这个属性放在任意标签中，那表明这个标签的位置可能会从右开始排列。
 
 行 `<tr>`属性：
 
@@ -634,7 +634,7 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 - `colspan`：横向合并。例如 `colspan="2"` 表示当前单元格在水平方向上要占据两个单元格的位置。
 - `rowspan`：纵向合并。例如 `rowspan="2"` 表示当前单元格在垂直方向上要占据两个单元格的位置。
 
-下面用几个例子讲解表格(这些代码只是演示上面的知识，开发中千万别这样用/手动狗头)
+下面用几个例子讲解表格（这些代码只是演示上面的知识，开发中千万别这样用/手动狗头）
 
 例子1：表格由行 `tr` 组成，行由列 `td` 组成
 
@@ -810,12 +810,12 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 `form`元素将所有的表单包含起来，也相应于表单的作用域。
 
-`get`和`post`提交方式的区别：`get`请求把表单的数据显式地放在URL中，并且对长度和数据值编码有所限制；`post`请求把表单数据放在HTTP请求体中，没有长度限制。
+`get`和`post`提交方式的区别：`get`请求把表单的数据显式地放在 URL 参数中，并且对长度和数据值编码有所限制；`post` 请求把表单数据放在 HTTP 请求体中，没有长度限制。
 
 2）文本框
 
 ```html
-<input type="text" name="控件名称" value="文本框输入值" placeholder="提示信息" disabled readonly required auotfocus />
+<input type="text" name="控件名称" value="文本框输入值" placeholder="提示信息" disabled readonly required autofocus />
 ```
 
 3）密码框
@@ -906,6 +906,8 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 </form>
 ```
 
+一般使用 `form` 包裹表单元素，有一个 `submit` 按钮，再给 `form` 设置 `submit` 事件，禁止默认行为，然后再做一些验证，最后再提交。
+
 ### 11、转义字符(字符实体)
 
 ```html
@@ -942,7 +944,7 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 
 将浏览器窗口分解为多个小窗口，每个小窗口均可以显示各自的网页
 
-`<frameset rows="" cols="">`：框架网页集，`rows`为横向分隔，`cols`为纵向分隔，值可以是具体数值也可以是百分比，注意`frameset`标记是和`body`标记同级的标记，不能将`frameset`标记包含在`body`标记中，否则将无法看到框架网页的效果。
+`<frameset rows="" cols="">`：框架网页集，`rows` 为横向分隔，`cols` 为纵向分隔，值可以是具体数值也可以是百分比，注意 `frameset` 标记是和 `body` 标记同级的标记，不能将 `frameset` 标记包含在 `body` 标记中，否则将无法看到框架网页的效果。
 
 `<frame name="" scr="" />`：指定每一个小窗口的名称和链接的网页，窗口的名称可以用于超级链接的 target 属性。
 
@@ -954,7 +956,7 @@ alt：图片不能显示时，对图片描述；搜索引擎根据 alt 搜索图
 <iframe src=”路径” width=”” heigh=”” name=”名称”></iframe>
 ```
 
-内嵌框架`<iframe>：可以在一个浏览器窗口种同时显式多个页面文档`
+内嵌框架 `<iframe>：可以在一个浏览器窗口种同时显式多个页面文档`
 
 在现实开发中，不推荐使用，内联框架中的内容不会被搜索引擎所检索
 
@@ -1007,29 +1009,29 @@ header, nav, main, article, section, aside, footer{
 
   - 方法一：手动创建标签
 
-  ```html
-  <script>
-    /* 手动创建标签：默认的标签的类型都是行级元素 */
-    document.createElement("header")
-    document.createElement("nav")
-    document.createElement("main")
-    document.createElement("article")
-    document.createElement("aside")
-    document.createElement("footer")
-  </script>
-  ```
+    ```html
+    <script>
+      /* 手动创建标签：默认的标签的类型都是行级元素 */
+      document.createElement("header")
+      document.createElement("nav")
+      document.createElement("main")
+      document.createElement("article")
+      document.createElement("aside")
+      document.createElement("footer")
+    </script>
+    ```
 
   - 方法二：引入第三方插件 `html5shiv.min.js`
 
-  ```html
-  <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  ```
+    ```html
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    ```
 
 ### 2、列表
 
 HTML5 中，对 ol、dl 进行了改良
 
-- `ol`：添加了`start`、`reversed`属性
+- `ol`：添加了 `start`、`reversed` 属性
   - `start`：可以指定列表编号从多少开始
   - `reversed`：列表反向排序
 
@@ -1052,86 +1054,86 @@ HTML5 中，对 ol、dl 进行了改良
 
   - 可以用于解释术语
 
-  ```html
-  <dl>
-    <dt><dfn>RSS</dfn></dt>
-    <dd>RSS也叫聚合RSS，是在线共享内容的一种简易方式(也叫聚合内容)……</dd>
-    <dt><dfn>博客</dfn></dt>
-    <dd>博客，又译为网络日志，部落格或部落阁等，是一种通常由个人管理……</dd>
-  </dl>
-  ```
+    ```html
+    <dl>
+      <dt><dfn>RSS</dfn></dt>
+      <dd>RSS也叫聚合RSS，是在线共享内容的一种简易方式(也叫聚合内容)……</dd>
+      <dt><dfn>博客</dfn></dt>
+      <dd>博客，又译为网络日志，部落格或部落阁等，是一种通常由个人管理……</dd>
+    </dl>
+    ```
 
   - 可以表示辅助信息
 
-  ```html
-  <dl>
-    <dt>作者</dt>
-    <dd>xxx</dd>
-    <dt>出版社</dt>
-    <dd>xxx出版社</dd>
-    <dt>类别</dt>
-    <dd>文学</dd>
-  </dl>
-  ```
+    ```html
+    <dl>
+      <dt>作者</dt>
+      <dd>xxx</dd>
+      <dt>出版社</dt>
+      <dd>xxx出版社</dd>
+      <dt>类别</dt>
+      <dd>文学</dd>
+    </dl>
+    ```
 
 ### 3、表单
 
 (1) 表单新增的 `type` 属性
 
-- `email` 提供了默认的电子邮箱的完整验证，要求表单值必须包含 `@` 符号，同时必须包含服务器名称，如果不能满足验证，则会阻止当前的数据提交(submit)
+- `email` 提供了默认的电子邮箱的完整验证，要求表单值必须包含 `@` 符号，同时必须包含服务器名称，如果不能满足验证，则会阻止当前的数据提交（submit）
 
-```html
-邮箱：<input type="email">
-```
+    ```html
+    邮箱：<input type="email">
+    ```
 
 - `tel` 并不是用来实现验证，它的本质目的是为了能够**在移动端打开数字键盘**，意味着限制了用户只能输入数字。
 
-```html
-电话：<input type="tel">
-```
+    ```html
+    电话：<input type="tel">
+    ```
 
 - `url` 验证只能输入合法的网址，必须包含 `http://`
 
-```html
-网址：<input type="url">
-```
+    ```html
+    网址：<input type="url">
+    ```
 
-- `number` 只能输入数字(包含小数点)，不能输入其他的字符
+- `number` 只能输入数字（包含小数点），不能输入其他的字符
   - `max`：最大值，`min`：最小值，`value`：默认值
 
-```html
-数量：<input type="number">
-<input type="number" value="60" min="0" max="100">
-```
+    ```html
+    数量：<input type="number">
+    <input type="number" value="60" min="0" max="100">
+    ```
 
 - `search` 可以提供更人性化的输入体验
 
-```html
-搜索框：<input type="search">
-```
+    ```html
+    搜索框：<input type="search">
+    ```
 
 - `range` 范围
 
-```html
-范围：<input type="range" min="0" max="100" value="50">
-```
+    ```html
+    范围：<input type="range" min="0" max="100" value="50">
+    ```
 
-- `color `颜色
+- `color` 颜色
 
-```html
-颜色：<input type="color">
-```
+    ```html
+    颜色：<input type="color">
+    ```
 
 - 日期时间相关
 
-```html
-时间：<input type="time"> <!-- 时分秒 -->
-日期：<input type="date"> <!-- 年月日 -->
-日期时间：<input type="datetime"> <!-- 目前大多数浏览器都不支持，只有Safari -->
-日期时间：<input type="datetime-local"> <!-- 日期和时间 -->
-月份：<input type="month">
-星期：<input type="week">
-```
+    ```html
+    时间：<input type="time"> <!-- 时分秒 -->
+    日期：<input type="date"> <!-- 年月日 -->
+    日期时间：<input type="datetime"> <!-- 目前大多数浏览器都不支持，只有Safari -->
+    日期时间：<input type="datetime-local"> <!-- 日期和时间 -->
+    月份：<input type="month">
+    星期：<input type="week">
+    ```
 
 (2) 表单新增的其他属性
 
@@ -1141,9 +1143,9 @@ HTML5 中，对 ol、dl 进行了改良
 
 - `autocomplete`：自动完成 on off
 
-  必须成功提交过：提交过才会记录
+  - 必须成功提交过：提交过才会记录
 
-  当前添加 `autocomplete` 的元素必须有 `name` 属性
+  - 当前添加 `autocomplete` 的元素必须有 `name` 属性
 
 - `required` 必须输入，如果没有输入则会阻止当前数据提交
 
@@ -1213,7 +1215,7 @@ HTML5 中，对 ol、dl 进行了改良
 
 - `oninput`：监听当前指定元素内容的改变，只要**内容改变(添加内容/删除内容)**就会触发这个事件（鼠标粘贴的也能触发）
 
-  对比：`onkeyup`：**键盘弹起**的时候触发，每一个键的弹起都会触发一次
+  - 对比：`onkeyup`：**键盘弹起**的时候触发，每一个键的弹起都会触发一次
 
 - `oninvalid`：当验证不通过时触发
 
@@ -1236,7 +1238,7 @@ HTML5 中，对 ol、dl 进行了改良
 
 ### 4、进度条
 
-- `progress `
+- `progress`
   - max：最大值
   - value：当前进度值
 - `meter`度量器——衡量当前进度值 
@@ -1312,12 +1314,12 @@ query：查询 selector：选择器
 
 ### 2、操作类样式
 
-`classList`当前元素的所有样式列表——数组
+`classList` 当前元素的所有样式列表——数组
 
-- `.add`为元素添加指定类名，一次只能添加一个
-- `.remove`为元素溢出指定名称的类样式，一次只能移除一个
-- `.toggle`切换元素的样式，如果元素之前没有指定名称的样式则添加，如果有则移除
-- `.contains`判断元素是否包含指定名称的样式，返回true/false
+- `.add` 为元素添加指定类名，一次只能添加一个
+- `.remove` 为元素溢出指定名称的类样式，一次只能移除一个
+- `.toggle` 切换元素的样式，如果元素之前没有指定名称的样式则添加，如果有则移除
+- `.contains` 判断元素是否包含指定名称的样式，返回 true/false
 
 ```javascript
 document.querySelector(‘li’).classList.add(‘red’)
@@ -1337,9 +1339,9 @@ document.querySelector(‘li’).className=‘red underline’
 
 定义：
 
-- `data-`开头
+- `data-` 开头
 
-- `data-`后必须至少有一个字符，多个单词使用-连接
+- `data-` 后必须至少有一个字符，多个单词使用-连接
 
 - 建议小写、无特殊符号、非纯数字
 
@@ -1360,9 +1362,9 @@ window.onload = function(){
 
 ### 1、网络状态改变事件
 
-- ononline: 网络连通的时候触发这个事件
+- ononline：网络连通的时候触发这个事件
 
-- onoffline: 网络断开时触发
+- onoffline：网络断开时触发
 
 ```javascript
 // window.ononline = function () {}
@@ -1379,13 +1381,13 @@ window.addEventListener("offline", function(){
 
 ### 2、全屏接口的使用
 
-- requireFullscreen(): 开启全屏显示
+- requireFullscreen()：开启全屏显示
 
-不同浏览器需要添加不同的前缀：Chrome: webkit fireFox: moz ie: ms opera: o
+  - 不同浏览器需要添加不同的前缀：Chrome: webkit fireFox: moz ie: ms opera: o
 
-- cancelFullScreen(): 退出全屏显示 只能使用document来实现
+- cancelFullScreen()：退出全屏显示 只能使用document来实现
 
-- fullscreenElement: 是否是全屏状态 只能使用document来实现
+- fullscreenElement：是否是全屏状态 只能使用document来实现
 
 ```html
 <div>
@@ -1434,38 +1436,38 @@ window.onload = function(){
 </script>
 ```
 
-### 3、文件读取API
+### 3、文件读取 API
 
 FileReader：读取文件内容
 
-- readAsText(): 读取文本文件(可以使用Txt打开的文件)，返回文本字符串，默认编码是UTF-8
+- readAsText()：读取文本文件（可以使用Txt打开的文件），返回文本字符串，默认编码是 UTF-8
 
-- readAsBinaryString(): 读取任意类型的文件。返回二进制字符串，这个方法不是用来读取文件展示给用户的，而是存储文件。例如：读取文件的内容，获取二进制数据，传递给后台，后台接收了数据之后，再将数据存储
+- readAsBinaryString()：读取任意类型的文件。返回二进制字符串，这个方法不是用来读取文件展示给用户的，而是存储文件。例如：读取文件的内容，获取二进制数据，传递给后台，后台接收了数据之后，再将数据存储
 
-- readAsDataURL(): 没有返回值，参数是文件
+- readAsDataURL()：没有返回值，参数是文件
 
-读取文件获取一段以data开头的字符串，这段字符串的本质就是DataURL。DataURL是一种将文件(这个文件一般就是指图像或者能够嵌入到文档的文件格式)嵌入到文档的方案，将资源转换为base64编码的字符串形式，并且将这些内容直接存储在url中à优化网站的加载速度和执行效率
+读取文件获取一段以 data 开头的字符串，这段字符串的本质就是 DataURL。DataURL 是一种将文件（这个文件一般就是指图像或者能够嵌入到文档的文件格式）嵌入到文档的方案，将资源转换为 base64 编码的字符串形式，并且将这些内容直接存储在 url 中，优化网站的加载速度和执行效率
 
 ```html
 <!-- 展示图片，src：指定路径(资源定位--url)，src请求得是外部文件，一般是服务器资源，意味着它需要向服务器发送请求，它占用服务器资源 -->
 <img src="../imgs/1.jpg" alt="">
 ```
 
-- abort(): 中断读取
+- abort()：中断读取
 
-FileReader提供一个完整的事件模型，用来捕获读取文件时的状态
+FileReader 提供一个完整的事件模型，用来捕获读取文件时的状态
 
-* onabort: 读取文件中断时触发
+- onabort：读取文件中断时触发
 
-* onerror: 读取错误时触发
+- onerror：读取错误时触发
 
-* onload: 文件读取成功完成时触发
+- onload：文件读取成功完成时触发
 
-* onloadend: 读取完成时触发，无论成功还是失败
+- onloadend：读取完成时触发，无论成功还是失败
 
-* onloadstart: 开始读取时触发
+- onloadstart：开始读取时触发
 
-* onprogress: 读取文件过程中持续触发
+- onprogress：读取文件过程中持续触发
 
 ```html
 <!-- 实时预览图片 
@@ -1497,16 +1499,16 @@ FileReader提供一个完整的事件模型，用来捕获读取文件时的状�
 拖拽事件：
 
 - (被)拖拽元素
-  - ondrag: 拖动整个过程都会调用
-  - ondragstart: 当拖动开始时调用
-  - ondragleave: 当鼠标离开拖拽元素时调用
-  - ondragend: 当拖拽结束时调用
+  - ondrag：拖动整个过程都会调用
+  - ondragstart：当拖动开始时调用
+  - ondragleave：当鼠标离开拖拽元素时调用
+  - ondragend：当拖拽结束时调用
 
 - 目标元素
-  - ondragenter: 当拖拽元素进入时调用
-  - ondragover: 当停留在目标元素上时调用
-  - ondrop: 当在目标元素上松开鼠标时调用 浏览器默认会阻止这个事件，我们必须在ondragover中阻止浏览器的默认行为
-  - ondragleave: 当鼠标离开目标元素时调用
+  - ondragenter：当拖拽元素进入时调用
+  - ondragover：当停留在目标元素上时调用
+  - ondrop：当在目标元素上松开鼠标时调用 浏览器默认会阻止这个事件，我们必须在 ondragover 中阻止浏览器的默认行为
+  - ondragleave：当鼠标离开目标元素时调用
 
 ```html
 <style>
@@ -1653,7 +1655,7 @@ getLocation()
 </script>
 ```
 
-可以直接使用第三方地图 API，例如百度地图API：<http://lbsyun.baidu.com/jsdemo.htm#a1_2>
+可以直接使用第三方地图 API，例如百度地图 API：<http://lbsyun.baidu.com/jsdemo.htm#a1_2>
 
 ### 6、通信 API
 
@@ -1691,7 +1693,7 @@ webSocket.onclose = function(event){
 }
 ```
 
-- 关闭socket
+- 关闭 socket
 
 ```javascript
 webSocket.close()
@@ -1710,13 +1712,13 @@ webSocket.close()
 
 可以存储数据到本地，存储的容量 5MB 左右（每个浏览器不同）。这个数据本质是存储在当前页面的内存中；它的生命周期为关闭当前页面，关闭页面，数据会自动清除；
 
-- `setItem(key, value)`: 存储数据，以键值对方式存储
+- `setItem(key, value)`：存储数据，以键值对方式存储
 
-- `getItem(key)`: 获取数据，通过指定名称的 key 获取对应的 value 值，如果找不到对应名称的 key，那么就会获取 null
+- `getItem(key)`：获取数据，通过指定名称的 key 获取对应的 value 值，如果找不到对应名称的 key，那么就会获取 null
 
-- `removeItem(key)`: 删除数据，通过指定名称 key 删除对应的值，如果 key 值错误，不会报错，也不会删除数据
+- `removeItem(key)`：删除数据，通过指定名称 key 删除对应的值，如果 key 值错误，不会报错，也不会删除数据
 
-- `clear()`: 清空所有存储的内容
+- `clear()`：清空所有存储的内容
 
 ```html
 <input type="text" id="username"><br>

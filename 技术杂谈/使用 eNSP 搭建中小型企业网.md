@@ -468,26 +468,26 @@ NULL0                             unassigned           up         up(s)
 
 ## 结果测试
 
-### 1、内网电脑之间进行通信：
+### 1、内网电脑之间进行通信
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic3.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic3.png)
 
 PC1 能够 ping 通其他四个 VLAN 内的主机
 
-### 2、内网主机动态获取 IP 地址：
+### 2、内网主机动态获取 IP 地址
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic2.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic2.png)
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic4.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic4.png)
 
 PC 配置 DHCP 能够自动获取 IP
 
-### 3、内网主机访问外网：
+### 3、内网主机访问外网
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic5.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic5.png)
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic6.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic6.png)
 
-![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic7.png) 
+![img](https://cdn.wallleap.cn/img/pic/web-HCL9/pic7.png)
 
 PC１、PC３ 和 Server1 能够 ping 通外网的主机，PC2 和 PC4 ping 通

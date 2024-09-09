@@ -10,11 +10,11 @@ tags:
 description: Win11 安装 Arch 子系统并配置开发环境
 ---
 
-最近更新了 win11，重新启用下 linux 子系统，并设置好基础开发环境。
+最近更新了 win11，重新启用下 Linux 子系统，并设置好基础开发环境。
 
 Win10 启用其子系统 Ubuntu 并安装图形界面可以看这篇文章：<https://myblog.wallleap.cn/#/post/34>
 
-主要是想着 win11 界面看着也还不错了，`终端` + `oh-my-zsh` / `oh-my-posh` 看着也是非常 nice 的
+主要是想着 Win11 界面看着也还不错了，`终端` + `oh-my-zsh` / `oh-my-posh` 看着也是非常 nice 的
 
 ![命令](https://cdn.wallleap.cn/img/pic/illustrtion/202207111752655.png)
 
@@ -36,7 +36,7 @@ Win10 启用其子系统 Ubuntu 并安装图形界面可以看这篇文章：<ht
 
 ![Windows功能](https://cdn.wallleap.cn/img/post/202204281040833.png)
 
-等待一会之后按提示重启电脑就成功开启 wsl 了（如果 BIOS 中有 VT/虚拟 相关的选项，需要进 BIOS 设置为开启状态）
+等待一会之后按提示重启电脑就成功开启 WSL 了（如果 BIOS 中有 VT/虚拟 相关的选项，需要进 BIOS 设置为开启状态）
 
 > 为了方便也可以直接在 powershell 中使用命令（管理员身份运行）：
 >
@@ -45,19 +45,19 @@ Win10 启用其子系统 Ubuntu 并安装图形界面可以看这篇文章：<ht
 > dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 > ```
 
-## 2、设置 WSL2 为默认版
+## 2、设置 WSL 2 为默认版
 
 1. 下载升级包：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
 2. 下载完成后双击安装
 
-3. 在 powershell 输入命令：`wsl --set-default-version 2`，将 WSL2 设置为默认版
+3. 在 PowerShell 输入命令：`wsl --set-default-version 2`，将 WSL 2 设置为默认版
 
 ## 3、安装 ArchWSL
 
 提供了两种安装方式，我们选择简单点的：
 
-在[yuk7/ArchWSL - releases](https://github.com/yuk7/ArchWSL/releases/latest)下载 Arch.appx / Arch.zip
+在 [yuk7/ArchWSL - releases](https://github.com/yuk7/ArchWSL/releases/latest)下载 Arch.appx / Arch.zip
 
 解压，双击 Arch.exe 进行安装
 
@@ -80,33 +80,31 @@ Win10 启用其子系统 Ubuntu 并安装图形界面可以看这篇文章：<ht
 
 ```shell
 [root@PC-NAME]# echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
-(设置 sudoers 文件。)
+# 设置 sudoers 文件
 
 [root@PC-NAME]# useradd -m -G wheel -s /bin/bash {username}
-(添加用户)
+# 添加用户
 
 [root@PC-NAME]# passwd {username}
-(设置默认用户密码)
+# 设置默认用户密码
 
 [root@PC-NAME]# exit
 
 >Arch.exe config --default-user {username}
-(设置默认用户)
+# 设置默认用户
 ```
 
 把上面的 `{username}` 替换为你自己想创建的用户名，例如 `testuser`
 
-如果默认用户密码被更改 ([issue #7](https://github.com/yuk7/ArchWSL/issues/7)), 请重启电脑或者用管理员 CMD 重启 LxssManager。
+如果默认用户密码被更改 ([issue #7](https://github.com/yuk7/ArchWSL/issues/7)), 请重启电脑或者用以管理员身份打开 CMD 运行下面命令，重启 `LxssManager`
 
-要重启 `LxssManager`, 请运行：
-
-```shell
+```cmd
 net stop lxssmanager && net start lxssmanager
 ```
 
 ## 6、初始化密钥环（keyring）
 
-请执行这些命令以初始化密钥环（keyring）(必须执行此步骤才可以使用 Pacman)
+请执行这些命令以初始化密钥环 keyring（必须执行此步骤才可以使用 Pacman）
 
 ```shell
 [user@PC-NAME]$ sudo pacman-key --init
@@ -130,11 +128,13 @@ sudo pacman -S zsh
 sudo pacman -S wget
 ```
 
-获取 oh-my-zsh 安装脚本，如果打死都获取不来，直接把 [tools/install.sh](https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh) 内容复制，并新建一个 install.sh 文件，粘贴内容
+获取 oh-my-zsh 安装脚本
 
 ```shell
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
 ```
+
+> 如果打死都获取不来，直接把 [tools/install.sh](https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh) 内容复制，并新建一个 install.sh 文件，粘贴内容进去
 
 给文件运行权限
 
@@ -156,7 +156,7 @@ sudo chsh -s /bin/zsh
 
 主题默认是在 `~/.oh-my-zsh/themes/` 目录下，可以选择这里面已经有了的主题
 
-主题预览：[External themes · ohmyzsh/ohmyzsh Wiki (github.com)](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
+主题预览：[External themes](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes)
 
 可以尝试自己下载主题，以 `passion` 为例，前往主题仓库：[ChesterYue/ohmyzsh-theme-passion](https://github.com/ChesterYue/ohmyzsh-theme-passion)
 
@@ -166,7 +166,7 @@ sudo chsh -s /bin/zsh
 cp passion.zsh-theme ~/.oh-my-zsh/themes/
 ```
 
-在配置文件中修改主题名为`passion`
+在配置文件中修改主题名为 `passion`
 
 ```zsh
 vim ~/.zshrc
@@ -176,21 +176,21 @@ vim ~/.zshrc
 
 需要搭配合适的字体才能显示完整，建议使用 FiraCode 字体族
 
-https://wallleap.lanzoub.com/i43lX08fdnpa
+前往 <https://wallleap.lanzoub.com/i43lX08fdnpa> 下载字体，安装时候选择 `FiraCode Nerd Font` 即可
 
 新建一个终端就可以看到主题效果了
 
 下载三个常用的插件：
 
-历史命令查找（zsh-history-substring-search）
+**历史命令查找**（zsh-history-substring-search）
 
 https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/history-substring-search
 
-代码高亮（zsh-syntax-highlighting）
+**代码高亮**（zsh-syntax-highlighting）
 
 https://github.com/zsh-users/zsh-syntax-highlighting
 
-命令提示（zsh-autosuggestions）
+**命令提示**（zsh-autosuggestions）
 
 https://github.com/zsh-users/zsh-autosuggestions
 
@@ -204,10 +204,10 @@ vim ~/.zshrc
 
 ```config
 plugins=(
-    git
-    zsh-history-substring-search
-    zsh-syntax-highlighting
-    zsh-autosuggestions
+  git
+  zsh-history-substring-search
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 ```
 
@@ -231,7 +231,7 @@ wsl 下可以进入 `/mnt` 目录，win 下的各个盘符都在这底下
 
 用的 WSL 已经是 Linux 了，但是不方便复用，可以选择 Docker 配置一个统一的开发环境
 
-### （1）下载 Docker Desktop
+### 下载 Docker Desktop
 
 直接前往官网 [Docker Desktop - Docker](https://www.docker.com/products/docker-desktop/) 4.15 版本，下载自己平台的软件
 
@@ -262,11 +262,11 @@ wsl 下可以进入 `/mnt` 目录，win 下的各个盘符都在这底下
 }
 ```
 
-设置里勾选使用 WSL2 环境，默认勾选就不需要管
+设置里勾选使用 WSL 2 环境，默认勾选就不需要管
 
 ![WSL2](https://cdn.wallleap.cn/img/pic/illustrtion/202207261133741.png)
 
-### （2）获取镜像
+### 获取镜像
 
 前端开发环境我觉得 [FrankFang](https://github.com/FrankFang) 这个大佬配置的非常好，可以直接使用
 
@@ -296,7 +296,7 @@ docker network create network1
 
 ![repos](https://cdn.wallleap.cn/img/pic/illustrtion/202207261222995.png)
 
-### （3）使用说明
+### 使用说明
 
 - 运行 `nvm use system` 和 `node --version` 得到 node 运行环境
 - 运行 `rvm use 3` 和 `ruby --version` 得到 ruby 运行环境
@@ -305,16 +305,16 @@ docker network create network1
 
 ## 参考文档
 
-- [在WSL2中安装ArchLinux - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/266585727)
+- [在WSL2中安装ArchLinux](https://zhuanlan.zhihu.com/p/266585727)
 
-- [wsl安装archlinux(Windows10子系统安装archlinux) - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/417410431)
+- [wsl安装archlinux(Windows10子系统安装archlinux)](https://zhuanlan.zhihu.com/p/417410431)
 
-- [ArchWSL/README_zh-cn.md at master · yuk7/ArchWSL (github.com)](https://github.com/yuk7/ArchWSL/blob/master/i18n/README_zh-cn.md)
+- [yuk7/ArchWSL](https://github.com/yuk7/ArchWSL/blob/master/i18n/README_zh-cn.md)
 
 - [ArchWSL documentation](https://wsldl-pg.github.io/ArchW-docs/locale/zh-CN/)
 
 - [WSL 的基本命令 | Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/basic-commands)
 
-- [Arch 终端美化 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/436313976)
+- [Arch 终端美化](https://zhuanlan.zhihu.com/p/436313976)
 
-- [Writing ZSH Themes: A Quickref (carbonfive.com)](https://blog.carbonfive.com/writing-zsh-themes-a-quickref/)
+- [Writing ZSH Themes](https://blog.carbonfive.com/writing-zsh-themes-a-quickref/)

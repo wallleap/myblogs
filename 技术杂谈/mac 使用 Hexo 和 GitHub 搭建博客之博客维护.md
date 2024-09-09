@@ -81,6 +81,20 @@ alias hd='hexo clean && hexo g && hexo d && git add . && git commit -m "update" 
 
 ## 部署到个人服务器
 
+建议使用宝塔面板，简单快捷
+
 ## 部署到国内服务器后的域名备案
 
+可以使用阿里云的备案小助手或者腾讯云的备案小程序，都很方便
+
 ## 开放一定时间之后添加广告
+
+可以接入百度联盟、谷歌广告、360 广告等
+
+链接分别为：
+
+- <https://union.baidu.com/>
+- <https://www.google.cn/adsense/start/>
+- <https://e.360.cn/>
+
+直接注册即可，审核通过之后就可以添加广告了

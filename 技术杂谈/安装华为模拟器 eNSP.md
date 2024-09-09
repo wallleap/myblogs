@@ -43,15 +43,15 @@ eNSP分享：
 
 到这步，点击“我愿意接受此协议”，接着点“下一步”
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygUx74eZH1j1PmHLCb7fFIoqaU5tJAkSCflxYBIQZBDAmrFGhgPL4bCw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423335.webp)
 
 安装位置的话，直接修改成磁盘根目录/eNSP
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygvBbElvl4kJk4lJAL2Dzq6a7eUSyozF2sCbSTBTuBmwicGEoqKVYvewA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423336.webp)
 
 在到这里需要注意下，取消勾选“安装 VirtualBox 5.0.16”前的复选框，接着点击“下一步”
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygSZ9ia5lHqlFsg24HTdJH6gRp3ZJCtTe54zPHiaFBs3ywQqZJUVsp0IEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423337.webp)
 
 接着按提示安装完 eNSP、WinPcap、Wirehark 即可
 
@@ -59,9 +59,9 @@ eNSP分享：
 
 注意，安装完成之后不要立即打开 eNSP，也就是在这一步取消复选框再点完成
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygQ0rStFxylujU1IoMnJpZ9RhpfLkdOONU7XoYfPZHptPkeH5pLa695Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423339.webp)
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygMFOp6XEn7jINxaDXghXqGxEfG1UriaGsh9HfiaC3n1cFZZwan7mvg3wA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423340.webp)
 
 接下来就可以安装 VBox 了
 
@@ -75,19 +75,19 @@ eNSP分享：
 
 同理，更改下目录，当然，这里用默认的目录也可以
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygRmBAzA5POI547Lp5iaZ28Ux0Nia1A26rwNVN4fYG4CEicGxxvuTatIpnw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423341.webp)
 
 如果安装过程中弹窗，请点击“是”
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygmLeDibAvGYQaY5vpXsx5YkGbUf2EUOiajAfiaWfLw5hutFea0TCN6GXlQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423342.webp)
 
 第一次安装，可能会弹出下面这个界面，咱点击“安装”
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygF6KqE1nQQZCmmMZSQia1Bo61LAbDYia3nHOHJA0cbjUQQJ8WibAbNnGSQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423343.webp)
 
 到这个界面，VBox 也安装完成了
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygehuBsgiaEDFGS6gwnUl8uhqfnhAezjVc3YprNtE6VIl0tmq0egGSzicw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423344.webp)
 
 ## 3、其他设置
 
@@ -99,51 +99,51 @@ eNSP分享：
 
 首先进入控制面板
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygd2PyEibFy7lu5tmC2mqWcibsbrF2A1HAqBHg5Vvl3FIXxznc4gMiadC8w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423345.webp)
 
 按照下图，点击进入这个位置
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygglqXObQ1HIrich96UKf6G7qUyjKOCPAzKLj4guuvzHTOmnRqzNibjdJw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423346.webp)
 
 点击左边的“高级设置”
 
 再点击“属性”，把这三项都设置为关闭
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygAUesaYoImmj9ib25CAKvmdDHeXVjG0wPBWOsvxbxeRwdzGGeWcMKvmQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423347.webp)
 
 看到这个就是关闭成功了
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfyg8l1TqRUCPBqGh0mqqPPN4J8cdPepHstIMNlzaS2Nx04l3icr59qZNIA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423348.webp)
 
 ### 注册设备
 
 现在我们进入 VBox，这里没有设备，我们需要进入 eNSP 设置
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygXwL2geG7C7rB8BAicficLdsIibibYnjf2hxKI5DtaPuBKxuYCbbqUble0w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423349.webp)
 
 进入 eNSP，点击左上角，新建一个空白的拓扑
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygdp63yCKqxBZFY5zbWgiaENxXrEE286g3s78BhVSLYPbNeiasJSJ24Izg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423350.webp)
 
 再点击右上方的菜单-工具-注册设备
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfyguHZHIysY69p47Yrp3VDichU63ccIK1gsV8UIk5ISicIeicvZ0r6mT5ibkw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423351.webp)
 
 勾选三个复选框，点击注册
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfyg9OjvsWuynHD7NLW2toiaPPRhWK6fLAAlpJBg6p39WNgPWtHRp1Llm1w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423352.webp)
 
 好吧，弄完之后 VBox 还是看不到设备
 
 我们在拓扑上添加上设备测试一下，路由器选择 AR3260(基本上这个能用其他的都 OK 了)，交换机选择 S3700
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygvQWddX0Lt2JRdJF4kQMwvse0da1Ze8cLicxVAlON1Mpvzy9FAFJK21A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423353.webp)
 
 启动一下所有的设备，没有弹出错误，等待一会变成绿色，点进设备，没有 `######`
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygibPuZJib0FprT3YJNXK0099ahPIekBibBSWKKImGv4V0zicxFyjLQKdz8A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423354.webp)
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHSXHk7JH3ngB3gl2s7SLfygIe3jQQA9JITv1VFHVbjCMlPlDicqicuXEiaONWHnxrfVykwWk0Y2UBtdg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071423355.webp)
 
 一般这样就 OK 了
 

@@ -1,5 +1,5 @@
 ---
-title: 利用 frp 进行远程桌面控制
+title: 利用 Frp 进行远程桌面控制
 date: 2022-05-09 10:21
 updated: 2022-05-09 10:21
 cover: //cdn.wallleap.cn/img/post/202205091750478.jpg
@@ -7,18 +7,18 @@ category: 技术杂谈
 tags:
   - 电脑
   - win
-description: 利用 frp 进行远程桌面控制
+description: 利用 Frp 进行远程桌面控制
 ---
 
-之前买了一年的华为云服务器，就只是托管了个网站，最近想着做点什么，经常在家的时候需要用公司电脑拷点文件，所以想利用一下 windows 的远程桌面。
+之前买了一年的华为云服务器，就只是托管了个网站，最近想着做点什么，经常在家的时候需要用公司电脑拷点文件，所以想利用一下 Windows 的远程桌面。
 
-在公网上想要访问公司电脑，没有公网 IP 情况下就需要使用内网穿透，内网穿透的工具有很多，如花生壳、net123、ngrok、frp，花生壳和 nat123 属于服务商提供的穿透所以会收取费用（一月40-50 / 128Kb），ngrok 和 frp 属于需要手动配置搭建的程序。
+在公网上想要访问公司电脑，没有公网 IP 情况下就需要使用内网穿透，内网穿透的工具有很多，如花生壳、net123、ngrok、frp，其中花生壳和 nat123 属于服务商提供的穿透所以会收取费用（一月 40-50 / 128Kb），ngrok 和 frp 属于需要手动配置搭建的程序。
 
-我选择的是 [frp](https://github.com/fatedier/frp) ，官方文档地址为：[https://gofrp.org/](https://gofrp.org/)
+我选择的是 [Frp](https://github.com/fatedier/frp) ，官方文档地址为：[https://gofrp.org/](https://gofrp.org/)
 
-## 1、下载 frp
+## 1、下载 Frp
 
-前往 [releases]( https://github.com/fatedier/frp/releases)，根据自己系统下载相应架构的压缩包，如果不知道选那个，可以先下载箭头所示的两个，有问题再选择其他的（linux 输入 `arch` 命令查看）
+前往 [releases]( https://github.com/fatedier/frp/releases)，根据自己系统下载相应架构的压缩包，如果不知道选那个，可以先下载箭头所示的两个，有问题再选择其他的（Linux 输入 `arch` 命令查看）
 
 ![frp-releases](https://cdn.wallleap.cn/img/post/202205091058892.png)
 
@@ -28,7 +28,7 @@ description: 利用 frp 进行远程桌面控制
 
 ### 修改配置文件
 
-先将 linux 压缩包上传到服务器，我这里用的是[宝塔面板](https://www.bt.cn/new/index.html)，之后解压，重命名
+先将 Linux 压缩包上传到服务器，我这里用的是[宝塔面板](https://www.bt.cn/new/index.html)，之后解压，重命名
 
 ![解压后 frp](https://cdn.wallleap.cn/img/post/202205091108806.png)
 
@@ -38,13 +38,13 @@ description: 利用 frp 进行远程桌面控制
 [common]
 bind_port = 7000
 
-# 服务器端监听http请求的端口(由于80端口被nginx占用,因此指定其他端口)
+# 服务器端监听 http 请求的端口(由于80端口被 nginx 占用,因此指定其他端口)
 vhost_http_port = 81 
 
-# 服务器用以显示连接状态的站点端口,以下配置中可以通过访问IP:7500登录查看frp服务端状态等信息
+# 服务器用以显示连接状态的站点端口,以下配置中可以通过访问 IP:7500 登录查看 frp 服务端状态等信息
 dashboard_port = 7500
 
-# dashboard对应的用户名/密码
+# dashboard 对应的用户名/密码
 dashboard_user = username
 dashboard_pwd = password
 
@@ -52,7 +52,7 @@ dashboard_pwd = password
 #log_file = /root/net-ct/frp/frps.log
 
 
-# 日志记录错误级别,分为:trace, debug, info, warn, erro
+# 日志记录错误级别,分为 trace, debug, info, warn, error
 #log_level = warn
 
 # 日志保存最大天数
@@ -86,49 +86,50 @@ subdomain_host = frps.domain.com
 
 防火墙常用命令：
 
-1. 防火墙基本操作
-  
-    查看版本： `firewall-cmd --version`
-    显示状态： `firewall-cmd --state`
-    查看所有打开的端口： `netstat -anp`
+**防火墙基本操作**
 
-    开启防火墙 `systemctl start firewalld`
-    关闭防火墙 `systemctl stop firewalld`
+- 查看版本：`firewall-cmd --version`
+- 显示状态：`firewall-cmd --state`
+- 查看所有打开的端口：`netstat -anp`
+- 开启防火墙：`systemctl start firewalld`
+- 关闭防火墙：`systemctl stop firewalld`
+- 开启防火墙：`service firewalld start`
 
-    开启防火墙 `service firewalld start`
-    若遇到无法开启
-    先用：`systemctl unmask firewalld.service`
-    然后：`systemctl start firewalld.service`
+若遇到无法开启
 
-2. 端口查询
+先用：`systemctl unmask firewalld.service`
 
-    查询指定端口是否已开 `firewall-cmd --query-port=666/tcp`
+然后：`systemctl start firewalld.service`
 
-    提示 yes or no
+**端口查询**
 
-    查询所有开启的端口 `netstat -anp`
+查询指定端口是否已开 `firewall-cmd --query-port=666/tcp`
 
-3. 开启端口
+提示 yes or no
 
-    如果上面端口查询没有开启的话，需要重新开启一下
+查询所有开启的端口 `netstat -anp`
 
-    开启端口命令
+**开启端口**
 
-    添加 `firewall-cmd --zone=public --add-port=80/tcp --permanent`（`–permanent` 永久生效，没有此参数重启后失效）
+如果上面端口查询没有开启的话，需要重新开启一下
 
-    重新载入 `firewall-cmd --reload`
+开启端口命令
 
-    查看 `firewall-cmd --zone= public --query-port=80/tcp`
+添加 `firewall-cmd --zone=public --add-port=80/tcp --permanent`（`–permanent` 永久生效，没有此参数重启后失效）
 
-    删除 `firewall-cmd --zone= public --remove-port=80/tcp --permanent`
+重新载入 `firewall-cmd --reload`
 
-    我们只需要开启相应的端口即可，例如 `7000` 端口（最好用到的端口都开启下）
+查看 `firewall-cmd --zone= public --query-port=80/tcp`
 
-    ```zsh
-    firewall-cmd --zone=public --add-port=7000/tcp --permanent
-    firewall-cmd --reload
-    firewall-cmd --zone= public --query-port=7000/tcp    # 现在会显示 yes
-    ```
+删除 `firewall-cmd --zone= public --remove-port=80/tcp --permanent`
+
+我们只需要开启相应的端口即可，例如 `7000` 端口（最好用到的端口都开启下）
+
+```zsh
+firewall-cmd --zone=public --add-port=7000/tcp --permanent
+firewall-cmd --reload
+firewall-cmd --zone= public --query-port=7000/tcp    # 现在会显示 yes
+```
 
 ### 更改安全组
 
@@ -157,9 +158,9 @@ cd /www/frp
 
 ## 3、客户端配置
 
-服务器端跑动之后，可以在 windows 上进行配置了
+服务器端跑动之后，可以在 Windows 上进行配置了
 
-首先解压 windows 的压缩包，在目录中用 `cmd` 打开
+首先解压 Windows 的压缩包，在目录中用 `cmd` 打开
 
 ![输入cmd](https://cdn.wallleap.cn/img/post/202205091140454.png)
 
@@ -226,11 +227,11 @@ sc.exe create frpcservice binPath="\"D:\Program Files\frp_0.42.0_windows_386\frp
 > winsw start
 > ```
 >
-> 提示成功后可以进入 **服务** 查看
+> 提示成功后可以进入**服务**查看
 
 ## 4、远程连接
 
-Windows10/11 在设置中开启`远程桌面`
+Windows 10/11 在设置中开启`远程桌面`
 
 电脑上利用自带的 `mstsc` 可以连接，在手机或 iPad 上搜索 `RD Client` 安装
 

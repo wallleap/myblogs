@@ -12,25 +12,27 @@ description: 2020 年了，jQuery 是否还值得学
 
 jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，源码值得学习。
 
-- 初识jQuery
-- jQuery的两把利器
-- 使用jQuery核心函数
-- 使用jQuery对象
-- jQuery对象
+可以先了解 jQuery 的一些基本用法，然后再去看源码，这样会更容易理解。
+
+- 初识 jQuery
+- jQuery 的两把利器
+- 使用 jQuery 核心函数
+- 使用 jQuery 对象
+- jQuery 对象
 - 练习
 
-## 一、初识jQuery
+## 一、初识 jQuery
 
-### 1、what
+### 1、一个 JS 库
 
 - 官网：<http://jquery.com/>
 - 一个优秀的 JS 函数库
 - 使用了 jQuery 的网站超过90%中大型 WEB 项目开发首选
 - Write Less, Do More!!!
 
-### 2、why
+### 2、操作更方便
 
-- HTML 元素选取(选择器)
+- HTML 元素选取（选择器）
 - HTML 元素操作
 - CSS 操作
 - HTML 事件处理
@@ -39,26 +41,26 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
 - 读写合一
 - 浏览器兼容
 - 易扩展插件
-- ajax 封装
+- Ajax 封装
 - ......
 
-> 封装简化 DOM 操作(CRUD) / Ajax
+> 封装简化 DOM 操作（CRUD）/ Ajax
 >
 > 强大选择器：方便快速查找 DOM 元素
 >
-> 隐式遍历(迭代)：一次操作多个元素
+> 隐式遍历（迭代）：一次操作多个元素
 >
 > 读写合一：读数据/写数据用的是一个函数
 >
-> 事件处理、链式调用、DOM 操作(CUD)、样式操作……
+> 事件处理、链式调用、DOM 操作、样式操作……
 
-### 3、how
+### 3、jQuery 的使用
 
-![](https://cdn.wallleap.cn/img/pic/illustration/20200815145128.png)
+![使用](https://cdn.wallleap.cn/img/pic/illustration/20200815145128.png)
 
-(1) 引入库：本地引入、CDN 远程引入，测试版、生产版(压缩版)
+(1) 引入库：本地引入、CDN 远程引入，测试版、生产版（压缩版）
 
-(2) 使用库：函数(`$`/`jQuery`)、对象(`$xxx`)
+(2) 使用库：函数（`$`/`jQuery`）、对象（`$xxx`）
 
 ```html
 <!--
@@ -77,7 +79,7 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
     }
   }
 </script>
-<!--使用jQuery实现-->
+<!--使用 jQuery 实现-->
   <!--本地引入-->
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
   <!--远程引入-->
@@ -86,53 +88,53 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
   //绑定文档加载完成的监听
   jQuery(function () {
     var $btn2 = $('#btn2')
-    $btn2.click(function () { // 给btn2绑定点击监听
+    $btn2.click(function () { // 给 btn2 绑定点击监听
       var username = $('#username').val()
       alert(username)
     })
   })
   /*
-  1. 使用jQuery核心函数: $/jQuery
-  2. 使用jQuery核心对象: 执行$()返回的对象
+  1. 使用 jQuery 核心函数：$/jQuery
+  2. 使用 jQuery 核心对象：执行 $() 返回的对象
     */
 </script>
 ```
 
-## 二、jQuery 的2把利器
+## 二、jQuery 的 2 把利器
 
-- jQuery函数: `$`/`jQuery`
-  - jQuery向外暴露的就是jQuery函数, 可以直接使用
-  - 当成一般函数使用: `$(param)`
-    - param是function: 相当于`window.onload = function`(文档加载完成的监听)
-    - param是选择器字符串: 查找所有匹配的DOM元素, 返回包含所有DOM元素的jQuery对象
-    - param是DOM元素: 将DOM元素对象包装为jQuery对象返回  `$(this)`
-    - param是标签字符串: 创建标签DOM元素对象并包装为jQuery对象返回
-  - 当成对象使用: `$.xxx`
-    - `each(obj/arr, function(key, value){})`
-    - `trim(str)`
-- jQuery对象
-  - 包含所有匹配的n个DOM元素的伪数组对象
-  - 执行`$()`返回的就是jQuery对象
+- jQuery 函数：`$`/`jQuery`
+  - jQuery 向外暴露的就是 jQuery 函数，可以直接使用
+  - 当成一般函数使用：`$(param)` 或 `jQuery(param)`
+    - param 是 Function：相当于 `window.onload = function`（文档加载完成的监听）
+    - param 是选择器字符串：查找所有匹配的 DOM 元素，返回包含所有 DOM 元素的 jQuery 对象
+    - param 是 DOM 元素：将 DOM 元素对象包装为 jQuery 对象返回 `$(this)`
+    - param 是标签字符串：创建标签 DOM 元素对象并包装为 jQuery 对象返回
+  - 当成对象使用：`$.xxx`
+    - `$.each(obj/arr, function(key, value){})`：隐式遍历 obj/arr
+    - `$.trim(str)`：去除字符串两端的空格
+- jQuery 对象
+  - 包含所有匹配的 n 个 DOM 元素的伪数组对象
+  - 执行 `$()` 返回的就是 jQuery 对象
   - 基本行为:
-    - `length`/`size()`: 得到dom元素的个数
-    - `[index]`: 得到指定下标对应的dom元素
-    - `each(function(index, domEle){})`: 遍历所有dom元素
-    - `index()`: 得到当前dom元素在所有兄弟中的下标
+    - `length`/`size()`：得到 DOM 元素的个数
+    - `[index]`：得到指定下标对应的 DOM 元素
+    - `each(function(index, domEle){})`：遍历所有 DOM 元素
+    - `index()`：得到当前 DOM 元素在所有兄弟中的下标
 
-### 1、jQuery核心函数
+### 1、jQuery 核心函数
 
-- 简称: jQuery函数(`$`/`jQuery`)
+- 简称: jQuery 函数（`$`/`jQuery`）
 
-- jQuery库向外直接暴露的就是`$`/`jQuery`
+- jQuery 库向外直接暴露的就是 `$`/`jQuery`
 
-- 引入jQuery库后, 直接使用`$`即可
-  - 当函数用: `$(xxx)`
-  - 当对象用: `$.xxx()`
+- 引入 jQuery 库后，直接使用 `$` 即可
+  - 当函数用：`$(xxx)`
+  - 当对象用：`$.xxx()`
 
 ```html
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
 <script type="text/javascript">
-  //1.  jQuery函数: 直接可用
+  //1. jQuery 函数：直接可用
   console.log($, typeof $) // f(){}
   console.log(jQuery===$) // true
   /*
@@ -146,32 +148,32 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
 </script>
 ```
 
-理解
+理解：
 
-- 即`$` 或`jQuery`
-- jQuery定义了这个全局的函数供我们调用
-- 它既可作为一般函数调用, 且传递的参数类型不同/格式不同功能就完全不同
-- 也可作为对象调用其定义好的方法, 此时`$`就是一个工具对象
+- 即 `$` 或 `jQuery`
+- jQuery 定义了这个全局的函数供我们调用
+- 它既可作为一般函数调用，且传递的参数类型不同/格式不同功能就完全不同
+- 也可作为对象调用其定义好的方法，此时 `$` 就是一个工具对象
 
-作为函数调用
+作为函数调用：
 
 - 参数为函数 `$(fun)`
-- 参数为选择器(selector)字符串 `$("#div1")`
-- 参数为DOM对象 `$(div1Ele)`
-- 参数为html标签字符串`$("<div>")`
+- 参数为选择器（selector）字符串 `$("#div1")`
+- 参数为 DOM 对象 `$(div1Ele)`
+- 参数为 HTML 标签字符串 `$("<div>")`
 
-作为对象使用
+作为对象使用：
 
-- 发送ajax请求的方法
-  `$.ajax()`
-  `$.get()`
-  `$.post()`
-  ......
+- 发送 ajax 请求的方法
+  - `$.ajax()`
+  - `$.get()`
+  - `$.post()`
+  - ......
 - 其它工具方法
-  `$.each()`
-  `$.trim()`
-  `$.parseJSON()`
-  ......
+  - `$.each()`
+  - `$.trim()`
+  - `$.parseJSON()`
+  - ......
   
 ```html
 <div>
@@ -180,27 +182,17 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
   <input type="text" name="msg1"/><br/>
   <input type="text" name="msg2"/><br/>
 </div>
-<!--
-1. 作为一般函数调用: $(param)
-    1). 参数为函数 : 当DOM加载完成后，执行此回调函数
-    2). 参数为选择器字符串: 查找所有匹配的标签, 并将它们封装成jQuery对象
-    3). 参数为DOM对象: 将dom对象封装成jQuery对象
-    4). 参数为html标签字符串 (用得少): 创建标签对象并封装成jQuery对象
-2. 作为对象使用: $.xxx()
-    1). $.each() : 隐式遍历数组
-    2). $.trim() : 去除两端的空格
--->
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
   /*
    需求1. 点击按钮: 显示按钮的文本, 显示一个新的输入框
    需求2. 遍历输出数组中所有元素值
-   需求3. 去掉"  my atguigu  "两端的空格
+   需求3. 去掉 "  lu wang  " 两端的空格
    */
   /*需求1. 点击按钮: 显示按钮的文本, 显示一个新的输入框*/
-  //1.1). 参数为函数 : 当DOM加载完成后，执行此回调函数
+  //1.1). 参数为函数：当DOM加载完成后，执行此回调函数
   $(function () { // 绑定文档加载完成的监听
-    // 1.2). 参数为选择器字符串: 查找所有匹配的标签, 并将它们封装成jQuery对象
+    // 1.2) 参数为选择器字符串: 查找所有匹配的标签, 并将它们封装成jQuery对象
     $('#btn').click(function () { // 绑定点击事件监听
       // this是什么? 发生事件的dom元素(<button>)
       // alert(this.innerHTML)
@@ -212,77 +204,64 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
   })
   /*需求2. 遍历输出数组中所有元素值*/
   var arr = [2, 4, 7]
-  // 1). $.each() : 隐式遍历数组
+  // 1). $.each()：隐式遍历数组
   $.each(arr, function (index, item) {
     console.log(index, item)
   })
-  // 2). $.trim() : 去除两端的空格
-  var str = ' my atguigu  '
+  // 2). $.trim()：去除两端的空格
+  var str = ' lu wang  '
   // console.log('---'+str.trim()+'---')
   console.log('---'+$.trim(str)+'---')
 </script>
 ```
 
-### 2、jQuery核心对象
+### 2、jQuery 核心对象
 
-- 简称: jQuery对象
+- 简称：jQuery 对象
 
-- 得到jQuery对象: 执行jQuery函数返回的就是jQuery对象
+- 得到 jQuery 对象：执行 jQuery 函数返回的就是 jQuery 对象
 
-- 使用jQuery对象: `$obj.xxx()`
+- 使用 jQuery 对象：`$obj.xxx()`
 
 ```html
 <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
 <script type="text/javascript">
-  //2. jQuery对象: 执行jQuery函数得到它
+  //2. jQuery 对象：执行 jQuery 函数得到它
   console.log($() instanceof Object) // true
 </script>
 ```
 
-![](https://cdn.wallleap.cn/img/pic/illustration/20200815155511.png)
+理解：
 
-理解
+- 即执行 jQuery 核心函数返回的对象
+- jQuery 对象内部包含的是 DOM 元素对象的伪数组（可能只有一个元素）
+- jQuery 对象拥有很多有用的属性和方法，让程序员能方便的操作 DOM
 
-- 即执行jQuery核心函数返回的对象
-- jQuery对象内部包含的是dom元素对象的伪数组(可能只有一个元素)
-- jQuery对象拥有很多有用的属性和方法, 让程序员能方便的操作dom
-
-属性/方法
+属性/方法：
 
 - 基本行为
-  `size()`/`length`
-  `[index]`/`get(index)`
-  `each()`
-  `index()`
+  - `size()`/`length`：包含的 DOM 元素个数
+  - `[index]`/`get(index)`：得到对应位置的 DOM 元素
+  - `each()`：遍历包含的所有 DOM 元素
+  - `index()`：得到在所在兄弟元素中的下标
 
-- 属性
-    操作内部标签的属性或值
+- 属性：操作内部标签的属性或值
 
-- CSS
-    操作标签的样式
+- CSS：操作标签的样式
 
-- 文档
-    对标签进行增删改操作
-- 筛选
-    根据指定的规则过滤内部的标签
-- 事件
-    处理事件监听相关
-- 效果
-    实现一些动画效果
+- 文档：对标签进行增删改操作
+
+- 筛选：根据指定的规则过滤内部的标签
+
+- 事件：处理事件监听相关
+
+- 效果：实现一些动画效果
 
 ```html
 <button>测试一</button>
 <button>测试二</button>
 <button id="btn3">测试三</button>
 <button>测试四</button>
-<!--
-1. jQuery对象是一个包含所有匹配的任意多个dom元素的伪数组对象
-2. 基本行为
-  * size()/length: 包含的DOM元素个数
-  * [index]/get(index): 得到对应位置的DOM元素
-  * each(): 遍历包含的所有DOM元素
-  * index(): 得到在所在兄弟元素中的下标
--->
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
   /*
@@ -321,7 +300,7 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
   // 自定义一个伪数组
   var weiArr = {}
   weiArr.length = 0
-  weiArr[0] = 'atguigu'
+  weiArr[0] = 'luwang'
   weiArr.length = 1
   weiArr[1] = 123
   weiArr.length = 2
@@ -333,179 +312,179 @@ jQuery 是一个 JavaScript 库，极大地简化了原生 JavaScript 编程，�
 </script>
 ```
 
-## 三、使用jQuery核心函数
+## 三、使用 jQuery 核心函数
 
 ### 1、选择器
 
 (1) 说明
 
-- 选择器本身只是一个有特定语法规则的字符串, 没有实质用处
-- 它的基本语法规则使用的就是CSS的选择器语法, 并对基进行了扩展
-- 只有调用`$()`, 并将选择器作为参数传入才能起作用
-- `$(selector)`作用 : 根据选择器规则在整个文档中查找所有匹配的标签的数组, 并封装成jQuery对象返回(用来查找特定页面元素)
+- 选择器本身只是一个有特定语法规则的字符串，没有实质用处
+- 它的基本语法规则使用的就是 CSS 的选择器语法，并对基进行了扩展
+- 只有调用 `$()`，并将选择器作为参数传入才能起作用
+- `$(selector)` 作用：根据选择器规则在整个文档中查找所有匹配的标签的数组，并封装成 jQuery 对象返回（用来查找特定页面元素）
 
 (2) 分类
 
-- 基本选择器(最基本最常用的选择器)
+基本选择器
 
-  - `#id`：id选择器
-  - `element`：元素选择器
-  - `.class`：属性选择器
-  - `*`：任意标签
-  - `selector1,selector2,selectorN`：取多个选择器的并集(组合选择器)
-  - `selector1selector2selectorN`：取多个选择器的交集(相交选择器)
+- `#id`：id 选择器
+- `element`：元素选择器
+- `.class`：类选择器
+- `*`：任意标签
+- `selector1,selector2,selectorN`：取多个选择器的并集（组合选择器）
+- `selector1selector2selectorN`：取多个选择器的交集(相交选择器)
 
-  ```html
-  <div id="div1" class="box">div1(class="box")</div>
-  <div id="div2" class="box">div2(class="box")</div>
-  <div id="div3">div3</div>
-  <span class="box">span(class="box")</span>
-  <br>
-  <ul>
-    <li>AAAAA</li>
-    <li title="hello">BBBBB(title="hello")</li>
-    <li class="box">CCCCC(class="box")</li>
-    <li title="hello">DDDDDD(title="hello")</li>
-  </ul>
-  <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    /*
-     需求:
-     1. 选择id为div1的元素
-     2. 选择所有的div元素
-     3. 选择所有class属性为box的元素
-     4. 选择所有的div和span元素
-     5. 选择所有class属性为box的div元素
-     */
-    //1. 选择id为div1的元素
-    // $('#div1').css('background', 'red')
-    //2. 选择所有的div元素
-    // $('div').css('background', 'red')
-    //3. 选择所有class属性为box的元素
-    //$('.box').css('background', 'red')
-    //4. 选择所有的div和span元素
-    // $('div,span').css('background', 'red')
-    //5. 选择所有class属性为box的div元素
-    //$('div.box').css('background', 'red')
-    //$('*').css('background', 'red')
-  </script>
-  ```
+```html
+<div id="div1" class="box">div1(class="box")</div>
+<div id="div2" class="box">div2(class="box")</div>
+<div id="div3">div3</div>
+<span class="box">span(class="box")</span>
+<br>
+<ul>
+  <li>AAAAA</li>
+  <li title="hello">BBBBB(title="hello")</li>
+  <li class="box">CCCCC(class="box")</li>
+  <li title="hello">DDDDDD(title="hello")</li>
+</ul>
+<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+  /*
+    需求:
+    1. 选择id为div1的元素
+    2. 选择所有的div元素
+    3. 选择所有class属性为box的元素
+    4. 选择所有的div和span元素
+    5. 选择所有class属性为box的div元素
+    */
+  //1. 选择id为div1的元素
+  // $('#div1').css('background', 'red')
+  //2. 选择所有的div元素
+  // $('div').css('background', 'red')
+  //3. 选择所有class属性为box的元素
+  //$('.box').css('background', 'red')
+  //4. 选择所有的div和span元素
+  // $('div,span').css('background', 'red')
+  //5. 选择所有class属性为box的div元素
+  //$('div.box').css('background', 'red')
+  //$('*').css('background', 'red')
+</script>
+```
 
-- 层次选择器(查找子元素, 后代元素, 兄弟元素的选择器)
+层次选择器（查找子元素、后代元素、兄弟元素的选择器）
 
-  - `ancestor descendant`：在给定的祖先元素下的后代元素中匹配元素
-  - `parent > child`：在给定的父元素下的子元素中匹配元素
-  - `prev + next`：匹配所有紧接在prev元素后的next元素
-  - `prev ~ siblings`：匹配prev元素之后的所有siblings元素
+- `ancestor descendant`：在给定的祖先元素下的后代元素中匹配元素
+- `parent > child`：在给定的父元素下的子元素中匹配元素
+- `prev + next`：匹配所有紧接在 prev 元素后的 next 元素
+- `prev ~ siblings`：匹配 prev 元素之后的所有 siblings 元素
 
-  ```html
-  <ul>
-    <li>AAAAA</li>
-    <li class="box">CCCCC</li>
-    <li title="hello"><span>BBBBB</span></li>
-    <li title="hello"><span class="box">DDDD</span></li>
-    <span>EEEEE</span>
-  </ul>
-  <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    /*
-     需求:
-     1. 选中ul下所有的的span
-     2. 选中ul下所有的子元素span
-     3. 选中class为box的下一个li
-     4. 选中ul下的class为box的元素后面的所有兄弟元素
-     */
-    //1. 选中ul下所有的的span
-    // $('ul span').css('background', 'yellow')
-    //2. 选中ul下所有的子元素span
-    // $('ul>span').css('background', 'yellow')
-    //3. 选中class为box的下一个li
-    // $('.box+li').css('background', 'yellow')
-    //4. 选中ul下的class为box的元素后面的所有兄弟元素
-    $('ul .box~*').css('background', 'yellow')
-  </script>
-  ```
+```html
+<ul>
+  <li>AAAAA</li>
+  <li class="box">CCCCC</li>
+  <li title="hello"><span>BBBBB</span></li>
+  <li title="hello"><span class="box">DDDD</span></li>
+  <span>EEEEE</span>
+</ul>
+<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+  /*
+    需求:
+    1. 选中ul下所有的的span
+    2. 选中ul下所有的子元素span
+    3. 选中class为box的下一个li
+    4. 选中ul下的class为box的元素后面的所有兄弟元素
+    */
+  //1. 选中ul下所有的的span
+  // $('ul span').css('background', 'yellow')
+  //2. 选中ul下所有的子元素span
+  // $('ul>span').css('background', 'yellow')
+  //3. 选中class为box的下一个li
+  // $('.box+li').css('background', 'yellow')
+  //4. 选中ul下的class为box的元素后面的所有兄弟元素
+  $('ul .box~*').css('background', 'yellow')
+</script>
+```
 
-- 过滤选择器(在原有选择器匹配的元素中进一步进行过滤的选择器)
+过滤选择器（在原有选择器匹配的元素中进一步进行过滤的选择器）
 
-  - 基本
-    - `:first`
-    - `:last`
-    - `:eq(index)`
-    - `:lt`
-    - `:gt`
-    - `:odd`
-    - `:even`
-    - `:not(selector)`
-    - `header`
-    - `animated`
-    - `focus`
-  - 内容
-    - `:contains(text)`
-    - `empty`
-    - `has(selector)`
-    - `parent`
-  - 可见性
-    - `:hidden`
-    - `:visible`
-  - 属性
-    - `[attrbute]`
-    - `[attrName=value]`
-    - `[attribute!=value]`
-    - `[attribute^=value]`
-    - `[attribute$=value]`
-    - `[attribute*=value]`
-    - `[attrSel1][attrSel2][attrSelN]`
+- 基本
+  - `:first`
+  - `:last`
+  - `:eq(index)`
+  - `:lt`
+  - `:gt`
+  - `:odd`
+  - `:even`
+  - `:not(selector)`
+  - `:header`
+  - `:animated`
+  - `:focus`
+- 内容
+  - `:contains(text)`
+  - `:empty`
+  - `:has(selector)`
+  - `:parent`
+- 可见性
+  - `:hidden`
+  - `:visible`
+- 属性
+  - `[attribute]`
+  - `[attrName=value]`
+  - `[attribute!=value]`
+  - `[attribute^=value]`
+  - `[attribute$=value]`
+  - `[attribute*=value]`
+  - `[attrSel1][attrSel2][attrSelN]`
 
-  ```html
-  <div id="div1" class="box">class为box的div1</div>
-  <div id="div2" class="box">class为box的div2</div>
-  <div id="div3">div3</div>
-  <span class="box">class为box的span</span>
-  <br/>
-  <ul>
-    <li>AAAAA</li>
-    <li title="hello">BBBBB</li>
-    <li class="box">CCCCC</li>
-    <li title="hello">DDDDDD</li>
-    <li title="two">BBBBB</li>
-    <li style="display:none">我本来是隐藏的</li>
-  </ul>
-  <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
-  <script type="text/javascript">
-  
-    /*
-     需求:
-     1. 选择第一个div
-     2. 选择最后一个class为box的元素
-     3. 选择所有class属性不为box的div
-     4. 选择第二个和第三个li元素
-     5. 选择内容为BBBBB的li
-     6. 选择隐藏的li
-     7. 选择有title属性的li元素
-     8. 选择所有属性title为hello的li元素
-     */
-    //1. 选择第一个div
-    // $('div:first').css('background', 'red')
-    //2. 选择最后一个class为box的元素
-    //$('.box:last').css('background', 'red')
-    //3. 选择所有class属性不为box的div
-    // $('div:not(.box)').css('background', 'red')  //没有class属性也可以
-    //4. 选择第二个和第三个li元素
-    // $('li:gt(0):lt(2)').css('background', 'red') // 多个过滤选择器不是同时执行, 而是依次
-    //$('li:lt(3):gt(0)').css('background', 'red')
-    //5. 选择内容为BBBBB的li
-    // $('li:contains("BBBBB")').css('background', 'red')
-    //6. 选择隐藏的li
-    // console.log($('li:hidden').length, $('li:hidden')[0])
-    //7. 选择有title属性的li元素
-    // $('li[title]').css('background', 'red')
-    //8. 选择所有属性title为hello的li元素
-    $('li[title="hello"]').css('background', 'red')
-  </script>
-  ```
+```html
+<div id="div1" class="box">class为box的div1</div>
+<div id="div2" class="box">class为box的div2</div>
+<div id="div3">div3</div>
+<span class="box">class为box的span</span>
+<br/>
+<ul>
+  <li>AAAAA</li>
+  <li title="hello">BBBBB</li>
+  <li class="box">CCCCC</li>
+  <li title="hello">DDDDDD</li>
+  <li title="two">BBBBB</li>
+  <li style="display:none">我本来是隐藏的</li>
+</ul>
+<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+<script type="text/javascript">
 
-练习： 表格隔行变色
+  /*
+    需求:
+    1. 选择第一个div
+    2. 选择最后一个class为box的元素
+    3. 选择所有class属性不为box的div
+    4. 选择第二个和第三个li元素
+    5. 选择内容为BBBBB的li
+    6. 选择隐藏的li
+    7. 选择有title属性的li元素
+    8. 选择所有属性title为hello的li元素
+    */
+  //1. 选择第一个div
+  // $('div:first').css('background', 'red')
+  //2. 选择最后一个class为box的元素
+  //$('.box:last').css('background', 'red')
+  //3. 选择所有class属性不为box的div
+  // $('div:not(.box)').css('background', 'red')  //没有class属性也可以
+  //4. 选择第二个和第三个li元素
+  // $('li:gt(0):lt(2)').css('background', 'red') // 多个过滤选择器不是同时执行, 而是依次
+  //$('li:lt(3):gt(0)').css('background', 'red')
+  //5. 选择内容为BBBBB的li
+  // $('li:contains("BBBBB")').css('background', 'red')
+  //6. 选择隐藏的li
+  // console.log($('li:hidden').length, $('li:hidden')[0])
+  //7. 选择有title属性的li元素
+  // $('li[title]').css('background', 'red')
+  //8. 选择所有属性title为hello的li元素
+  $('li[title="hello"]').css('background', 'red')
+</script>
+```
+
+练习：表格隔行变色
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815163734.png)
 
@@ -609,65 +588,65 @@ th, td {
 </script>
 ```
 
-- 表单选择器
+表单选择器
 
-  - 表单
-    - `:input`
-    - `:text`
-    - `:checkbox`
-    - `:radio`
-  - 表单对象属性
-    - `:checked`: 选中的
+- 表单
+  - `:input`
+  - `:text`
+  - `:checkbox`
+  - `:radio`
+- 表单对象属性
+  - `:checked`：选中的
 
-  ```html
-  <form>
-    用户名: <input type="text"/><br>
-    密 码: <input type="password"/><br>
-    爱 好:
-    <input type="checkbox" checked="checked"/>篮球
-    <input type="checkbox"/>足球
-    <input type="checkbox" checked="checked"/>羽毛球 <br>
-    性 别:
-    <input type="radio" name="sex" value='male'/>男
-    <input type="radio" name="sex" value='female'/>女<br>
-    邮 箱: <input type="text" name="email" disabled="disabled"/><br>
-    所在地:
-    <select>
-      <option value="1">北京</option>
-      <option value="2" selected="selected">天津</option>
-      <option value="3">河北</option>
-    </select><br>
-    <input type="submit" value="提交"/>
-  </form>
-  <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    /*
-     需求:
-     1. 选择不可用的文本输入框
-     2. 显示选择爱好 的个数
-     3. 显示选择的城市名称
-     */
-    //1. 选择不可用的文本输入框
-    // $(':text:disabled').css('background', 'red')
-    //2. 显示选择爱好 的个数
-    console.log($(':checkbox:checked').length)
-    //3. 显示选择的城市名称
-    $(':submit').click(function () {
-      var city = $('select>option:selected').html() // 选择的option的标签体文本
-      city = $('select').val()  // 选择的option的value属性值
-      alert(city)
-    })
-  </script>
-  ```
+```html
+<form>
+  用户名: <input type="text"/><br>
+  密 码: <input type="password"/><br>
+  爱 好:
+  <input type="checkbox" checked="checked"/>篮球
+  <input type="checkbox"/>足球
+  <input type="checkbox" checked="checked"/>羽毛球 <br>
+  性 别:
+  <input type="radio" name="sex" value='male'/>男
+  <input type="radio" name="sex" value='female'/>女<br>
+  邮 箱: <input type="text" name="email" disabled="disabled"/><br>
+  所在地:
+  <select>
+    <option value="1">北京</option>
+    <option value="2" selected="selected">天津</option>
+    <option value="3">河北</option>
+  </select><br>
+  <input type="submit" value="提交"/>
+</form>
+<script src="js/jquery-1.10.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+  /*
+    需求:
+    1. 选择不可用的文本输入框
+    2. 显示选择爱好 的个数
+    3. 显示选择的城市名称
+    */
+  //1. 选择不可用的文本输入框
+  // $(':text:disabled').css('background', 'red')
+  //2. 显示选择爱好 的个数
+  console.log($(':checkbox:checked').length)
+  //3. 显示选择的城市名称
+  $(':submit').click(function () {
+    var city = $('select>option:selected').html() // 选择的option的标签体文本
+    city = $('select').val()  // 选择的option的value属性值
+    alert(city)
+  })
+</script>
+```
 
-### 2、`$`工具方法
+### 2、`$` 工具方法
 
-1. `$.each()`: 遍历数组或对象中的数据
-2. `$.trim()`: 去除字符串两边的空格
-3. `$.type(obj)`: 得到数据的类型
-4. `$.isArray(obj)`: 判断是否是数组
-5. `$.isFunction(obj)`: 判断是否是函数
-6. `$.parseJSON(json)`: 解析json字符串转换为js对象/数组
+1. `$.each()`：遍历数组或对象中的数据
+2. `$.trim()`：去除字符串两边的空格
+3. `$.type(obj)`：得到数据的类型
+4. `$.isArray(obj)`：判断是否是数组
+5. `$.isFunction(obj)`：判断是否是函数
+6. `$.parseJSON(json)`：解析 json 字符串转换为 js 对象/数组
 
 ```html
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
@@ -705,7 +684,7 @@ th, td {
 </script>
 ```
 
-练习：多Tab点击切换
+练习：多 Tab 点击切换
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815163919.png)
 
@@ -770,9 +749,9 @@ th, td {
 
 - `post`
 
-  ……
+- ……
 
-## 四、使用jQuery对象
+## 四、使用 jQuery 对象
 
 ### 1、属性/文本
 
@@ -784,15 +763,15 @@ th, td {
 - `prop(name)` / `prop(name, value)`: 读写布尔值的标签属性
 - `removeAttr(name)`/`removeProp(name)`: 删除属性
 
-操作class属性
+操作 class 属性
 
-- `addClass(classValue)`: 添加class
-- `removeClass(classValue)`: 移除指定class
+- `addClass(classValue)`：添加 class
+- `removeClass(classValue)`：移除指定 class
 
 操作HTML代码/文本/值
 
-- `val()` / `val(value)`: 读写标签的value
-- `html()` / `html(htmlString)`: 读写标签体文本
+- `val()` / `val(value)`：读写标签的value
+- `html()` / `html(htmlString)`：读写标签体文本
 
 ```html
 <div id="div1" class="box" title="one">class为box的div1</div>
@@ -857,7 +836,7 @@ th, td {
 
 ### 2、CSS
 
-(1) style样式(设置CSS样式/读取CSS值)
+(1) style 样式（设置 CSS 样式/读取 CSS 值）
 
 - `css(styleName)`: 根据样式名得到对应的值
 - `css(styleName, value)`: 设置一个样式
@@ -882,11 +861,11 @@ th, td {
 </script>
 ```
 
-(2) 位置坐标(获取/设置标签的位置数据)
+(2) 位置坐标（获取/设置标签的位置数据）
 
-- `offset()`: 读/写当前元素坐标(原点是页面左上角)
-- `position()`: 读当前元素坐标(原点是父元素左上角)
-- `scrollTop()`/`scrollLeft()`: 读/写元素/页面的滚动条坐标
+- `offset()`：读/写当前元素坐标（原点是页面左上角）
+- `position()`：读当前元素坐标（原点是父元素左上角）
+- `scrollTop()`/`scrollLeft()`：读/写元素/页面的滚动条坐标
 
 ```html
 <style type="text/css">
@@ -952,11 +931,11 @@ th, td {
 </script>
 ```
 
-1. scrollTop(): 读取/设置滚动条的Y坐标
+1. `scrollTop()`：读取/设置滚动条的Y坐标
 
-2. `$(document.body).scrollTop()+$(document.documentElement).scrollTop()`: 读取页面滚动条的Y坐标(兼容chrome和IE)
+2. `$(document.body).scrollTop()+$(document.documentElement).scrollTop()`：读取页面滚动条的 Y 坐标
 
-3. `$('body,html').scrollTop(60);`滚动到指定位置(兼容chrome和IE)
+3. `$('body,html').scrollTop(60);`：滚动到指定位置
 
 ```html
 <body style="height: 2000px;">
@@ -991,30 +970,32 @@ th, td {
 </body>
 ```
 
-(3) 尺寸(获取/设置标签的尺寸数据)
+(3) 尺寸（获取/设置标签的尺寸数据）
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815171021.png)
 
 - 内容尺寸
-  - `height()`: height
-  - `width()`: width
+  - `height()`：height
+  - `width()`：width
 - 内部尺寸
-  - `innerHeight()`: height+padding
-  - `innerWidth()`: width+padding
+  - `innerHeight()`：height + padding
+  - `innerWidth()`：width + padding
 
 - 外部尺寸
-  - outerHeight(false/true): height+padding+border 如果是true, 加上margin
-  - outerWidth(false/true): width+padding+border 如果是true, 加上margin
+  - `outerHeight(false/true)`：height + padding + border 如果是 true，加上 margin
+  - `outerWidth(false/true)`：width + padding + border 如果是 true，加上 margin
 
 ```html
-div {
-  width: 100px;
-  height: 150px;
-  background: red;
-  padding: 10px;
-  border: 10px #fbd850 solid;
-  margin: 10px;
-}
+<style>
+  div {
+    width: 100px;
+    height: 150px;
+    background: red;
+    padding: 10px;
+    border: 10px #fbd850 solid;
+    margin: 10px;
+  }
+</style>
 <div>div</div>
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script>
@@ -1033,19 +1014,19 @@ div {
 
 (1) 过滤
 
-在jQuery对象中的元素对象数组中过滤出一部分元素来
+在 jQuery 对象中的元素对象数组中过滤出一部分元素来
 
-1. first()
+1. `first()`
 
-2. last()
+2. `last()`
 
-3. eq(index|-index)
+3. `eq(index|-index)`：index 为正数，从前往后数；index 为负数，从后往前数
 
-4. filter(selector)：对当前元素提要求
+4. `filter(selector)`：对当前元素提要求
 
-5. not(selector)：对当前元素提要求, 并取反
+5. `not(selector)`：对当前元素提要求，并取反
 
-6. has(selector)：对子孙元素提要求
+6. `has(selector)`：对子孙元素提要求
 
 ```html
 <ul>
@@ -1087,17 +1068,17 @@ div {
 
 在已经匹配出的元素集合中根据选择器查找孩子/父母/兄弟标签
 
-1. children(): 子标签中找
+1. `children()`：子标签中找
 
-2. find() : 后代标签中找
+2. `find()`：后代标签中找
 
-3. parent() : 父标签
+3. `parent()`：父标签
 
-4. prevAll() : 前面所有的兄弟标签
+4. `prevAll()`：前面所有的兄弟标签
 
-5. nextAll() : 后面所有的兄弟标签
+5. `nextAll()`：后面所有的兄弟标签
 
-6. siblings() : 前后所有的兄弟标签
+6. `siblings()`：前后所有的兄弟标签
 
 ```html
 <div id="div1" class="box" title="one">class为box的div1</div>
@@ -1141,18 +1122,18 @@ div {
 </script>
 ```
 
-### 4、文档处理(CUD)
+### 4、文档处理
 
 - 增加
-  - append() / appendTo(): 向当前匹配的所有元素内部的最后插入指定内容
-  - preppend() / preppendTo(): 向当前匹配的所有元素内部的最前面插入指定内容
-  - before(): 将指定内容插入到当前所有匹配元素的前面
-  - after(): 将指定内容插入到当前所有匹配元素的后面替换节点
+  - `append()` / `appendTo()`：向当前匹配的所有元素内部的最后插入指定内容
+  - `preppend()` / `preppendTo()`：向当前匹配的所有元素内部的最前面插入指定内容
+  - `before()`：将指定内容插入到当前所有匹配元素的前面
+  - `after()`：将指定内容插入到当前所有匹配元素的后面替换节点
 - 删除
-  - remove(): 将自己及内部的孩子都删除
-  - empty(): 掏空(自己还在)
+  - `remove()`：将自己及内部的孩子都删除
+  - `empty()`：掏空（自己还在）
 - 更新
-  - replaceWith()：用指定内容替换所有匹配的标签删除节点
+  - `replaceWith()`：用指定内容替换所有匹配的标签删除节点
 
 ```html
 <style type="text/css">
@@ -1226,19 +1207,19 @@ div {
 (1) 事件处理
 
 - 绑定事件
-  - eventName(function(){})：绑定对应事件名的监听, 例如：`$('#div').click(function(){});`
-  - on('eventName', function(){})： 通用的绑定事件监听, 例如：`$('#div').on('click', function(){})`
-    - 常用: `click`, `mouseenter`/`mouseleave` `mouseover`/`mouseout` `focus`/`blur`
+  - `eventName(function(){})`：绑定对应事件名的监听，例如 `$('#div').click(function(){});`
+  - `on('eventName', function(){})`： 通用的绑定事件监听，例如 `$('#div').on('click', function(){})`
+    - 常用：`click`, `mouseenter`/`mouseleave` `mouseover`/`mouseout` `focus`/`blur`
 
-     优缺点:
+    - 优缺点:
 
-      eventName: 编码方便, 但只能加一个监听, 且有的事件监听不支持
+      - `eventName`：编码方便，但只能加一个监听，且有的事件监听不支持
 
-      on: 编码不方便, 可以添加多个监听, 且更通用
+      - `on`：编码不方便，可以添加多个监听，且更通用
 
 - 解绑事件
 
-  - off('eventName')
+  - `off('eventName')`：解绑对应事件名的监听，例如 `$('#div').off('click');`
 
 ```html
 <style type="text/css">
@@ -1347,104 +1328,104 @@ div {
 
 (2) 事件切换
 
-hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
+`hover(function(){}, function(){})`：同时绑定鼠标移入和移出监听
 
-区别mouseover与mouseenter?
+区别 `mouseover` 与 `mouseenter`?
 
-- mouseover: 在移入子元素时也会触发, 对应mouseout
+- `mouseover`：在移入子元素时也会触发，对应 `mouseout`
 
-- mouseenter: 只在移入当前元素时才触发, 对应mouseleave
+- `mouseenter`：只在移入当前元素时才触发，对应 `mouseleave`
 
-​        hover()使用的就是mouseenter()和mouseleave()
+`hover()` 使用的就是 `mouseenter()` 和 `mouseleave()`
 
-区别on('eventName', fun)与eventName(fun)
+区别 `on('eventName', fun)` 与 `eventName(fun)`
 
-- on('eventName', fun): 通用, 但编码麻烦
+- `on('eventName', fun)`：通用，但编码麻烦
 
-- eventName(fun): 编码简单, 但有的事件没有对应的方法
+- `eventName(fun)`：编码简单，但有的事件没有对应的方法
 
 ```html
 <style type="text/css">
- * {
-  margin: 0px;
- }
- .div1 {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 50px;
-  left: 10px;
-  background: olive;
- }
- .div2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50px;
-  background: red;
- }
- .div3 {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 50px;
-  left: 230px;
-  background: olive;
- }
- .div4 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50px;
-  background: yellow;
- }
- .divText{
-  position: absolute;
-  top: 330px;
-  left: 10px;
- }
+  * {
+    margin: 0px;
+  }
+  .div1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 10px;
+    background: olive;
+  }
+  .div2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    background: red;
+  }
+  .div3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 230px;
+    background: olive;
+  }
+  .div4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    background: yellow;
+  }
+  .divText{
+    position: absolute;
+    top: 330px;
+    left: 10px;
+  }
 </style>
 <div class="divText">
- 区分鼠标的事件
+  区分鼠标的事件
 </div>
 <div class="div1">
- div1.....
- <div class="div2">div2....</div>
+  div1.....
+  <div class="div2">div2....</div>
 </div>
 <div class="div3">
- div3.....
- <div class="div4">div4....</div>
+  div3.....
+  <div class="div4">div4....</div>
 </div>
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
- $('.div1')
+$('.div1')
   .mouseover(function () {
-   console.log('mouseover 进入')
+    console.log('mouseover 进入')
   })
   .mouseout(function () {
-   console.log('mouseout 离开')
+    console.log('mouseout 离开')
   })
- $('.div3')
+$('.div3')
   .mouseenter(function () {
-   console.log('mouseenter 进入')
+    console.log('mouseenter 进入')
   })
   .mouseleave(function () {
-   console.log('mouseleave 离开')
+    console.log('mouseleave 离开')
   })
 </script>
 ```
 
 (3) 事件委托
-- 理解: 将子元素的事件委托给父辈元素处理
-  - 事件监听绑定在父元素上, 但事件发生在子元素上
-  *　事件会冒泡到父元素
-  - 但最终调用的事件回调函数的是子元素: event.target
+
+- 理解：将子元素的事件委托给父辈元素处理
+  - 事件监听绑定在父元素上，但事件发生在子元素上（事件会冒泡到父元素）
+  - 但最终调用的事件回调函数的是子元素：`event.target`
 - 好处
   - 新增的元素没有事件监听
-  - 减少监听的数量(n==>1)
+  - 减少监听的数量（n==>1）
 - 编码
-  - delegate(selector, 'eventName', function(event){}) // 回调函数中的this是子元素
-  - undelegate('eventName')
+  - `delegate(selector, 'eventName', function(event){}) // 回调函数中的this是子元素`
+  - `undelegate('eventName')`
 
 ```html
 <ul>
@@ -1474,35 +1455,35 @@ hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
 </script>
 ```
 
-引入：绑定事件监听的问题: 新加的元素没有监听
+引入：绑定事件监听的问题（新加的元素没有监听）
 
-1. 事件委托(委派/代理):
+1、事件委托（委派/代理）：
 
-- 将多个子元素(li)的事件监听委托给父辈元素(ul)处理
+- 将多个子元素（li）的事件监听委托给父辈元素（ul）处理
 
 - 监听回调是加在了父辈元素上
 
-- 当操作任何一个子元素(li)时, 事件会冒泡到父辈元素(ul)
+- 当操作任何一个子元素（li）时，事件会冒泡到父辈元素（ul）
 
-- 父辈元素不会直接处理事件, 而是根据event.target得到发生事件的子元素(li), 通过这个子元素调用事件回调函数
+- 父辈元素不会直接处理事件，而是根据 `event.target` 得到发生事件的子元素（li），通过这个子元素调用事件回调函数
 
-2. 事件委托的2方:
+2、事件委托的 2 方：
 
-- 委托方: 业主 li
+- 委托方：业主 li
 
-- 被委托方: 中介 ul
+- 被委托方：中介 ul
 
-3. 使用事件委托的好处
+3、使用事件委托的好处
 
-- 添加新的子元素, 自动有事件响应处理
+- 添加新的子元素，自动有事件响应处理
 
-- 减少事件监听的数量: n==>1
+- 减少事件监听的数量：n==>1
 
-4. jQuery的事件委托API
+4、jQuery 的事件委托 API
 
-- 设置事件委托: `$(parentSelector).delegate(childrenSelector, eventName, callback)`
+- 设置事件委托：`$(parentSelector).delegate(childrenSelector, eventName, callback)`
 
-- 移除事件委托: `$(parentSelector).undelegate(eventName)`
+- 移除事件委托：`$(parentSelector).undelegate(eventName)`
 
 ```html
 <ul>
@@ -1533,24 +1514,25 @@ hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
 ```
 
 - 事件坐标
-  - `event.offsetX`/`event.offsetY`: 原点是当前元素左上角(相对于事件元素左上角)
-  - `event.clientX`/`event.clientY`: 原点是窗口左上角(相对于视口的左上角)
-  - `event.pageX`/`event.pageY`: 原点是页面左上角(相对于页面的左上角)
+  - `event.offsetX`/`event.offsetY`：原点是当前元素左上角（相对于事件元素左上角）
+  - `event.clientX`/`event.clientY`：原点是窗口左上角（相对于视口的左上角）
+  - `event.pageX`/`event.pageY`：原点是页面左上角（相对于页面的左上角）
 
-     ![](https://cdn.wallleap.cn/img/pic/illustration/20200815173853.png)
+![](https://cdn.wallleap.cn/img/pic/illustration/20200815173853.png)
+
 - 事件相关处理
-  - 停止事件冒泡: `event.stopPropagation()`
-  - 阻止事件的默认行为: `event.preventDefault()`
+  - 停止事件冒泡：`event.stopPropagation()`
+  - 阻止事件的默认行为：`event.preventDefault()`
 
 ### 6、动画效果
 
-在一定的时间内, 不断改变元素样式
+在一定的时间内，不断改变元素样式
 
-(1) 滑动动画(不断改变元素的高度来实现的)
+(1) 滑动动画（不断改变元素的高度来实现的）
 
-- slideDown()：带动画的展开
-- slideUp()：带动画的收缩
-- slideToggle()：带动画的切换展开/收缩
+- `slideDown()`：带动画的展开
+- `slideUp()`：带动画的收缩
+- `slideToggle()`：带动画的切换展开/收缩
 
 ```html
 <style type="text/css">
@@ -1596,11 +1578,11 @@ hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
 </script>
 ```
 
-(2) 淡入淡出动画(不断改变元素的透明度来实现的)
+(2) 淡入淡出动画（不断改变元素的透明度来实现的）
 
-- fadeIn()：带动画的显示
-- fadeOut()：带动画隐藏
-- fadeToggle()：带动画切换显示/隐藏
+- `fadeIn()`：带动画的显示
+- `fadeOut()`：带动画隐藏
+- `fadeToggle()`：带动画切换显示/隐藏
 
 ```html
 <style type="text/css">
@@ -1651,11 +1633,11 @@ hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
 </script>
 ```
 
-(3) 显示/隐藏动画(不断改变元素的尺寸和透明度来实现)
+(3) 显示/隐藏动画（不断改变元素的尺寸和透明度来实现）
 
-- show()：(不)带动画的显示
-- hide()：(不)带动画的隐藏
-- toggle()：(不)带动画的切换显示/隐藏
+- `show()`：(不)带动画的显示
+- `hide()`：(不)带动画的隐藏
+- `toggle()`：(不)带动画的切换显示/隐藏
 
 ```html
 <style type="text/css">
@@ -1710,8 +1692,8 @@ hover(function(){}, function(){}) 同时绑定鼠标移入和移出监听
 
 (4) 自定义动画
 
-- animate({结束时的样式}, time, fun)：自定义动画效果的动画
-- stop()：停止动画
+- `animate({结束时的样式}, time, fun)`：自定义动画效果的动画
+- `stop()`：停止动画
 
 ```html
 <style type="text/css">
@@ -1823,9 +1805,9 @@ jQuery动画本质 : 在指定时间内不断改变元素样式值来实现的
 </script>
 ```
 
-jQuery对象使用特点
+jQuery 对象使用特点
 
-- 链式调用：调用jQuery对象的任何方法后返回的还是当前jQuery对象
+- 链式调用：调用 jQuery 对象的任何方法后返回的还是当前 jQuery 对象
 
 ```javascript
 $('.div1')
@@ -1838,30 +1820,32 @@ $('.div1')
 ```
 
 - 读写合一
-  - 读: 内部第一个dom元素
-  - 写: 内部所有的dom元素
+  - 读：内部第一个 DOM 元素
+  - 写：内部所有的 DOM 元素
 
-## 五、jQuery插件
+## 五、jQuery 插件
 
 ### 1、扩展插件
 
-- 扩展jQuery的工具方法
+扩展 jQuery 的工具方法
 
 ```javascript
 $.extend({
-  xxx: fuction () {} // this是$
+  xxx: function () {} // this 是 $
 })
 $.xxx()
 ```
 
-- 扩展jQuery对象的方法
+扩展 jQuery 对象的方法
 
 ```javascript
 $.fn.extend({
-  xxx: function(){}  // this是jQuery对象
+  xxx: function(){}  // this 是 jQuery 对象
 })
 $obj.xxx()
 ```
+
+例子：
 
 ```html
 <style type="text/css">
@@ -1888,7 +1872,7 @@ $obj.xxx()
 <!--
 1. 扩展jQuery的工具方法
   $.extend(object)
-2. 扩展jQuery对象的方法
+1. 扩展jQuery对象的方法
   $.fn.extend(object)
 -->
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
@@ -1923,23 +1907,23 @@ $obj.xxx()
 </script>
 ```
 
-### 2、jQuery插件
+### 2、jQuery 插件
 
 - 理解
-  - 基于jQuery编写的扩展库
+  - 基于 jQuery 编写的扩展库
   - <http://plugins.jquery.com/>
 - jquery-validation
   - 表单验证插件
   - 参考"菜鸟教程"学习 <https://www.runoob.com/jquery/jquery-plugin-validate.html>
   - 使用
     - 下载
-    - 引入js
+    - 引入 js
       - jquery-1.11.1.js
       - jquery.validate.js
       - messages_zh.js
     - 定义验证
       - 直接在标签中指定
-      - js编码指定
+      - js 编码指定
 
 - jquery UI  <http://jqueryui.com/>
 - laydate   <http://www.layui.com/laydate/>
@@ -1965,25 +1949,25 @@ $obj.xxx()
 </head>
 <body>
 <!--
-问题 : 如果有2个库都有$, 就存在冲突
-解决 : jQuery库可以释放$的使用权, 让另一个库可以正常使用, 此时jQuery库只能使用jQuery了
-API : jQuery.noConflict()
+问题：如果有 2 个库都有 $，就存在冲突
+解决：jQuery 库可以释放 $ 的使用权，让另一个库可以正常使用，此时 jQuery 库只能使用 jQuery 了
+API：jQuery.noConflict()
 -->
 <script type="text/javascript" src="js/myLib.js"></script>
 <script type="text/javascript" src="js/jquery-1.10.1.js"></script>
 <script type="text/javascript">
-  // 释放$的使用权
+  // 释放 $ 的使用权
   jQuery.noConflict()
-  // 调用myLib中的$
+  // 调用 myLib 中的 $
   $()
-  // 要想使用jQuery的功能, 只能使用jQuery
+  // 要想使用 jQuery 的功能，只能使用 jQuery
   jQuery(function () {
     console.log('文档加载完成')
   })
 </script>
 ```
 
-### 2、jQuery中的`$(function(){})`
+### 2、jQuery 中的 `$(function(){})`
 
 ```html
 <h1>测试window.onload与$(document).ready()</h1>
@@ -2032,7 +2016,7 @@ API : jQuery.noConflict()
 
 ### 3、练习
 
-以前用原生js实现过的用jQuery来一遍
+以前用原生 js 实现过的用 jQuery 来一遍
 
 (1) 爱好选择器
 
@@ -2516,7 +2500,7 @@ $(function () {
           currLeft = -imgCount * PAGE_WIDTH
         }
       }
-      // 设置left
+      // 设置 left
       $list.css('left', currLeft)
     }, ITEM_TIME)
 
@@ -2529,7 +2513,7 @@ $(function () {
    */
   function updatePoints (next) {
 
-    // 计算出目标圆点的下标targetIndex
+    // 计算出目标圆点的下标 targetIndex
     var targetIndex = 0
     if(typeof next === 'boolean') {
       if(next) {
@@ -2560,6 +2544,6 @@ $(function () {
 </script>
 ```
 
-jQuery文档的结构图
+jQuery 文档的结构图
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815175515.png)

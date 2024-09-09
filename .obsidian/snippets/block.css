@@ -1,0 +1,17 @@
+.cm-sizer .inline-title {
+  caret-color: var(--cm-tag);
+}
+
+body.unified-cm-highlighting[class*="theme-"] .CodeView, body.unified-cm-highlighting[class*="theme-"] .CodeView .cm-s-obsidian, body.unified-cm-highlighting[class*="theme-"] .CodeView .cm-s-obsidian .CodeMirror-gutter, body.unified-cm-highlighting[class*="theme-"] .cm-s-obsidian div.HyperMD-codeblock-bg, body.unified-cm-highlighting[class*="theme-"] .cm-s-obsidian .cm-hmd-frontmatter.CodeMirror-linebackground, body.unified-cm-highlighting[class*="theme-"] .cm-s-obsidian .templater-command-bg, body.unified-cm-highlighting[class*="theme-"] .cm-s-obsidian .templater-inline .cm-templater-command, body.unified-cm-highlighting[class*="theme-"] .cm-s-obsidian .cm-math.CodeMirror-linebackground, body.fallback-highlighting[class*="theme-"] .markdown-preview-view pre[class*="language-"], body.fallback-highlighting[class*="theme-"] .markdown-preview-view pre[class*="language-"] code {
+  caret-color: white;
+}
+
+.HyperMD-quote.HyperMD-quote-1.cm-line {
+  padding: 1em;
+  background-color: var(--color-base-20);
+  border-radius: 0 .4em .4em 0;
+}
+
+.HyperMD-quote.HyperMD-quote-1.cm-line + .HyperMD-quote.HyperMD-quote-1.cm-line {
+  padding: 0 1em 1em 1em;
+}

@@ -21,9 +21,9 @@ description: 调试向 Chrome 打造
 
 主要就是利用 Chrome 的多用户会生成一个独立的、相互隔离的浏览器
 
-### 方法一、自己指定存放数据路径(推荐)
+### 方法一、自己指定存放数据路径（推荐）
 
-1、进入 Chrome 所在目录(可以通过默认的快捷方式右击-属性-打开文件所在位置)，接着右击 Chrome，选择创建快捷方式
+1、进入 Chrome 所在目录（可以通过默认的快捷方式右击-属性-打开文件所在位置），接着右击 Chrome，选择创建快捷方式
 
 ![创建快捷方式](https://cdn.wallleap.cn/img/pic/illustration/image-20200716091222532.png)
 
@@ -39,7 +39,7 @@ description: 调试向 Chrome 打造
 
 ### 方法二、直接生成新用户快捷方式
 
- 打开谷歌浏览器，点击如下的图标
+打开谷歌浏览器，点击如下的图标
 
 ![点击图标](https://cdn.wallleap.cn/img/pic/illustration/image-20200716092020261.png)
 

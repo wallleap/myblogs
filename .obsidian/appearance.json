@@ -1,0 +1,16 @@
+{
+  "accentColor": "#d84dff",
+  "enabledCssSnippets": [
+    "base",
+    "block",
+    "heading",
+    "inline"
+  ],
+  "theme": "moonstone",
+  "interfaceFontFamily": "MiSans",
+  "textFontFamily": "MiSans",
+  "monospaceFontFamily": "JetBrains Mono",
+  "baseFontSize": 26,
+  "translucency": true,
+  "nativeMenus": false
+}

@@ -1,7 +1,7 @@
 ---
 title: Vue 的完整版和运行时版有什么区别
 date: 2023-06-02 20:13
-updated: 2026-05-02 20:13
+updated: 2023-06-02 20:13
 cover: https://cdn.wallleap.cn/img/pic/cover/vue.jpg
 author: Luwang
 comments: true
@@ -17,11 +17,13 @@ keywords:
 description: Vue 的完整版和运行时版有什么区别
 ---
 
+引入 CDN 文件时，Vue 有两个版本，完整版和运行时版，两者有什么区别呢？
+
 在了解这两个版本之前，我们先了解一下 Vue
 
 - 读作 View，意为 MVC 中的 V
 - MVC 中的 V 是 Vue 的重点，M 和 C 被简化（是 MV* 框架）
-  - Vue 1.0 宣传的是 MVVM
+  - Vue 0.x 宣传的是 MVVM
   - 后面的是 MV*
 
 ## 官方文档
@@ -53,7 +55,7 @@ description: Vue 的完整版和运行时版有什么区别
 
 在官网中[不同版本区别](https://v2.cn.vuejs.org/v2/guide/installation.html#%E5%AF%B9%E4%B8%8D%E5%90%8C%E6%9E%84%E5%BB%BA%E7%89%88%E6%9C%AC%E7%9A%84%E8%A7%A3%E9%87%8A)可以看到除开生产或开发版和模块化，可以分为两个版本**完整版（vue.js）和运行时版本（vue.runtime.js）**
 
-![两个版本](https://cdn.wallleap.cn/img/pic/illustration/202306041331312.png?imageMogr2/format/webp/interlace/1/quality/80|watermark/1/image/aHR0cDovL3dhbGxsZWFwLTEyNTkwODQzMzAuY29zLmFwLWd1YW5nemhvdS5teXFjbG91ZC5jb20vaW1nL3dhdGVybWFyazEucG5n/gravity/southeast/dx/16/dy/16/scatype/3/spcent/10/dissolve/90|watermark/3/type/3/text/bHV3YW5nMHdhbGxsZWFw)
+![两个版本](https://cdn.wallleap.cn/img/pic/illustration/202306041331312.png)
 
 - 两个版本
   - 完整版 `vue.js`、`vue.min.js`
@@ -61,8 +63,8 @@ description: Vue 的完整版和运行时版有什么区别
     - 同时包含编译器（Compiler）和运行时（Runtime）的构建
   - 运行时版本 `vue.runtime.js`
     - 用 JS 构建视图
-    - 需要自己写 h 函数
-    - h 也可以交给 vue-loader，把 .vue 文件翻译成 h 构建方法，这样做 HTML 就只有一个 `dia#app` ，SEO 不友好
+    - 需要自己写 h 函数（渲染函数）
+    - h 也可以交给 vue-loader，把 `.vue` 文件翻译成 h 构建方法，这样做 HTML 就只有一个 `div#app` ，SEO 不友好
 - `main.js` 中 `const vm = new Vue({})`
 - 编译器负责把模板字符串编译成 JS 渲染函数的代码
 - 运行时负责创建 Vue 实例的代码，渲染和修补虚拟 DOM 等。基本上去掉了编译器。
@@ -71,7 +73,7 @@ description: Vue 的完整版和运行时版有什么区别
 
 **完整版** Vue 的写法：
 
-在 HTML/模板 中用到了模板字符串，需要用到 Compiler（`{{count}}` → `0`、`v-if`、`v-for`  等）
+在 HTML/模板（`template`）中用到了模板字符串、指令等，需要用到 Compiler（`{{count}}` → `0`、`v-if`、`v-for`  等）
 
 ```html
 <div id="app">
@@ -79,18 +81,18 @@ description: Vue 的完整版和运行时版有什么区别
   <button @click="add">+1</button>
 </div>
 <script>
-  new Vue({
- el: '#app',
- // template: `<div>{{count}}<button v-on:click="add">+1</button></div>` // 或者用这种
+new Vue({
+  el: '#app',
+  // template: `<div>{{count}}<button v-on:click="add">+1</button></div>` // 或者用这种
  data: {
    count: 0
  },
  methods: {
-   add() {
-  this.count += 1
-   }
+  add() {
+    this.count += 1
+  }
  }
-  })
+})
 </script>
 ```
 
@@ -105,20 +107,20 @@ description: Vue 的完整版和运行时版有什么区别
 ```html
 <div id="app"></div>
 <script>
-  new Vue({
- el: '#app',
- render(h) {  // h → createElement
-   return h('div', [this.count, h('button', {on: {click: this.add}}, '+1')])
- },
- data: {
-   count: 0
- },
- methods: {
-   add() {
-  this.count += 1
-   }
- }
-  })
+new Vue({
+  el: '#app',
+  render(h) {  // h → createElement
+    return h('div', [this.count, h('button', {on: {click: this.add}}, '+1')])
+  },
+  data: {
+    count: 0
+  },
+  methods: {
+    add() {
+      this.count += 1
+    }
+  }
+})
 </script>
 ```
 
@@ -137,9 +139,9 @@ description: Vue 的完整版和运行时版有什么区别
     <button @click="add">+1</button>
   </div>
 </template>
-<script>  <!-- 除了视图的其他选项 -->
+<script>  // 除了视图的其他选项
 export default {
-  data() {  // vue-loader 下 data 必须是函数
+  data() {  // 单文件组件中 data 必须是函数
     return {
       count: 0
     }
@@ -172,13 +174,13 @@ new Vue({
 })
 ```
 
-MyDemo 是一个对象，有 beforeCreate、beforeDestroy 数组，data、render 等方法，有 methods 对象
+MyDemo 是一个对象，有 methods 对象、beforeCreate、beforeDestroy 数组，data、render 等方法
 
 可以把 `MyDemo.render.toString()` 打印出来就是 render 方法
 
 ### 总结
 
-| | Vue 完整版 | Vue 非完整版 | 评价 |
+| 对比 | Vue 完整版 | Vue 非完整版 | 评价 |
 |---|---|---|---|
 | 特点 | 有 Compiler | 没有 Compiler | Compiler 占约 40% 体积 |
 | 视图 | 写在 HTML 里或者写在 template 选项 | 写在 render 函数里，用 h 来创建标签 | h 是尤雨溪写好传给 render 的 |

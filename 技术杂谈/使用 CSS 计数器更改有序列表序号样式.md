@@ -12,7 +12,7 @@ description: 使用 CSS 计数器更改有序列表序号样式
 
 **CSS 计数器**可让你根据内容在文档中的位置调整其显示的外观。例如，你可以使用计数器自动为网页中的标题编号，或者更改有序列表的编号。
 
-文档：[CSS Counter Styles - CSS（层叠样式表） | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Counter_Styles)
+文档：[CSS Counter Styles](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Counter_Styles)
 
 ## 使用计数器
 
@@ -24,27 +24,27 @@ article>section*4>h2{Section}+(h3{话题}+p{段落111111111}+p{段落aaaaaaaaaaa
 
 ![HTML](https://cdn.wallleap.cn/img/pic/illustrtion/202210121755148.png)
 
-### 1、使用 [`counter-reset`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-reset) 属性初始化计数器的值
+### 1、使用 `counter-reset` 属性初始化计数器的值
 
 在使用计数器之前，需要使用 [`counter-reset`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-reset) 属性来初始化它的值。这个属性也可用于指定计数器的初始值。
 
 #### 正序计数器
 
-`counter-reset` 属性值为 `计数器名称 初始值`，初始值不指定则为0
+`counter-reset` 属性值为 `计数器名称 初始值`，初始值不指定则为 0
 
-将名为 `section` 的计数器初始化为默认值（`0`），将名为 `topic` 的计数器初始化为 `-13`， 将名为 `paragraph` 的计数器初始化为 `1`：
+例如，将名为 `section` 的计数器初始化为默认值（`0`），将名为 `topic` 的计数器初始化为 `-13`， 将名为 `paragraph` 的计数器初始化为 `1`：
 
 ```css
 counter-reset: section;
-counter-reset: topic -13;
+counter-reset: topic -13; /* 中间空格隔开 */
 counter-reset: paragraph 1;
 ```
 
-也可以同时初始化多个计数器，并可以指定其初始值：
+也可以同时初始化多个计数器，并指定其初始值：
 
 ```css
 article {
-	counter-reset: section topic -13 paragraph 1;
+  counter-reset: section topic -13 paragraph 1;
 }
 ```
 
@@ -64,13 +64,13 @@ counter-reset: reversed(topic) 2;
 >
 > 计数器的名称不可以为 `none`、`unset`、`inherit` 或 `initial`，否则，相应的声明会被忽略。
 
-### 2、计数器可通过 [`counter-increment`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-increment) 属性指定其值为递增或递减
+### 2、计数器可通过 `counter-increment` 属性指定其值为递增或递减
 
-在初始化之后，计数器的值就可以使用 [`counter-increment`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-increment) 来指定其为递增或递减，可以在计数器的名称后指定单次递增或递减的值（正数或负数）
+在初始化之后，计数器的值就可以使用 [`counter-increment`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-increment) 来指定其为递增或递减，可以在计数器的名称后指定单次递增或递减的值（正数或负数）：
 
 ```css
 section h2 {
-    counter-increment: section; /* 默认以 1 增加 */
+  counter-increment: section; /* 默认以 1 增加 */
 }
 section h3 {
   counter-increment: topic 1; /* 可以手动指定增加的数值 */
@@ -86,9 +86,9 @@ section p {
 counter-increment: section topic 1 paragraph -2;
 ```
 
-### 3、当前计数器的值通过 [`counter()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter) 或 [`counters()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counters) 函数显示出来
+### 3、当前计数器的值通过 `counter()` 或 `counters()` 函数显示出来
 
-这通常会在[伪元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)的 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/content) 属性中使用。
+这两个函数通常在[伪元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)的 [`content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/content) 属性中使用。
 
 当不需要包含父级上下文的编号，而仅需要嵌套内容的编号时，应使用 [`counter()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter) 函数；当需要同时包含父级上下文和嵌套内容的编号时，应使用 [`counters()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counters) 函数（一般在有序列表或目录中使用）。
 
@@ -126,7 +126,7 @@ section p::before {
 
 使用 `ol` 元素创建的有序列表，会自动应用名为 `list-item` 的计数器。
 
-和其它的计数器一样，其也是一个默认自增（+1）且初始值为 0 的计数器，对于反向计数器，则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
+和其它的计数器一样，它也是一个默认自增（+1）且初始值为 0 的计数器；对于反向计数器（`reversed()`），则以元素数量为初始值，且默认自减（-1）。与自定义的计数器不同，`list-item` 是根据其是否为反向计数器而*自动*自增或自减的。
 
 可以通过 CSS 修改 `list-item` 计数器应用在有序列表上的默认行为。例如，你可以改变默认初始值，或使用 [`counter-increment`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/counter-increment) 改变递增或递减的方式。
 

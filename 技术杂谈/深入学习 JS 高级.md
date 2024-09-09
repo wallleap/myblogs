@@ -32,8 +32,8 @@ description: 深入学习 JS 高级
   - boolean：true/false
   - undefined：undefined
   - null：null
-  - symbol：symbol类型的数据
-  - bigint：bigint类型的数据
+  - symbol：symbol 类型的数据
+  - bigint：bigint 类型的数据
 
 - 对象（引用）类型 object
   - Object：任意对象
@@ -50,7 +50,7 @@ var obj = {
   name: 'TOM',
   age: 12
 }
-fuction test(){
+function test(){
   var a = 3
 }
 var arr = [3, 'abc']
@@ -60,8 +60,8 @@ arr[1]
 **判断**
 
 - `typeof`
-  - 可以判断：undefined/ 数值 /字符串/布尔值/function
-  - 不能判断：null与Object Object与array
+  - 可以判断：undefined/数值/字符串/布尔值/function
+  - 不能判断：null 与 Object、Object与 array
 
 - `instanceof`：判断对象的具体类型
 
@@ -124,7 +124,7 @@ b1.b3()() ---> return的function
 
 ```javascript
 function Person(name, age){ // 构造函数 类型
- this.name = name
+  this.name = name
   this.age = age
 } 
 var p = new Person('Tom', 12) // 根据类型创建的实例对象
@@ -132,63 +132,63 @@ var p = new Person('Tom', 12) // 根据类型创建的实例对象
 
 **其他问题**
 
-1. undefined与null的区别?
+1、undefined 与 null 的区别?
 
-   - undefined代表定义未赋值
-   - nulll定义并赋值了, 只是值为null
+- undefined 代表定义未赋值
+- null 定义并赋值了, 只是值为 null
 
-   ```javascript
-   var a
-   console.log(a)  // undefined
-   a = null
-   console.log(a) // null
-   ```
+```javascript
+var a
+console.log(a)  // undefined
+a = null
+console.log(a) // null
+```
 
-2. 什么时候给变量赋值为null呢?
+2、什么时候给变量赋值为 null 呢?
 
-   - 初始赋值, 表明将要赋值为对象
-   - 结束前, 让对象成为垃圾对象(被垃圾回收器回收)
+- 初始赋值，表明将要赋值为对象
+- 结束前，让对象成为垃圾对象（被垃圾回收器回收）
 
-   ```javascript
-   //起始
-   var b = null  // 初始赋值为null, 表明将要赋值为对象
-   //确定对象就赋值
-   b = ['atguigu', 12]
-   //最后
-   b = null // 让b指向的对象成为垃圾对象(被垃圾回收器回收)
-   // b = 2
-   ```
+```javascript
+//起始
+var b = null  // 初始赋值为 null，表明将要赋值为对象
+//确定对象就赋值
+b = ['luwang', 12]
+//最后
+b = null // 让 b 指向的对象成为垃圾对象（被垃圾回收器回收）
+// b = 2
+```
 
-3. 严格区别变量类型与数据类型?
+3、严格区别变量类型与数据类型?
 
-   - 数据的类型
+- 数据的类型
 
-     - 基本类型
-     - 对象类型
+  - 基本类型
+  - 对象类型
 
-   - 变量的类型(变量内存值的类型)
+- 变量的类型（变量内存值的类型）
 
-     - 基本类型: 保存就是基本类型的数据
-     - 引用类型: 保存的是地址值
+  - 基本类型：保存就是基本类型的数据
+  - 引用类型：保存的是地址值
 
-     ```javascript
-     var c = function () {
-     
-     }
-     console.log(typeof c) // 'function'
-     ```
+```javascript
+var c = function () {
+
+}
+console.log(typeof c) // 'function'
+```
 
 ### 2、数据、变量与内存
 
 1、什么是数据?
 
-- 存储在内存中代表特定信息的'东东', 本质上是0101...
+- 存储在内存中代表特定信息的内容，本质上是 0101...（二进制）
 
-- 数据的特点: 可传递, 可运算
+- 数据的特点：可传递，可运算
 
 - 一切皆数据
 
-- 内存中所有操作的目标: 数据
+- 内存中所有操作的目标：数据
   - 算术运算
   - 逻辑运算
   - 赋值
@@ -196,23 +196,23 @@ var p = new Person('Tom', 12) // 根据类型创建的实例对象
 
 2、什么是内存?
 
-- 内存条通电后产生的可储存数据的空间(临时的)
+- 内存条通电后产生的可储存数据的空间（临时的）
 
-- 内存产生和死亡: 内存条(电路版)--->通电--->产生内存空间--->存储数据--->处理数据--->断电--->内存空间和数据都消失
+- 内存产生和死亡：内存条(电路版)--->通电--->产生内存空间--->存储数据--->处理数据--->断电--->内存空间和数据都消失
 
 - 一块小内存的2个数据
   - 内部存储的数据
   - 地址值
 
 - 内存分类
-  - 栈: 全局变量/局部变量
-  - 堆: 对象
+  - 栈：全局变量/局部变量
+  - 堆：对象
 
 3、什么是变量?
 
-- 可变化的量, 由变量名和变量值组成
+- 可变化的量，由变量名和变量值组成
 
-- 每个变量都对应的一块小内存, 变量名用来查找对应的内存, 变量值就是内存中保存的数据
+- 每个变量都对应的一块小内存，变量名用来查找对应的内存，变量值就是内存中保存的数据
 
 4、内存、数据、变量三者之间的关系
 
@@ -237,13 +237,13 @@ var b = a + 2
 
 5、关于赋值与内存的问题
 
-问题: var a = xxx, a 内存中到底保存的是什么?
+问题：`var a = xxx`，a 内存中到底保存的是什么?
 
-- xxx是**基本数据**, 保存的就是这个**数据**
+- xxx是**基本数据**，保存的就是这个**数据**
 
-- xxx是**对象**, 保存的是对象的**地址值**
+- xxx是**对象**，保存的是对象的**地址值**
 
-- xxx是一个**变量**, 保存的xxx的**内存内容(可能是基本数据, 也可能是地址值)**
+- xxx是一个**变量**，保存的xxx的**内存内容（可能是基本数据，也可能是地址值）**
 
 ```javascript
 var a = 3
@@ -258,11 +258,11 @@ a = b
 
 ![image-20200815100153040](https://cdn.wallleap.cn/img/pic/illustration/20200815100154.png)
 
-1. 关于引用变量赋值问题
+6、关于引用变量赋值问题
 
-- 2个引用变量指向同一个对象, 通过一个变量修改对象内部数据, 另一个变量看到的是修改之后的数据
+- 2 个引用变量指向同一个对象，通过一个变量修改对象内部数据，另一个变量看到的是修改之后的数据
 
-- 2个引用变量指向同一个对象, 让其中一个引用变量指向另一个对象, 另一引用变量依然指向前一个对象
+- 2 个引用变量指向同一个对象，让其中一个引用变量指向另一个对象，另一引用变量依然指向前一个对象
 
 ```javascript
 var obj1 = {name: 'Tom'}
@@ -293,11 +293,11 @@ console.log(a.age) // 13
 
 7、关于数据传递问题
 
-问题: 在 js 调用函数时传递变量参数时, 是值传递还是引用传递
+问题：在 js 调用函数时传递变量参数时，是值传递还是引用传递
 
-- 理解1: 都是值(基本/地址值)传递
+- 理解1：都是值（基本/地址值）传递
 
-- 理解2: 可能是值传递, 也可能是引用传递(地址值)
+- 理解2：可能是值传递，也可能是引用传递（地址值）
 
 ```javascript
 var a = 3
@@ -316,16 +316,16 @@ fn2(obj)  // Tom
 
 8、JS 引擎如何管理内存
 
-问题: JS 引擎如何管理内存?
+问题：JS 引擎如何管理内存?
 
 - 内存生命周期
-  - 分配小内存空间, 得到它的使用权
-  - 存储数据, 可以反复进行操作
+  - 分配小内存空间，得到它的使用权
+  - 存储数据，可以反复进行操作
   - 释放小内存空间
 
 - 释放内存
-  - 局部变量: 函数执行完自动释放
-  - 对象: 成为垃圾对象==>垃圾回收器回收
+  - 局部变量：函数执行完自动释放
+  - 对象：成为垃圾对象==>垃圾回收器回收
 
 ```javascript
 var a = 3
@@ -355,15 +355,15 @@ fn() // b是自动释放, b所指向的对象是在后面的某个时刻由垃�
 
 3、对象的组成
 
-- 属性: 属性名(字符串)和属性值(任意)组成
+- 属性：属性名（字符串）和属性值（任意）组成
 
-- 方法: 一种特别的属性(属性值是函数)
+- 方法：一种特别的属性（属性值是函数）
 
 4、如何访问对象内部数据?
 
-- `.属性名`: 编码简单, 有时不能用
+- `.属性名`：编码简单，有时不能用
 
-- `['属性名']`: 编码麻烦, 能通用
+- `['属性名']`：编码麻烦，能通用
 
 ```javascript
 var p = {
@@ -382,9 +382,9 @@ p['setAge'](23)
 console.log(p.name, p['age'])
 ```
 
-问题: 什么时候必须使用['属性名']的方式?
+问题：什么时候必须使用 `['属性名']` 的方式?
 
-1. 属性名包含特殊字符: `-`空格
+1. 属性名包含特殊字符： `-`、`空格`
 
 2. 属性名不确定（是变量）
 
@@ -407,9 +407,9 @@ console.log(p[propName])
 
 1、什么是函数?
 
-- 实现特定功能的n条语句的封装体
+- 实现特定功能的 n 条语句的封装体
 
-- 只有函数是可以执行的, 其它类型的数据不能执行
+- 只有函数是可以执行的，其它类型的数据不能执行
 
 2、为什么要用函数?
 
@@ -423,12 +423,12 @@ console.log(p[propName])
 
 - 表达式
 
-4、如何调用(执行)函数?
+4、如何调用（执行）函数?
 
-- test(): **直接调用**
-- obj.test(): **通过对象调用**
-- new test(): **new调用**
-- test.call/apply(obj): **临时让test成为obj的方法进行调用**
+- `test()`：**直接调用**
+- `obj.test()`：**通过对象调用**
+- `new test()`：**new 调用**
+- `test.call(obj)`/`test.apply(obj)`：**临时让 test 成为 obj 的方法进行调用**
 
 ```javascript
 /*
@@ -474,16 +474,15 @@ console.log(obj.xxx)
 ### 5、回调函数
 
 1. 什么函数才是回调函数?
-    1). 你定义的
-    2). 你没有调
-    3). 但最终它执行了(在某个时刻或某个条件下)
+   1) 你定义的
+   2) 你没有调
+   3) 但最终它执行了（在某个时刻或某个条件下）
 2. 常见的回调函数?
 
-- dom事件回调函数 ==>发生事件的dom元素
-- 定时器回调函数 ===>window
-
-- ajax请求回调函数(后面讲)
-- 生命周期回调函数(后面讲)
+   - DOM 事件回调函数 ==> 发生事件的 DOM 元素
+   - 定时器回调函数 ===> window
+   - ajax 请求回调函数
+   - 生命周期回调函数
 
 ```html
 <button id="btn">测试点击事件</button>
@@ -513,7 +512,7 @@ console.log(obj.xxx)
 2、作用
 
 - 隐藏实现
-- 不会污染外部(全局)命名空间
+- 不会污染外部（全局）命名空间
 - 用它来编码 js 模块
 
 ```javascript
@@ -541,16 +540,20 @@ $().test() // 1.
 
 1、this 是什么?
 
-- 任何函数本质上都是通过某个对象来调用的,如果没有直接指定就是 window
-- 所有函数内部都有一个变量this
+- 任何函数本质上都是通过某个对象来调用的，如果没有直接指定就是 window
+- 所有函数内部都有一个变量 this
 - 它的值是调用函数的当前对象
 
 2、如何确定 this 的值?
 
-- test(): window
-- p.test(): p
-- new test(): 新创建的对象
-- p.call(obj): obj
+函数调用的时候确定
+
+- `test()`：window
+- `p.test()`：p
+- `new test()`：新创建的对象
+- `p.call(obj)`：obj
+
+箭头函数没有自己的 this，箭头函数中所谓的 this，其实就是外层代码块的 this
 
 ```javascript
 function Person(color) {
@@ -590,22 +593,22 @@ fun1();
 
 ## 二、函数高级
 
-超级重点，两大神兽：==原型和闭包==
+超级重点，两大神兽：**原型和闭包**
 
 ### 1、原型和原型链
 
 (1) 原型
 
-A、函数的 prototype 属性
+函数的 prototype 属性
 
-- 每个函数都有一个 prototype 属性, 它默认指向一个 Object 空对象(即称为: 原型对象)
-- 原型对象中有一个属性 constructor, 它指向函数对象
+- 每个函数都有一个 prototype 属性，它默认指向一个 Object 空对象（即称为原型对象）
+- 原型对象中有一个属性 constructor，它指向函数对象
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815113737.png)
 
-B、给原型对象添加属性(一般都是方法)
+给原型对象添加属性（一般都是方法）
 
-- 作用: 函数的所有实例对象自动拥有原型中的属性(方法)
+- 作用：函数的所有实例对象自动拥有原型中的属性（方法）
 
 ```javascript
 // 每个函数都有一个prototype属性, 它默认指向一个Object空对象(即称为: 原型对象)
@@ -629,15 +632,16 @@ fun.test()
 
 (2) 显式原型与隐式原型
 
-1. 每个函数 function 都有一个 prototype，即显式原型(属性)
-2. 每个实例对象都有一个 `__proto__`，可称为隐式原型(属性)
+1. 每个函数 function 都有一个 prototype，即显式原型（属性）
+2. 每个实例对象都有一个 `__proto__`，可称为隐式原型（属性）
 3. 对象的隐式原型的值为其对应构造函数的显式原型的值
 4. 内存结构
-5. 总结:
 
-- 函数的 `prototype` 属性: 在定义函数时自动添加的, 默认值是一个空Object对象
-- 对象的`__proto__`属性: 创建对象时自动添加的, 默认值为构造函数的prototype属性值
-- 程序员能直接操作显式原型, 但不能直接操作隐式原型(ES6之前)
+总结：
+
+- 函数的 `prototype` 属性：在定义函数时自动添加的，默认值是一个空 Object 对象
+- 对象的 `__proto__` 属性：创建对象时自动添加的，默认值为构造函数的 prototype 属性值
+- 程序员能直接操作显式原型，但不能直接操作隐式原型（ES6之前）
 
 ```javascript
 //定义构造函数
@@ -664,18 +668,18 @@ fn.test()
 
 (3) 原型链
 
-1. 原型链
+原型链
 
-- 访问一个对象的属性时，
+- 访问一个对象的属性时
   - 先在自身属性中查找，找到返回
-  - 如果没有, 再沿着`__proto__`这条链向上查找, 找到返回
-  - 如果最终没找到, 返回undefined
-- 别名: 隐式原型链
-- 作用: 查找对象的属性(方法)
+  - 如果没有，再沿着 `__proto__` 这条链向上查找，找到返回
+  - 如果最终没找到，返回 undefined
+- 别名：隐式原型链
+- 作用：查找对象的属性（方法）
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815115136.png)
 
-2. 构造函数/原型/实体对象的关系
+构造函数/原型/实体对象的关系
 
 ```javascript
 var o1 = new Object();
@@ -684,7 +688,7 @@ var o2 = {};
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815115415.png)
 
-3. 构造函数/原型/实体对象的关系2
+构造函数/原型/实体对象的关系2
 
 ```javascript
 function Foo(){  }
@@ -724,26 +728,26 @@ console.log(Fn.prototype instanceof Object) // true
 console.log(Object.prototype instanceof Object) // false
 console.log(Function.prototype instanceof Object) // true
 /*
-2. 所有函数都是Function的实例(包含Function)
+1. 所有函数都是Function的实例(包含Function)
 */
 console.log(Function.__proto__===Function.prototype)
 /*
-3. Object的原型对象是原型链尽头
+1. Object的原型对象是原型链尽头
   */
 console.log(Object.prototype.__proto__) // null
 
 ```
 
-4. 原型继承
+原型继承
 
-- 构造函数的实例对象自动拥有构造函数原型对象的属性(方法)
+- 构造函数的实例对象自动拥有构造函数原型对象的属性（方法）
 - 利用的就是原型链
 
-5. 原型属性问题
+原型属性问题
 
-- 读取对象的属性值时: 会自动到原型链中查找
-- 设置对象的属性值时: 不会查找原型链, 如果当前对象中没有此属性, 直接添加此属性并设置其值
-- 方法一般定义在原型中, 属性一般通过构造函数定义在对象本身上
+- 读取对象的属性值时：会自动到原型链中查找
+- 设置对象的属性值时：不会查找原型链，如果当前对象中没有此属性，直接添加此属性并设置其值
+- 方法一般定义在原型中，属性一般通过构造函数定义在对象本身上
 
 ```javascript
 function Fn() {
@@ -776,12 +780,12 @@ console.log(p1.__proto__===p2.__proto__) // true
 
 (4) 探索 instanceof
 
-1. instanceof 是如何判断的?
+instanceof 是如何判断的?
 
-- 表达式: A instanceof B
-- 如果B函数的显式原型对象在A对象的原型链上, 返回true, 否则返回false
+- 表达式：A instanceof B
+- 如果 B 函数的显式原型对象在 A 对象的原型链上，返回 true，否则返回 false
 
-2. Function 是通过 new 自己产生的实例
+Function 是通过 new 自己产生的实例
 
 *案例1*
 
@@ -858,27 +862,26 @@ console.log(Function.prototype) // ƒ () { [native code] }
 
 (1) 变量提升与函数提升
 
-1. 变量声明提升
+变量声明提升
 
-- 通过**var定义(声明)的变量**, 在定义语句之前就可以访问到
-- 值: undefined
+- 通过 **var 定义(声明)的变量**，在定义语句之前就可以访问到
+- 值：undefined
 
-2. 函数声明提升
+函数声明提升
 
-- 通过**function声明的函数**, 在之前就可以直接调用
-- 值: 函数定义(对象)
+- 通过 **function 声明的函数**，在之前就可以直接调用
+- 值：函数定义（对象）
 
-3. 问题: 变量提升和函数提升是如何产生的?
-   - 在js中js引擎会优先解析var变量和function定义！在预解析完成后从上到下逐步进行！
-   - 解析var变量时，会把值存储在“执行环境”中，而不会去赋值，值是存储作用！例如:
-     alert（a）; var a = 2; 这时会输出undifiend,意思是没有被初始化没有被赋值!
-     这并不是没有被定义、错误了的意思！
-   - 在解析function时会把函数整体定义，这也就解释了为什么在function定义函数时为什么可以先调用后声明了！其实表面上看是先调用了，其实在内部机制中第一步实行的是把以function方式定义的函数先声明了（预处理）
+问题：变量提升和函数提升是如何产生的?
+
+- 在 js 中 js 引擎会优先解析 var 变量和 function 定义！在预解析完成后从上到下逐步进行！
+- 解析 var 变量时，会把值存储在“执行环境”中，而不会去赋值，值是存储作用！例如：`alert（a）; var a = 2;` 这时会输出 undefined，意思是没有被初始化没有被赋值！这并不是没有被定义、错误了的意思！
+- 在解析 function 时会把函数整体定义，这也就解释了为什么在 function 定义函数时为什么可以先调用后声明了！其实表面上看是先调用了，其实在内部机制中第一步实行的是把以 function 方式定义的函数先声明了（预处理）
 
 ```javascript
 /*
-面试题 : 输出 undefined
-  */
+面试题：输出 undefined
+*/
 var a = 3
 function fn () {
   console.log(a)
@@ -900,22 +903,22 @@ var fn3 = function () {
 }
 ```
 
-![image-20200815122404360](https://cdn.wallleap.cn/img/pic/illustration/20200815122405.png)
+![](https://cdn.wallleap.cn/img/pic/illustration/20200815122405.png)
 
 (2) 执行上下文
 
-1. 代码分类(位置)
+代码分类（位置）
 
 - 全局代码
-- 函数(局部)代码
+- 函数（局部）代码
 
-2. 全局执行上下文
+全局执行上下文
 
-- 在执行全局代码前将window确定为全局执行上下文
+- 在执行全局代码前将 window 确定为全局执行上下文
 - 对全局数据进行预处理
-  - var定义的全局变量==>undefined, 添加为window的属性
-  - function声明的全局函数==>赋值(fun), 添加为window的方法
-  - this==>赋值(window)
+  - var 定义的全局变量 ==> undefined，添加为 window 的属性
+  - function 声明的全局函数 ==> 赋值（fun），添加为 window 的方法
+  - this ==> 赋值（window）
 - 开始执行全局代码
 
 ```javascript
@@ -931,26 +934,40 @@ function a2() { // 在这里声明，能够在上面调用
 console.log(a1) // 3
 ```
 
-3. 函数执行上下文
+函数执行上下文
 
-- 在调用函数, 准备执行函数体之前, 创建对应的函数执行上下文对象(虚拟的, 存在于栈中)
+- 在调用函数，准备执行函数体之前，创建对应的函数执行上下文对象（虚拟的，存在于栈中）
 - 对局部数据进行预处理
   - 形参变量——>赋值(实参)——>添加为执行上下文的属性
-  - arguments==>赋值(实参列表), 添加为执行上下文的属性
-  - var定义的局部变量==>undefined, 添加为执行上下文的属性
-  - function声明的函数 ==>赋值(fun), 添加为执行上下文的方法
+  - arguments==>赋值(实参列表)，添加为执行上下文的属性
+  - var 定义的局部变量==>undefined，添加为执行上下文的属性
+  - function 声明的函数 ==>赋值(fun)，添加为执行上下文的方法
   - this==>赋值(调用函数的对象)
 - 开始执行函数体代码
 
-![](https://cdn.wallleap.cn/img/pic/illustration/20200815123118.png)
+```js
+function fn(a1) {
+  console.log(a1) // 2
+  console.log(a2) // undefined
+  a3() // a3()
+  console.log(this) // window
+  console.log(arguments) // 伪数组 2, 3
+
+  var a2 = 3
+  function a3() {
+    console.log('a3()')
+  }
+}
+fn(2, 3)
+```
 
 (3) 执行上下文栈
 
-1. 在全局代码执行前, JS引擎就会创建一个栈来存储管理所有的执行上下文对象
-2. 在全局执行上下文(window)确定后, 将其添加到栈中(压栈)
-3. 在函数执行上下文创建后, 将其添加到栈中(压栈)
-4. 在当前函数执行完后,将栈顶的对象移除(出栈)
-5. 当所有的代码执行完后, 栈中只剩下window
+1. 在全局代码执行前，JS 引擎就会创建一个栈来存储管理所有的执行上下文对象
+2. 在全局执行上下文（window）确定后，将其添加到栈中（压栈）
+3. 在函数执行上下文创建后，将其添加到栈中（压栈）
+4. 在当前函数执行完后，将栈顶的对象移除（出栈）
+5. 当所有的代码执行完后，栈中只剩下 window
 
 ```javascript
 var a = 10
@@ -1000,29 +1017,26 @@ console.log('ge: ' + i)
 
 (4) 面试题
 
+测试题 1：先执行变量提升，再执行函数提升（先找 `var` 和 `function xxx(){}`）
+
 ```javascript
-/*
-  测试题1:  先执行变量提升, 再执行函数提升(先找var和function xxx(){})
-  */
 function a() {}
 var a
 console.log(typeof a) // function
 ```
 
+测试题 2：先提出去，window 中有 b，且未赋值
+
 ```javascript
-/*
-  测试题2: 先提出去，window中有b，且未赋值
-  */
 if (!(b in window)) {
   var b = 1
 }
 console.log(b) // undefined
 ```
 
+测试题 3：针对变量名同名或函数名同名的情况。如果声明了同名的函数其定义会被后者覆盖，声明了同名的变量其值也会被后者覆盖
+
 ```javascript
-/*
-  测试题3: 针对变量名同名或函数名同名的情况：如果声明了同名的函数其定义会被后者覆盖，声明了同名的变量其值也会被后者覆盖
-  */
 var c = 1
 function c(c) {
   console.log(c)
@@ -1031,9 +1045,9 @@ function c(c) {
 console.log(c) // 1
 c(2) // 报错 Uncaught TypeError: c is not a function
 
-再看一个
-//声明阶段
-function x(){//函数声明
+// 再看一个
+// 声明阶段
+function x(){ //函数声明
  //console.log(5)此句会被下句代码覆盖
     console.log(3)
 }
@@ -1053,18 +1067,18 @@ console.log(x()) // Uncaught TypeError: x is not a function
 
 (1) 作用域
 
-1. 理解
+理解：
 
-- 就是一块"地盘", 一个代码段所在的区域
-- 它是静态的(相对于上下文对象), 在编写代码时就确定了
+- 就是一块“地盘”，一个代码段所在的区域
+- 它是静态的（相对于上下文对象），在编写代码时就确定了
 
-2. 分类
+分类：
 
 - 全局作用域
 - 函数作用域
-- 没有块作用域(ES6有了)
+- 没有块作用域（ES 6 有了）
 
-```javascript
+```js
 /*  //没块作用域
 if(true) {
   var c = 3
@@ -1072,7 +1086,7 @@ if(true) {
 console.log(c) // 3 有块作用域则报错*/
 ```
 
-3. 作用
+作用：
 
 - 隔离变量，不同作用域下同名变量不会有冲突
 
@@ -1100,20 +1114,20 @@ fn(10) // fn() 100 20 300 10
 
 (2) 作用域与执行上下文
 
-1. 区别1
+区别 1：
 
-- 全局作用域之外，每个函数都会创建自己的作用域，作用域在函数定义时就已经确定了。而不是在函数调用时
-- 全局执行上下文环境是在全局作用域确定之后, js代码马上执行之前创建
-- 函数执行上下文是在调用函数时, 函数体代码执行之前创建
+- 全局作用域之外，每个函数都会创建自己的作用域，作用域在函数定义时就已经确定了，而不是在函数调用时
+- 全局执行上下文环境是在全局作用域确定之后，js 代码马上执行之前创建
+- 函数执行上下文是在调用函数时，函数体代码执行之前创建
 
-2. 区别2
+区别 2：
 
-- 作用域是静态的, 只要函数定义好了就一直存在, 且不会再变化
-- 执行上下文是动态的, 调用函数时创建, 函数调用结束时就会自动释放
+- 作用域是静态的，只要函数定义好了就一直存在，且不会再变化
+- 执行上下文是动态的，调用函数时创建，函数调用结束时就会自动释放
 
-3. 联系
+联系：
 
-- 执行上下文(对象)是从属于所在的作用域
+- 执行上下文（对象）是从属于所在的作用域
 - 全局上下文环境==>全局作用域
 - 函数上下文环境==>对应的函数使用域
 
@@ -1123,16 +1137,16 @@ fn(10) // fn() 100 20 300 10
 
 (3) 作用域链
 
-1. 理解
+理解：
 
-- 多个上下级关系的作用域形成的链, 它的方向是从下向上的(从内到外)
+- 多个上下级关系的作用域形成的链，它的方向是从下向上的（从内到外）
 - 查找变量时就是沿着作用域链来查找的
 
-2. 查找一个变量的查找规则
+查找一个变量的查找规则：
 
-- 在当前作用域下的执行上下文中查找对应的属性, 如果有直接返回, 否则进入2
-- 在上一级作用域的执行上下文中查找对应的属性, 如果有直接返回, 否则进入3
-- 再次执行2的相同操作, 直到全局作用域, 如果还找不到就抛出找不到的异常
+1. 在当前作用域下的执行上下文中查找对应的属性，如果有直接返回，否则进入 2
+2. 在上一级作用域的执行上下文中查找对应的属性，如果有直接返回，否则进入 3
+3. 再次执行 2 的相同操作，直到全局作用域，如果还找不到就抛出找不到的异常
 
 ```javascript
 var a = 1
@@ -1230,28 +1244,27 @@ obj.fn2() // Uncaught ReferenceError: fn2 is not defined
 
 (2) 理解闭包
 
-1. 如何产生闭包?
+如何产生闭包?
 
-- 当一个**嵌套的内部(子)函数引用了嵌套的外部(父)函数的变量(函数)**时, 就产生了闭包
+- 当一个**嵌套的内部（子）函数引用了嵌套的外部（父）函数的变量（函数）**时，就产生了闭包
 
-2. 闭包到底是什么?
+闭包到底是什么?
 
-- 使用chrome调试查看
-- 理解一: 闭包是嵌套的内部函数(绝大部分人)
-- 理解二: 包含被引用变量(函数)的对象(极少数人)
-- 注意: 闭包存在于嵌套的内部函数中
+- 使用 Chrome 调试查看
+- 包含被引用变量（函数）的对象
+- 注意：闭包存在于嵌套的内部函数中
 
-3. ***产生闭包的条件?***
+***产生闭包的条件?***
 
 - 函数嵌套
-- 内部函数引用了外部函数的数据(变量/函数)
+- 内部函数引用了外部函数的数据（变量/函数）
 
 ```javascript
 function fn1 () {
   var a = 2
   var b = 'abc'
-  function fn2 () { //执行函数定义就会产生闭包(不用调用内部函数)
-    console.log(a)
+  function fn2 () { // 声明函数形式定义函数，会产生闭包
+    console.log(a)  // 使用了外部函数的变量
   }
   // fn2()
 }
@@ -1299,18 +1312,8 @@ showDelay('test', 2000)
 
 (4) 闭包的作用
 
-1. 使用函数内部的变量在函数执行完后, 仍然存活在内存中(延长了局部变量的生命周期)
-2. 让函数外部可以操作(读写)到函数内部的数据(变量/函数)
-
-*问题:*
-
-- 函数执行完后, 函数内部声明的局部变量是否还存在?
-
-  一般是不存在, 存在于闭中的变量才可能存在
-
-- 在函数外部能直接访问函数内部的局部变量吗?
-
-  不能, 但我们可以通过闭包让外部操作它
+1. 使用函数内部的变量在函数执行完后，仍然存活在内存中（延长了局部变量的生命周期）
+2. 让函数外部可以操作（读写）到函数内部的数据（变量/函数）
 
 ```javascript
 function fn1() {
@@ -1333,10 +1336,10 @@ f() // 0
 
 (5) 闭包的生命周期
 
-1. 产生: 在嵌套内部函数**定义**执行完时就产生了(不是在调用)
-2. 死亡: 在嵌套的内部函数成为垃圾对象时
+1. 产生：在嵌套内部函数**定义**执行完时就产生了（不是在调用）
+2. 死亡：在嵌套的内部函数成为垃圾对象时
 
-```
+```js
 function fn1() {
   //此时闭包就已经产生了(函数提升, 内部函数对象已经创建了)
   var a = 2
@@ -1349,27 +1352,27 @@ function fn1() {
 var f = fn1()
 f() // 3
 f() // 4
-f = null //闭包死亡(包含闭包的函数对象成为垃圾对象)
+f = null // 闭包死亡（包含闭包的函数对象成为垃圾对象）
 ```
 
-(6) 闭包的应用: 自定义JS模块
+(6) 闭包的应用：自定义 JS 模块
 
 模块：
 
-- 具有特定功能的js文件
-- 将所有的数据和功能都封装在一个函数内部(私有的)
-- 只向外暴露一个包括n个方法的对象或函数
-- 模块的使用者, 只需要通过模块暴露的对象调用方法来实现对应的功能
+- 具有特定功能的 js 文件
+- 将所有的数据和功能都封装在一个函数内部（私有的）
+- 只向外暴露一个包括 n 个方法的对象或函数
+- 模块的使用者，只需要通过模块暴露的对象调用方法来实现对应的功能
 
 例如：
 
-文件`myModule1.js`就是一个模块
+文件 `myModule1.js` 就是一个模块
 
 ```javascript
 function myModule() {
-  //私有数据
+  // 私有数据
   var msg = 'Hello This is Module1'
-  //操作数据的函数
+  // 操作数据的函数
   function doSomething() {
     console.log('doSomething() '+msg.toUpperCase())
   }
@@ -1377,7 +1380,7 @@ function myModule() {
     console.log('doOtherthing() '+msg.toLowerCase())
   }
 
-  //向外暴露对象(给外部使用的方法)
+  //向外暴露对象（给外部使用的方法）
   return {
     doSomething: doSomething,
     doOtherthing: doOtherthing
@@ -1430,18 +1433,18 @@ function myModule() {
 </script>
 ```
 
-压缩代码时，会把变量改为a、b、c这种的，因此最好这样做
+压缩代码时，会把变量改为 a、b、c 这种的，因此最好这样做
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815132854.png)
 
 (7) 闭包的缺点及解决
 
-1. 缺点
+缺点：
 
-- 函数执行完后, 函数内的局部变量没有释放, 占用内存时间会变长
+- 函数执行完后，函数内的局部变量没有释放，占用内存时间会变长
 - 容易造成内存泄露
 
-2. 解决
+解决：
 
 - 能不用闭包就不用
 - 及时释放
@@ -1483,29 +1486,29 @@ f = null //让内部函数成为垃圾对象-->回收闭包
 
 ```javascript
 //代码片段一
-var name = "The Window";
+var name = "The Window"
 var object = {
   name : "My Object",
   getNameFunc : function(){
     return function(){
-      return this.name;
-    };
+      return this.name
+    }
   }
-};
-alert(object.getNameFunc()());  // the window
+}
+alert(object.getNameFunc()())  // the window
 
 //代码片段二
-var name2 = "The Window";
+var name2 = "The Window"
 var object2 = {
   name2 : "My Object",
   getNameFunc : function(){
     var that = this;
     return function(){
       return that.name2;
-    };
+    }
   }
-};
-alert(object2.getNameFunc()()); // my object
+}
+alert(object2.getNameFunc()()) // my object
 
 // 三
 function fun(n,o) {
@@ -1525,7 +1528,7 @@ var b = fun(0).fun(1).fun(2).fun(3)//undefined,0,1,2
 
 var c = fun(0).fun(1)
 c.fun(2)
-c.fun(3)//undefined,0,1,1
+c.fun(3) // undefined,0,1,1
 ```
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815133831.png)
@@ -1536,11 +1539,11 @@ c.fun(3)//undefined,0,1,1
 
 有如下五种方式：
 
-(1) Object构造函数模式
+(1) Object 构造函数模式
 
-- 套路: 先创建空Object对象, 再动态添加属性/方法
-- 适用场景: 起始时不确定对象内部数据
-- 问题: 语句太多
+- 套路：先创建空 Object 对象，再动态添加属性/方法
+- 适用场景：起始时不确定对象内部数据
+- 问题：语句太多
 
 ```javascript
 /*
@@ -1564,9 +1567,9 @@ console.log(p.name, p.age)
 
 (2) 对象字面量模式
 
-- 套路: 使用{}创建对象, 同时指定属性/方法
-- 适用场景: 起始时对象内部数据是确定的
-- 问题: 如果创建多个对象, 有重复代码
+- 套路：使用 `{}` 创建对象，同时指定属性/方法
+- 适用场景：起始时对象内部数据是确定的
+- 问题：如果创建多个对象，有重复代码
 
 ```javascript
 var p = {
@@ -1593,9 +1596,9 @@ var p2 = {  //如果创建多个对象代码很重复
 
 (3) ~~工厂模式~~
 
-- 套路: 通过工厂函数动态创建对象并返回
-- 适用场景: 需要创建多个对象
-- 问题: 对象没有一个具体的类型, 都是Object类型
+- 套路：通过工厂函数动态创建对象并返回
+- 适用场景：需要创建多个对象
+- 问题：对象没有一个具体的类型，都是 Object 类型
 
 ```javascript
 function createPerson(name, age) { //返回一个对象的函数===>工厂函数
@@ -1606,7 +1609,6 @@ function createPerson(name, age) { //返回一个对象的函数===>工厂函数
       this.name = name
     }
   }
-
   return obj
 }
 
@@ -1614,7 +1616,7 @@ function createPerson(name, age) { //返回一个对象的函数===>工厂函数
 var p1 = createPerson('Tom', 12)
 var p2 = createPerson('Bob', 13)
 
-// p1/p2是Object类型
+// p1/p2 是 Object 类型
 
 function createStudent(name, price) {
   var obj = {
@@ -1624,14 +1626,14 @@ function createStudent(name, price) {
   return obj
 }
 var s = createStudent('张三', 12000)
-// s也是Object
+// s 也是 Object
 ```
 
 (4) 自定义构造函数模式
 
-- 套路: 自定义构造函数, 通过new创建对象
-- 适用场景: 需要创建多个类型确定的对象
-- 问题: 每个对象都有相同的数据, 浪费内存
+- 套路：自定义构造函数，通过 `new` 创建对象
+- 适用场景：需要创建多个类型确定的对象
+- 问题：每个对象都有相同的数据，浪费内存
 
 ```javascript
 //定义类型
@@ -1662,8 +1664,8 @@ console.log(p1, p2)
 
 (5) 构造函数+原型的组合模式
 
-- 套路: 自定义构造函数, 属性在函数中初始化, 方法添加到原型上
-- 适用场景: 需要创建多个类型确定的对象
+- 套路：自定义构造函数，属性在函数中初始化，方法添加到原型上
+- 适用场景：需要创建多个类型确定的对象
 
 ```javascript
 function Person(name, age) { //在构造函数中只初始化一般函数
@@ -1681,11 +1683,11 @@ console.log(p1, p2)
 
 ### 2、继承模式
 
-继承，在js中有三种方式：
+继承，在 JS 中有三种方式：
 
 (1) 原型链继承
 
-1. 套路
+套路：
 
 - 定义父类型构造函数
 - 给父类型的原型添加方法
@@ -1693,9 +1695,9 @@ console.log(p1, p2)
 - 创建父类型的对象赋值给子类型的原型
 - 将子类型原型的构造属性设置为子类型
 - 给子类型原型添加方法
-- 创建子类型的对象: 可以调用父类型的方法
+- 创建子类型的对象：可以调用父类型的方法
 
-2. 关键
+关键：
 
 - 子类型的原型为父类型的一个实例对象
 
@@ -1733,14 +1735,15 @@ console.log(sub)  // Sub
 
 (2) 借用构造函数继承
 
-1. 套路:
+套路：
 
 - 定义父类型构造函数
 - 定义子类型构造函数
 - 在子类型构造函数中调用父类型构造
 
-2. 关键:
-   - 在子类型构造函数中通用call()调用父类型构造函数
+关键：
+
+- 在子类型构造函数中通过 `call()` 调用父类型构造函数
 
 ```javascript
 function Person(name, age) {
@@ -1762,7 +1765,7 @@ console.log(s.name, s.age, s.price)
 
 1. 利用原型链实现对父类型对象的方法继承
 
-2. 利用super()借用父类型构建函数初始化相同属性
+2. 利用 `super()` 借用父类型构建函数初始化相同属性
 
 ```javascript
 function Person(name, age) {
@@ -1778,9 +1781,37 @@ function Student(name, age, price) {
   this.price = price
 }
 Student.prototype = new Person() // 为了能看到父类型的方法
-Student.prototype.constructor = Student //修正constructor属性
+Student.prototype.constructor = Student // 修正 constructor 属性
 Student.prototype.setPrice = function (price) {
   this.price = price
+}
+
+var s = new Student('Tom', 24, 15000)
+s.setName('Bob')
+s.setPrice(16000)
+console.log(s.name, s.age, s.price)
+```
+
+ES 6 中的继承：使用 `class` 类的 `extends` 关键字实现继承
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name
+    this.age = age
+  }
+  setName(name) {
+    this.name = name
+  }
+}
+class Student extends Person {
+  constructor(name, age, price) {
+    super(name, age)
+    this.price = price
+  }
+  setPrice(price) {
+    this.price = price
+  }
 }
 
 var s = new Student('Tom', 24, 15000)
@@ -1793,38 +1824,43 @@ console.log(s.name, s.age, s.price)
 
 ### 1、进程与线程
 
-(1) 进程(process)
+(1) 进程（process）
 
-- 程序的一次执行, 它占有一片独有的内存空间
-- 可以通过windows任务管理器查看进程
+- 程序的一次执行，它占有一片独有的内存空间
+- 可以通过 Windows 任务管理器查看进程
 
-(2) 线程(thread)
+(2) 线程（thread）
 
 - 是进程内的一个独立执行单元
 - 是程序执行的一个完整流程
-- 是CPU的最小的调度单元
+- 是 CPU 的最小的调度单元
 
 ![线程与进程](https://cdn.wallleap.cn/img/pic/illustration/20200815135743.png)
 
 应用程序必须运行在某个进程的某个线程上
-一个进程中至少有一个运行的线程: 主线程,  进程启动后自动创建
-一个进程中也可以同时运行多个线程, 我们会说程序是多线程运行的
+
+一个进程中至少有一个运行的线程：主线程，进程启动后自动创建
+
+一个进程中也可以同时运行多个线程，我们会说程序是多线程运行的
+
 一个进程内的数据可以供其中的多个线程直接共享
+
 多个进程之间的数据是不能直接共享的
-线程池(thread pool): 保存多个线程对象的容器, 实现线程对象的反复利用
+
+线程池（thread pool）：保存多个线程对象的容器，实现线程对象的反复利用
 
 (3) 相关问题
 
-1. 何为多进程与多线程?
+何为多进程与多线程?
 
-- 多进程运行: 一应用程序可以同时启动多个实例运行
-- 多线程: 在一个进程内, 同时有多个线程运行
+- 多进程运行：一应用程序可以同时启动多个实例运行
+- 多线程：在一个进程内，同时有多个线程运行
 
-2. 比较单线程与多线程?
+比较单线程与多线程?
 
 - 多线程
   - 优点
-    - 能有效提升CPU的利用率
+    - 能有效提升 CPU 的利用率
   - 缺点
     - 创建多线程开销
     - 线程间切换开销
@@ -1835,22 +1871,22 @@ console.log(s.name, s.age, s.price)
   - 缺点
     - 效率低
 
-3. JS是单线程还是多线程?
+JS 是单线程还是多线程?
 
-- js是单线程运行的，但使用H5中的 Web Workers可以多线程运行
+- jS 是单线程运行的，但使用 H5 中的 Web Workers 可以多线程运行
 
-4. 浏览器运行是单线程还是多线程?
+浏览器运行是单线程还是多线程?
 
 - 都是多线程运行的
 
-5. 浏览器运行是单进程还是多进程?
+浏览器运行是单进程还是多进程?
 
 - 有的是单进程
   - firefox
-  - 老版IE
+  - 老版 IE
 - 有的是多进程
   - chrome
-  - 新版IE
+  - 新版 IE
 - 如何查看浏览器是否是多进程运行的呢?
   - 任务管理器-->进程
 
@@ -1858,37 +1894,37 @@ console.log(s.name, s.age, s.price)
 
 - 支撑浏览器运行的最核心的程序
 - 不同的浏览器可能不一样
-  - Chrome, Safari : webkit
-  - firefox : Gecko
-  - IE : Trident
-  - 360,搜狗等国内浏览器: Trident + webkit
+  - Chrome、Safari：webkit
+  - firefox：Gecko
+  - IE：Trident
+  - 360、搜狗等国内浏览器：Trident + webkit（双核）
 - 内核由很多模块组成
   - 主线程
-    - js引擎模块 : 负责js程序的编译与运行
-    - html,css文档解析模块 : 负责页面文本的解析
-    - DOM/CSS模块 : 负责dom/css在内存中的相关处理
-    - 布局和渲染模块 : 负责页面的布局和效果的绘制(内存中的对象)
-       ......
+    - js 引擎模块：负责 js 程序的编译与运行
+    - html、css文档解析模块：负责页面文本的解析
+    - DOM/CSS模块：负责 dom/css 在内存中的相关处理
+    - 布局和渲染模块：负责页面的布局和效果的绘制（内存中的对象）
+    - ......
   - ​ 分线程
-    - 定时器模块 : 负责定时器的管理
-    - DOM事件响应模块 : 负责事件的管理
-    - 网络请求模块 : 负责ajax请求
+    - 定时器模块：负责定时器的管理
+    - DOM事件响应模块：负责事件的管理
+    - 网络请求模块：负责 ajax 请求
 
 ### 3、定时器引发的思考
 
-1. 定时器真是定时执行的吗?
+定时器真是定时执行的吗?
 
-- 定时器并不能保证真正定时执行
+- 定时器并不能保证真正定时执行（设置了 n 秒，则是 n 秒**之后**执行）
 
-- 一般会延迟一丁点(可以接受), 也有可能延迟很长时间(不能接受)
+- 一般会延迟一丁点（可以接受），也有可能延迟很长时间（不能接受）
 
-2. 定时器回调函数是在分线程执行的吗?
+定时器回调函数是在分线程执行的吗?
 
-- 在主线程执行的, js是单线程的
+- 在主线程执行的，js 是单线程的
 
-3. 定时器是如何实现的?
+定时器是如何实现的?
 
-- 事件循环模型(后面讲)
+- 事件循环模型
 
 ```javascript
 document.getElementById('btn').onclick = function () {
@@ -1906,31 +1942,32 @@ document.getElementById('btn').onclick = function () {
 }
 ```
 
-### 4、JS是单线程执行的
+### 4、JS 是单线程执行的
 
-1. 如何证明js执行是单线程的?
+如何证明 js 执行是单线程的?
 
-- setTimeout()的回调函数是在主线程执行的
+- `setTimeout()` 的回调函数是在主线程执行的
 - 定时器回调函数只有在运行栈中的代码全部执行完后才有可能执行
 
-2. 为什么js要用单线程模式, 而不用多线程模式?
+为什么 js 要用单线程模式，而不用多线程模式?
 
-- JavaScript的单线程，与它的用途有关。
-- 作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。
+- JavaScript 的单线程，与它的用途有关。
+- 作为浏览器脚本语言，JavaScript 的主要用途是与用户互动，以及操作 DOM。
 - 这决定了它只能是单线程，否则会带来很复杂的同步问题
 
-3. 代码的分类:
+代码的分类:
 
 - 初始化代码
 - 回调代码
 
-4. js引擎执行代码的基本流程
+js 引擎执行代码的基本流程
 
-- 先执行初始化代码: 包含一些特别的代码   回调函数(异步执行)
+- 先执行初始化代码：包含一些特别的代码
+  - 回调函数（异步执行）
   - 设置定时器
   - 绑定事件监听
-  - 发送ajax请求
-- 后面在某个时刻才会执行回调代码(回调函数包含的代码)
+  - 发送 ajax 请求
+- 后面在某个时刻才会执行回调代码（回调函数包含的代码）
 
 ```javascript
 setTimeout(function () {
@@ -1950,35 +1987,35 @@ function fn() {
 fn()
 
 console.log('alert()之前')
-alert('------') //暂停当前主线程的执行, 同时暂停计时, 点击确定后, 恢复程序执行和计时
+alert('------') // 暂停当前主线程的执行，同时暂停计时，点击确定后，恢复程序执行和计时
 console.log('alert()之后')
 ```
 
-### 5、浏览器的事件循环(轮询)模型
+### 5、浏览器的事件循环（轮询）模型
 
 (1) 模型原理图
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815141019.png)
 
-1. 所有代码分类
+所有代码分类
 
-- 初始化执行代码(同步代码): 包含绑定dom事件监听, 设置定时器, 发送ajax请求的代码
-- 回调执行代码(异步代码): 处理回调逻辑
+- 初始化执行代码（同步代码）：包含绑定 dom 事件监听，设置定时器，发送 ajax 请求的代码
+- 回调执行代码（异步代码）：处理回调逻辑
 
-2. js引擎执行代码的基本流程:
+js 引擎执行代码的基本流程：
 
 - 初始化代码===>回调代码
 
-3. 模型的2个重要组成部分:
+模型的 2 个重要组成部分：
 
-- 事件(定时器/DOM事件/Ajax)管理模块
+- 事件（定时器/DOM 事件/Ajax）管理模块
 - 回调队列
 
-4. 模型的运转流程
+模型的运转流程
 
-- 执行初始化代码, 将事件回调函数交给对应模块管理
-- 当事件发生时, 管理模块会将回调函数及其数据添加到回调列队中
-- 只有当初始化代码执行完后(可能要一定时间), 才会遍历读取回调队列中的回调函数执行
+- 执行初始化代码，将事件回调函数交给对应模块管理
+- 当事件发生时，管理模块会将回调函数及其数据添加到回调列队中
+- 只有当初始化代码执行完后（可能要一定时间），才会遍历读取回调队列中的回调函数执行
 
 ```javascript
 function fn1() {
@@ -1999,77 +2036,78 @@ fn2()
 
 (2) 相关重要概念
 
-1. 执行栈 execution stack
+执行栈 execution stack
 
 - 所有的代码都是在此空间中执行的
 
-2. 浏览器内核 browser core
+浏览器内核 browser core
 
-   - js引擎模块(在主线程处理)
+- js引擎模块(在主线程处理)
 
-   - 其它模块(在主/分线程处理)
+- 其它模块(在主/分线程处理)
 
-     ![运行原理图](https://cdn.wallleap.cn/img/pic/illustration/20200815141526.png)
+![运行原理图](https://cdn.wallleap.cn/img/pic/illustration/20200815141526.png)
 
-3. 任务队列 task queue
+- 任务队列 task queue
 
-4. 消息队列 message queue
+- 消息队列 message queue
 
-5. 事件队列 event queue
+- 事件队列 event queue
 
-   上面这三个在同一个 callback queue
+上面这三个在同一个 callback queue
 
-6. 事件轮询 event loop
-     从任务队列中循环取出回调函数放入执行栈中处理(一个接一个)
+事件轮询 event loop
 
-7. 事件驱动模型 event-driven interaction model
+- 从任务队列中循环取出回调函数放入执行栈中处理（一个接一个）
 
-8. 请求响应模型 request-response model
+事件驱动模型 event-driven interaction model
 
-### 6、H5 Web Workers(多线程)
+请求响应模型 request-response model
+
+### 6、H5 Web Workers（多线程）
 
 (1) 介绍
 
-- Web Workers 是 HTML5 提供的一个javascript多线程解决方案
-- 我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面
-- 但是子线程完全受主线程控制，且不得操作DOM。所以，这个新标准并没有改变JavaScript单线程的本质
+- Web Workers 是 HTML5 提供的一个 javascript 多线程解决方案
+- 我们可以将一些大计算量的代码交由 web Worker 运行而不冻结用户界面
+- 但是子线程完全受主线程控制，且不得操作DOM。所以，这个新标准并没有改变 JavaScript 单线程的本质
 
 (2) 相关API
 
-- Worker: 构造函数, 加载分线程执行的js文件
-- Worker.prototype.onmessage: 用于接收另一个线程的回调函数
-- Worker.prototype.postMessage: 向另一个线程发送消息
+- `Worker`：构造函数，加载分线程执行的 js 文件
+- `Worker.prototype.onmessage`：用于接收另一个线程的回调函数
+- `Worker.prototype.postMessage`：向另一个线程发送消息
 
 (3) 使用
 
-- 创建在分线程执行的js文件
+创建在分线程执行的 js 文件
 
 ```javascript
-var onmessage =function (event){ //不能用函数声明
-    console.log('onMessage()22');
-    var upper = event.data.toUpperCase();//通过event.data获得发送来的数据
-    postMessage( upper );//将获取到的数据发送会主线程
+var onmessage =function (event){ // 不能用函数声明
+  console.log('onMessage()22')
+  var upper = event.data.toUpperCase() // 通过 event.data 获得发送来的数据
+  postMessage( upper ) // 将获取到的数据发送会主线程
 }
 ```
 
-- 在主线程中的js中发消息并设置回调
+在主线程中的 js 中发消息并设置回调
 
 ```javascript
-//创建一个Worker对象并向它传递将在新线程中执行的脚本的URL
-var worker = new Worker("worker.js");  
-//接收worker传过来的数据函数
+// 创建一个Worker对象并向它传递将在新线程中执行的脚本的URL
+var worker = new Worker("worker.js")
+//接收 worker 传过来的数据函数
 worker.onmessage = function (event) {     
-    console.log(event.data);             
+  console.log(event.data)          
 };
-//向worker发送数据
-worker.postMessage("hello world");    
+// 向 worker 发送数据
+worker.postMessage("hello world")  
 ```
 
 ![](https://cdn.wallleap.cn/img/pic/illustration/20200815143823.png)
 
 (4) 应用练习
 
-- 直接在主线程
+直接在主线程
 
 ```javascript
 <input type="text" placeholder="数值" id="number">
@@ -2089,52 +2127,52 @@ document.getElementById('btn').onclick = function () {
 </script>
 ```
 
-- 使用Worker在分线程
+使用Worker在分线程
 
-  - 主线程
+- 主线程
 
-  ```javascript
-  var input = document.getElementById('number')
-  document.getElementById('btn').onclick = function () {
-    var number = input.value
-  
-    //创建一个Worker对象
-    var worker = new Worker('worker.js')
-    // 绑定接收消息的监听
-    worker.onmessage = function (event) {
-      console.log('主线程接收分线程返回的数据: '+event.data)
-      alert(event.data)
-    }
-  
-    // 向分线程发送消息
-    worker.postMessage(number)
-    console.log('主线程向分线程发送数据: '+number)
+```javascript
+var input = document.getElementById('number')
+document.getElementById('btn').onclick = function () {
+  var number = input.value
+
+  //创建一个Worker对象
+  var worker = new Worker('worker.js')
+  // 绑定接收消息的监听
+  worker.onmessage = function (event) {
+    console.log('主线程接收分线程返回的数据: '+event.data)
+    alert(event.data)
   }
-  // console.log(this) // window
-  ```
 
-  - 分线程 worker.js
+  // 向分线程发送消息
+  worker.postMessage(number)
+  console.log('主线程向分线程发送数据: '+number)
+}
+// console.log(this) // window
+```
 
-  ```javascript
-  function fibonacci(n) {
-    return n<=2 ? 1 : fibonacci(n-1) + fibonacci(n-2)  //递归调用
-  }
-  
-  console.log(this)
-  this.onmessage = function (event) {
-    var number = event.data
-    console.log('分线程接收到主线程发送的数据: '+number)
-    //计算
-    var result = fibonacci(number)
-    postMessage(result)
-    console.log('分线程向主线程返回数据: '+result)
-    // alert(result)  alert是window的方法, 在分线程不能调用
-    // 分线程中的全局对象不再是window, 所以在分线程中不可能更新界面
-  }
-  ```
+- 分线程 worker.js
+
+```javascript
+function fibonacci(n) {
+  return n<=2 ? 1 : fibonacci(n-1) + fibonacci(n-2)  //递归调用
+}
+
+console.log(this)
+this.onmessage = function (event) {
+  var number = event.data
+  console.log('分线程接收到主线程发送的数据: '+number)
+  //计算
+  var result = fibonacci(number)
+  postMessage(result)
+  console.log('分线程向主线程返回数据: '+result)
+  // alert(result)  alert是window的方法, 在分线程不能调用
+  // 分线程中的全局对象不再是window, 所以在分线程中不可能更新界面
+}
+```
 
 (5) 不足
 
-- worker内代码不能操作DOM(更新UI)
-- 不能跨域加载JS
+- worker 内代码不能操作 DOM（更新 UI）
+- 不能跨域加载 JS
 - 不是每个浏览器都支持这个新特性

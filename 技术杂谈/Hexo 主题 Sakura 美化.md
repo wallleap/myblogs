@@ -20,10 +20,10 @@ description: Hexo 主题 Sakura 美化
 
 做 Hexo 的美化工作，主要是：
 
-- 修改布局文件(HTML 模板 ejs 文件)，添加功能
-- 做好 CSS
+- 修改布局文件（HTML 模板 ejs 文件），添加功能
+- 添加 CSS
 
-还是得对 HTML(结构)、CSS(表现)、Javascript(行为)有一定的了解
+还是得对 HTML、CSS、JavaScript 有一定的了解
 
 ### 目录和文件分析
 
@@ -34,16 +34,16 @@ description: Hexo 主题 Sakura 美化
 首先分析下目录，主要包括以下几个
 
 ```md
-- languages    这个文件夹中存放的是语言文件，主要是博客中的一些字符以简体中文、繁体中文、英文显示的定义
-- layout   这个是布局文件夹，所有的博客页面HTML和JavaScript以ejs模板存放在这
-  - _partial   这里的和下面的都是公共的页面，可以引入到HTML的任意位置
+- languages 这个文件夹中存放的是语言文件，主要是博客中的一些字符以简体中文、繁体中文、英文显示的定义
+- layout 这个是布局文件夹，所有的博客页面 HTML 和 JavaScript 以 ejs 模板存放在这
+  - _partial 这里的和下面的都是公共的页面，可以引入到 HTML 的任意位置
   - _widget
-    - Search  这里存放的是页内搜索的ejs文件
-- source  这个文件夹和博客根目录下的source文件夹是一样的，但是为了存放主题相关的文件
-  - css   这里存放css文件
-  - fonts   字体文件
-  - images   图片
-  - js   js文件
+    - Search 这里存放的是页内搜索的 ejs 文件
+- source 这个文件夹和博客根目录下的 source 文件夹是一样的，但是为了存放主题相关的文件
+  - css 这里存放 css 文件
+  - fonts 字体文件
+  - images 图片
+  - js js 文件
 ```
 
 ### 代码插入位置
@@ -767,15 +767,9 @@ sakura 自带的系统为 valine，我们可以自行替换成其他的
 
 [来必力官网](https://www.livere.com/)
 
-注册登录后，点击菜单栏的【安装】，出现这个界面，直接点击【现在安装】
-
-![](<https://cdn.wallleap.cn>
+注册登录后，点击菜单栏的【安装】，直接点击【现在安装】
 
 前往管理页，点击左边的【代码管理】
-
-你将会看到这样的代码
-
-![](https://cdn.wallleap.cnpg)
 
 data-uid 后面的双引号中的内容剪切出来
 
@@ -1222,7 +1216,7 @@ layout: categories
 修改主题配置文件，将这两行代码放到留言板之前
 
 ```yml
- 标签: {path: /tags/, fa: fa-tag }
+  标签: {path: /tags/, fa: fa-tag }
   分类: {path: /categories/, fa: fa-bookmark }
 ```
 
@@ -1236,7 +1230,7 @@ emoji 表情：
 
 [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)
 
-图片懒加载(sakura 已经有了，但不是这种方式)：
+图片懒加载（sakura 已经有了，但不是这种方式）：
 
 [hexo-lazyload-image](https://www.npmjs.com/package/hexo-lazyload-image)
 
@@ -1424,7 +1418,7 @@ function zeroPadding(num, digit) {
 
 部署到 GitHub 之后，访问不存在的页面就会跳出来了
 
-##
+## 26、绑定自定义域名
 
 在博客根目录下的 source 目录下新建 CNAME 文件，如果主题 source 目录下有这个文件请删除
 

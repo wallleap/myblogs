@@ -52,23 +52,33 @@ description: PS 学习案例之草莓小屋
 
 将图片拖入PS，<kbd>Ctrl</kbd> + <kbd>J</kbd> 复制图层
 
-选择钢笔工具，点击一个点，有弧度的点击另一个点之后，鼠标不要松，拖动鼠标，知道路径和图形相符再松开鼠标，按住 <kbd>Alt</kbd> 键点击中间蓝色的点可以把下锚点删除掉，点击 <kbd>Shift</kbd> 可以画垂直/水平线
+选择钢笔工具，点击一个点，有弧度的点击另一个点之后，鼠标不要松，拖动鼠标，直到路径和图形相符再松开鼠标，按住 <kbd>Alt</kbd> 键点击中间蓝色的点可以把下锚点删除掉，点击 <kbd>Shift</kbd> 可以画垂直/水平线
+
+回到起点的时候，点击一下起点闭合路径
 
 闭合路径之后，<kbd>Ctrl</kbd> + <kbd>Enter</kbd> 载入选区，<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> 反选，这样便能够选择到门窗/台阶，之后 <kbd>Ctrl</kbd> + <kbd>J</kbd> 将内容复制出来，转换为智能对象
 
 门的抠取：
 
+使用钢笔工具勾勒出大概形状
+
 ![钢笔描绘门的大概形状](https://cdn.wallleap.cn/img/pic/illustration/image-20210310085532915.png)
+
+<kbd>Ctrl</kbd> + <kbd>Enter</kbd> 载入选区
 
 ![载入选区](https://cdn.wallleap.cn/img/pic/illustration/image-20210310085619921.png)
 
-![反选](https://cdn.wallleap.cn/img/pic/illustration/image-20210310085643363.png)
+如果选取不对，可以按住 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> 反选
+
+![如果选区不对进行反选](https://cdn.wallleap.cn/img/pic/illustration/image-20210310085643363.png)
+
+<kbd>Ctrl</kbd> + <kbd>j</kbd> 复制到新图层，并且在新图层上右击，选择转换为智能对象
 
 ![复制并转换为智能对象](https://cdn.wallleap.cn/img/pic/illustration/image-20210310085716614.png)
 
 窗户的和门差不多
 
-使用钢笔工具抠取台阶的时候，注意抠的形状问题(这里只是演示，自己抠的时候认真点)：
+使用钢笔工具抠取台阶的时候，注意抠的形状问题（这里只是演示，自己抠的时候认真点）：
 
 ![钢笔描绘形状](https://cdn.wallleap.cn/img/pic/illustration/image-20210310090141528.png)
 
@@ -92,15 +102,17 @@ description: PS 学习案例之草莓小屋
 
 ### 2、叶子
 
-使用快速选择工具选择叶子，复制两层方便以后使用
+使用快速选择工具选择叶子
+
+<kbd>Ctrl</kbd> + <kbd>J</kbd> 复制两层方便以后使用
 
 ![复制叶子](https://cdn.wallleap.cn/img/pic/illustration/image-20210310091313315.png)
 
-首先随便选择哪个叶子图层，<kbd>Ctrl</kbd> +点击这个图层的缩略图，载入选区，点击底部小太极图标，选择色相饱和度
+首先随便选择哪个叶子图层，<kbd>Ctrl</kbd> + 点击这个图层的缩略图，载入选区，点击底部小太极图标，选择色相饱和度
 
 ![色相饱和度](https://cdn.wallleap.cn/img/pic/illustration/image-20210310091536728.png)
 
-把鼠标移到两个图层中间，按住 <kbd>Alt</kbd> 键，这个效果只会对叶子生效
+把鼠标移到两个图层中间，按住 <kbd>Alt</kbd> 键，建立剪切蒙版，这个效果只会对叶子生效
 
 ![剪切蒙版](https://cdn.wallleap.cn/img/pic/illustration/image-20210310091819455.png)
 
@@ -112,11 +124,11 @@ description: PS 学习案例之草莓小屋
 
 为了让草莓更好得融合入背景，需要对草莓进行一些处理
 
-在草莓上面新建两个图层
+在草莓图层上面新建两个空白图层，快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd>
 
 ![新建空白图层](https://cdn.wallleap.cn/img/pic/illustration/image-20210310092150812.png)
 
-<kbd>Ctrl</kbd> 并点击草莓图层缩略图，选择草莓，接着在一个空白图层中用黄色画笔对草莓泛白光的边缘进行涂抹，并把图层不透明度调低，图层混合模式改为`颜色减淡`
+按住 <kbd>Ctrl</kbd> 并点击草莓图层缩略图，建立草莓的选区，接着在一个空白图层中用黄色画笔对草莓泛白光的边缘进行涂抹，并把图层不透明度调低，图层混合模式改为`颜色减淡`
 
 ![环境光](https://cdn.wallleap.cn/img/pic/illustration/image-20210310092508436.png)
 
@@ -134,7 +146,7 @@ description: PS 学习案例之草莓小屋
 
 ![调节大小](https://cdn.wallleap.cn/img/pic/illustration/image-20210310093320041.png)
 
-按住 <kbd>Alt</kbd>（可能是其他按键，自己尝试），水平拖动上或下的一个角，调为上宽下窄形状，适当变形
+按住 <kbd>Alt</kbd>，水平拖动上或下的一个角，调为上宽下窄形状，适当变形
 
 ![适当调节](https://cdn.wallleap.cn/img/pic/illustration/image-20210310093816632.png)
 
@@ -160,7 +172,9 @@ description: PS 学习案例之草莓小屋
 
 现在把窗户上面的叶子弄出来
 
-选中没有用过的那个叶子图层，按住 <kbd>Ctrl</kbd> 并点击图层缩略图，选择叶子，选择快速选择工具，按住 <kbd>Alt</kbd> 涂去上面的两片叶子，并且收缩2像素，<kbd>Ctrl</kbd> + <kbd>J</kbd> 复制图层，转换为智能对象，把它缩小并放到窗户上，对它进行色相饱和度调节
+选中没有用过的那个叶子图层，按住 <kbd>Ctrl</kbd> 并点击图层缩略图，选择叶子，选择快速选择工具，按住 <kbd>Alt</kbd> 涂去上面的两片叶子
+
+并且点击菜单栏的选择，收缩 2 像素，<kbd>Ctrl</kbd> + <kbd>J</kbd> 复制图层，转换为智能对象，把它缩小并放到窗户上，对它进行色相饱和度调节
 
 ![调节叶子](https://cdn.wallleap.cn/img/pic/illustration/image-20210310095622580.png)
 

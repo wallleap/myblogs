@@ -1,5 +1,5 @@
 ---
-title: mac 使用 Hexo 和 GitHub 搭建博客之博客维护
+title: Hexo 主题 Sakura
 date: 2019-08-08 17:38
 updated: 2019-08-08 17:38
 cover: //cdn.wallleap.cn/img/pic/cover/202302O55cFw.jpg
@@ -7,9 +7,8 @@ category: 转载内容
 tags:
   - 博客
   - Hexo
-description: mac 使用 Hexo 和 GitHub 搭建博客之博客维护
+description: 
 ---
-
 hexo-theme-sakura 主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
 
 基于 WordPress 主题 [Sakura](https://github.com/mashirozx/Sakura/)修改成 Hexo 的主题。

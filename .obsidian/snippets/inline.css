@@ -1,0 +1,7 @@
+.cm-s-obsidian span.cm-inline-code,
+.markdown-rendered code {
+  color: var(--cm-number);
+  background-color: var(--color-base-20);
+  padding: .2em .4em;
+  border-radius: .6em;
+}

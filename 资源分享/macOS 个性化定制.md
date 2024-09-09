@@ -252,11 +252,19 @@ brew install --cask mos
 
 推荐到软件官网下载或者到使用 Homebrew 下载
 
+开源下载：[mac 开源应用](https://github.com/serhii-londar/open-source-mac-os-apps)
+
 推荐一个应用分享站：[精品MAC应用分享 (xclient.info)](https://xclient.info/)
 
-付费软件，我一般到这上面购买：[麦软网](https://www.mairuan.com/)、[数码荔枝)](https://lizhi.shop/)
+付费软件，我一般到这上面购买：[麦软网](https://www.mairuan.com/)、[数码荔枝](https://lizhi.shop/)
 
 M1 可以直接安装移动端 APP，对于 App Store 中没有的移动端 APP，可以到网上找下砸壳了的 IPA 文件，然后到这个网站中安装：<https://appdb.to/my/devices>
+
+如果安装使用很久之后突然报错，可以换种：
+
+- [抖音 - Decrypt IPA Store](https://decrypt.day/app/id1142110895)——下载 ipa
+
+- [PlayCover/PlayCover: Community fork of PlayCover (github.com)](https://github.com/PlayCover/PlayCover)——这里面安装打开
 
 ### 菜单栏增强——iStat Menus/iStatistica、Bartender/Dozer、MenubarX
 
@@ -571,12 +579,13 @@ fq
 
 # 用 HomeBrew 安装 App
 brew install bigwig-club/brew/upic --cask
+brew install --cask PlayCover/playcover/playcover-community
 brew install --cask \
-	airserver \ 
-  alfred \
-  alt-tab \
-  android-file-transfer \
-  apifox \
+  airserver \ 
+  alfred \ 
+  alt-tab \ 
+  android-file-transfer \ 
+  apifox \ 
   arc \ 
   aria2gui \ 
   baidunetdisk \ 
@@ -604,21 +613,23 @@ brew install --cask \
   gas-mask \  
   handbrake \  
   handshaker \ 
+  iconJar \ 
   iina \  
   imageoptim \ 
   iterm2 \  
   jetbrains-toolbox \ 
-	kap \ 
+  kap \ 
   karabiner-elements \  
   keepingyouawake \  
   keyboardholder \ 
   keycastr \  
+  keymanager \ 
   licecap \  
   lyricsx \ 
   maczip \ 
   mailmaster \ 
-  menubarx \
-  miaoyan \
+  menubarx \ 
+  miaoyan \ 
   microsoft-edge \ 
   microsoft-remote-desktop \  
   middleclick \ 
@@ -638,7 +649,7 @@ brew install --cask \
   qq \ 
   qqmusic \ 
   raycast \  
-  rectangle \
+  rectangle \ 
   shottr \ 
   simplenote \ 
   sip \ 
@@ -656,10 +667,11 @@ brew install --cask \
   videofusion \  
   visual-studio-code \  
   warp \ 
-  wechat \
+  wechat \ 
   yesplaymusic \ 
   yuque \ 
-  zerotier-one
+  zerotier-one \ 
+  zotero
 
 # 安装 Cli 工具，以下是我的（以字母排序，方便你查找）
 brew install \  
@@ -684,7 +696,7 @@ brew install \
   mkcert \  
   neovim \ 
   nvm \  
-  paper \
+  paper \ 
   pnpm \  
   thefuck \ 
   the_silver_searcher \  

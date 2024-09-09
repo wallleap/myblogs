@@ -2,6 +2,7 @@
 title: 规范化 Commit 提交信息
 date: 2022-07-29 14:30
 updated: 2022-07-29 14:30
+author: 小康
 cover: //cdn.wallleap.cn/img/pic/illustrtion/202207261551425.jpg
 category: 技术杂谈
 tags:
@@ -16,7 +17,7 @@ description: 规范化 Commit 提交信息
 
 ## 使用
 
-在使用命令行提交 `commit` 消息时，可以通过`:关键字:` 的方式进行使用表情。
+在使用命令行提交 `commit` 消息时，可以通过 `:关键字:` 的方式进行使用表情。
 
 ```sh
 git commit -m ":tada: Initial commit"
@@ -24,7 +25,7 @@ git commit -m ":tada: Initial commit"
 
 ## 表情列表
 
-使用时可以复制需要的 emoji 代码。
+使用时可以复制需要的 emoji 代码
 
 |        emoji         |          emoji 代码           |         commit 说明          |
 | :------------------: | :---------------------------: | :--------------------------: |
@@ -106,7 +107,7 @@ git commit -m ":tada: Initial commit"
 >
 > 以下表格来自[阿里技术](https://zhuanlan.zhihu.com/p/182553920?utm_source=org.mozilla.firefox)
 
-|    标识    |                             含义                             |
+|    <span style="width: 7em">标识</span>    |                             含义                             |
 | :--------: | :----------------------------------------------------------: |
 |   `feat`   |                      新功能（feature）                       |
 |  `fix/to`  | 修复 bug，可以是 QA 发现的 BUG，也可以是研发自己发现的 BUG。 `fix`：产生 diff 并自动修复此问题。适合于一次提交直接修复问题 `to`：只产生 diff 不自动修复此问题。适合于多次提交。最终修复问题提交时使用 fix |

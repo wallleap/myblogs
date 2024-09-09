@@ -1,0 +1,11 @@
+{
+  "trashOption": "local",
+  "userIgnoreFilters": [
+    "node_modules/",
+    "node_modules/gitbook-plugin-back-to-top-button/",
+    "node_modules/gitbook-plugin-valine/",
+    "node_modules/gitbook-plugin-back-to-top-button/assets/"
+  ],
+  "showFrontmatter": true,
+  "vimMode": true
+}

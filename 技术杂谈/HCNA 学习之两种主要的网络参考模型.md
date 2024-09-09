@@ -24,7 +24,7 @@ description: HCNA 配置之 ACL 和 NAT
 
 > 注：OSI/RM 法律上标准，TCP/IP 工业网络体系标准。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHTuxKwib3AibzSz7x7m55ia3yJkkayrgwLJj5teMia6LvgQCTSaVvwwc7u32vvy2qA4NN5y2cTSBtAsrg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071350876.webp)
 
 而我们主要使用的是介于4层和7层之间的 TCP/IP 5层模型，由高至底为**应用层**、**传输层**、**网络层**、**数据链路层**和**物理层**。
 
@@ -37,7 +37,9 @@ description: HCNA 配置之 ACL 和 NAT
 **网络协议的三要素**：
 
 * <1> 语法：数据与控制信息的结构或格式
+
 * <2> 语义：需要发出何种控制信息，完成何种动作以及做出何种响应。
+
 * <3> 同步：事情实现顺序的详细说明
 
 除了物理层外，OSI 模型中的其他6个对等层都存在对应的协议，如数据链路层协议、网络层协议等，对等实体利用对等协议进行通信以向高层提供**服务**。
@@ -49,6 +51,7 @@ description: HCNA 配置之 ACL 和 NAT
 **服务类型**：
 
 * <1> 面向连接服务：两个N层实体在数据交换前，必须先建立连接，即首先初始化状态信息。并且为N+1层实体的信息传输建立一个通道。在数据传输阶段，通过这些状态信息，第N层实体可以跟踪在它们之间的PDU交换及它们与更高层的SDU交换。当数据交换结束后应释放这个连接，即去除状态信息，释放建立连接时所分配的资源。
+
 * <2> 无连接服务：两个N层实体通信前，不需要先建立一个连接，即不需要事先进行预定保留状态信息。同一个用户到相同目的地的信息块都独立发送，接收端无需返回确认信息。如果信息在传输中丢失，就不再重发。不可靠的无连接的服务通常被称为数据报服务。
 
 **服务原语**：
@@ -56,8 +59,11 @@ description: HCNA 配置之 ACL 和 NAT
 服务是通过一组服务原语(Primitive)来描述的，这些原语供用户和其他实体访问服务，通知服务提供者采取某些行动或报告某个对等实体的活动。
 
 * <1> 请求(Request)：由服务用户发往服务提供者，请求它完成某项工作。
+
 * <2> 指示(Indication)：由服务提供者发往服务用户，指示发生了某些事件。
+
 * <3> 响应(Response)：由服务用户发往服务提供者，对前面发生的指示的响应。
+
 * <4> 证实(Confirmation)：由服务提供者发往服务用户，对前面发生的请求的证实。
 
 N 层实体利用 N-1 层实体所提供的服务，向 N+I 层实体提供功能更强大的服务。这可以概括为“**服务是垂直的**”。
@@ -69,12 +75,14 @@ N 层实体使用 N-1 层实体所提供的服务时，不需要知道 N-1 层�
 在 OSI 模型中，各层之间的接口都有统一的规则。N 层的服务访问点 SAP(Service Access Point) 是 N 层实体提供服务给 N+1 层的地方，SAP 可以理解为下层实体之间的逻辑传输通道。每一层的 SAP 都有一个唯一标明它的地址。一个 N 层可能存在多个 SAP。
 
 * PDU：协议数据单元 对等实体之间传送的数据单位
+
 * SDU：服务数据单元 层与层之间交换的数据的单位
+
 * IDU：接口数据单元 在同一系统上下两层实体的交换信息中，经过SAP的信息单元
 
 可以是多个SDU合成一个PDU,也可以是一个SDU划分为几个PDU。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHTuxKwib3AibzSz7x7m55ia3yJllYIZd4HepVkvQfvbq8vfuiaX9nONm9ugvBlCKwgYX9Vu9cMr67vCvQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071350877.webp)
 
 **各层功能**：
 
@@ -140,7 +148,7 @@ N 层实体使用 N-1 层实体所提供的服务时，不需要知道 N-1 层�
 
 应用层协议的代表有 Telnet、FTP、HTTP、SNMP 等。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHTuxKwib3AibzSz7x7m55ia3yJbtDVGcia7bB7uHDIQiaHknAUZrMVS6VcKbVvIqbZlPoWO9iauicWo1LfkQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071350879.webp)
 
 **TCP/IP 分层模型**的四个协议层分别完成以下的**功能**：　　
 
@@ -160,7 +168,7 @@ N 层实体使用 N-1 层实体所提供的服务时，不需要知道 N-1 层�
 
 因特网的应用层协议包括Finger、Whois、FTP(文件传输协议)、Gopher、HTTP(超文本传输协议)、Telent(远程终端协议)、SMTP(简单邮件传送协议)、IRC(因特网中继会话)、NNTP（网络新闻传输协议）等。
 
-![img](https://mmbiz.qpic.cn/mmbiz_jpg/bQicJnZn4LHTuxKwib3AibzSz7x7m55ia3yJt8NxfuEAIB3QqslhFcCOwTSLU8xmCCFmia4w8hroNkHjQogVuXhmQvA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071350880.webp)
 
 ## No.2 协议簇
 
@@ -168,7 +176,7 @@ N 层实体使用 N-1 层实体所提供的服务时，不需要知道 N-1 层�
 
 TCP/IP 参考模型各层对应的协议已经得到广泛应用。
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/bQicJnZn4LHTuxKwib3AibzSz7x7m55ia3yJF6pPV1bRPicHiccoE7tYexiaC0Cr1COcWBqqwATxTTNj78foKic95EVf4Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](https://cdn.wallleap.cn/img/pic/illustration/202308071350881.webp)
 
 ### 01 数据链路层
 
@@ -229,7 +237,9 @@ MAC地址——RARP——>IP地址
 使得在互联网中的路由器能够彼此互相通知路由变化信息的一些规则和过程的集合
 
 * 距离矢量路由选择协议：RIPv1、RIPv2
+
 * 链路状态路由选择协议：OSPF
+
 * 路径向量路由选择协议：BGP
 
 **ICMP(Internet Control Message Protocol)网际控制报文协议**：

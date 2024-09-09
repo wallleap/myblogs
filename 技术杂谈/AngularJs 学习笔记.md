@@ -10,9 +10,9 @@ tags:
 description: AngularJs 学习笔记
 ---
 
-前端框架之一，个人更喜欢用Vue和React
+前端框架之一，个人更喜欢用 Vue 和 React
 
-## 1、Angular介绍
+## 一、Angular 介绍
 
 - 官网：<https://angularjs.org>
 - Angular 是 Google 开源的前端 JS 结构化框架
@@ -39,7 +39,6 @@ description: AngularJs 学习笔记
       - 当页面中有部分数据发生了变化不会去刷新整个页面，而是局部刷新
       - 利用的 Ajax 技术、路由
   - 应用
-    - ~~饿了么 <https://www.ele.me/home/>~~
     - 微信网页版 <https://wx.qq.com>
     - 知乎周报 <https://zhuanlan.zhihu.com/Weekly>
     - 后台管理应用：阿里云、土豆后台、唯品会……
@@ -47,7 +46,7 @@ description: AngularJs 学习笔记
   - 1.0 JavaScript
   - ~~2.0 3.0 4.0 TypeScript~~
 
-### 2、第一个 Angular 程序
+### 第一个 Angular 程序
 
 使用 jQuery 实现
 
@@ -92,44 +91,40 @@ description: AngularJs 学习笔记
 </html>
 ```
 
-Chrome 插件：
+Chrome 调试插件：
 
 > ng-inspector for AngularJS
 
-- `ng-app`(指令)：告诉angular核心，它管理当前标签所包含的整个区域，并且会自动创建$rootScope根作用域对象（通常放在body标签）
+### Angular 中的知识点
+
+- `ng-app`(指令)：告诉angular核心，它管理当前标签所包含的整个区域，并且会自动创建 $rootScope 根作用域对象（通常放在 body 标签）
 - `ng-model`：将当前输入框的值与谁关联(属性名:属性值)，并作为当前作用域对象($rootScope)的属性
 
-```js
-{{}}(表达式)：显示数据，从当前作用域对象的指定属性名上取
-```
+- 表达式：通常有一个返回值，可以放在任何需要值的地方，比如函数调用的参数、一个变量名、一个运算等（`{{username}}`）
 
-- 表达式：通常有一个返回值，可以放在任何需要值的地方，比如函数调用的参数、一个变量名、一个运算等
+- 语句：通常表示一个完整的执行单位，一段完整的 js 可执行代码，有的语句也可以用表达式来执行，称为表达式语句
 
-- 语句：通常表示一个完整的执行单位，一段完整的js可执行代码，有的语句也可以用表达式来执行，称为表达式语句
+- 区别：语句用分号结尾，有些语句我们没有加分号，例如 `console.log` 虽然没加分号，但也是语句，因为 js 引擎会自动在解析的时候加上分号
 
-- 区别：语句用分号结尾，有些语句我们没有加分号，例如console.log虽然没加分号，但也是语句，因为js引擎会自动在解析的时候加上分号
-
-- 特例：if语句，就不用加分号，也可以是完整的语句
+- 特例：if 语句，就不用加分号，也可以是完整的语句
 
 ## 二、四个重要概念
 
 ### 1、双向数据绑定
 
-- 数据绑定：数据从一个地方A转移(传递)到另一个地方B，而且这个操作由框架来完成
+- 数据绑定：数据从一个地方 A 转移（传递）到另一个地方 B，而且这个操作由框架来完成
 
-- 双向数据绑定：数据可以从View(视图层)流向Model(模型)，也可以从Model流向View
+- 双向数据绑定：数据可以从 View（视图层）流向 Model（模型/数据层），也可以从 Model 流向 View
 
-  - 视图(View)：也就是我们的页面（主要是Angular指令和表达式）
+  - 视图（View）：也就是我们的页面（主要是 Angular 指令和表达式）
 
-  - 模型(Model)：作用域对象(当前为$rootScope)，它可以包含一些属性或方法
+  - 模型（Model）：作用域对象（当前为 $rootScope），它可以包含一些属性或方法
 
-  - 当改变View中的数据，Model对象的对应属性也会随之改变：ng-model指令 数据从View到Model
+  - 当改变 View 中的数据，Model 对象的对应属性也会随之改变：ng-model 指令 数据从 View 到 Model
 
-  - 当Model域对象的属性发生改变时，页面对应数据随之更新：`{{}}` 表达式  数据从Model到View
+  - 当 Model 域对象的属性发生改变时，页面对应数据随之更新：`{{}}` 表达式  数据从 Model 到 View
 
-  - ng-model是双向数据绑定，而 `{{}}` 是单向数据绑定
-
-    (View——页面   Model——内存)
+  - ng-model 是双向数据绑定，而 `{{}}` 是单向数据绑定（View——页面   Model——内存）
 
 - ng-init：用来初始化当前作用域变量（View-->Model-->View）
 
@@ -162,7 +157,7 @@ Chrome 插件：
 <body ng-app>
 ```
 
-`ng-app=""` 除了接管区域，还会自动生成根作用域($rootScope)
+`ng-app=""` 除了接管区域，还会自动生成根作用域（$rootScope）
 
 ```html
 <input type="text" ng-model="name">
@@ -176,7 +171,7 @@ Chrome 插件：
 
 ![过程2](https://cdn.wallleap.cn/img/pic/illustration/1589612077497.png)
 
-- 初始化数据
+初始化数据
 
 ```html
 <!DOCTYPE html>
@@ -199,38 +194,26 @@ Chrome 插件：
 
 ### 2、依赖注入
 
-- 依赖对象：完成某个特定的功能需要某个对象才能实现，这个对象就是依赖对象。
-- 依赖注入：依赖的对象以形参的形式被注入进来使用，这种方式就是依赖注入。
-- Angular的`$scope`对象就是依赖对象，并且是依赖注入的形式进行使用。
-- 回调函数的event的就是依赖对象
+- 依赖对象：完成某个特定的功能需要某个对象才能实现，这个对象就是依赖对象
+- 依赖注入：依赖的对象以形参的形式被注入进来使用，这种方式就是依赖注入
+- Angular 的 `$scope` 对象就是依赖对象，并且是依赖注入的形式进行使用
+- 回调函数的 event 的就是依赖对象
 - 回调函数有形参就是依赖注入
 
-补：
-
-开发的两种方式：
-
-- 命令式
-  - 更加注重的是执行的过程
-  - 更像考试的解答题
-- 声明式
-  - 更加注重的是执行的结果
-  - 声明式是对命令的局部包装
-  - 更像选择题或填空题
-
-eg：数组中每一项加10
+eg：数组中每一项加 10
 
 ```javascript
 var arr = [1,2,3,4,5]
 var newArr1 = []
 // 命令式
 for(var i = 0; i < arr.length; i++){
-    var value = arr[i] + 10
-    newArr1.push(value)
+  var value = arr[i] + 10
+  newArr1.push(value)
 }
 console.log(newArr1)
 // 声明式
 var newArr2 = arr.map(function(item, index){
-    return item + 10
+  return item + 10
 })
 console.log(newArr2)
 ```
@@ -240,13 +223,13 @@ console.log(newArr2)
 ### 1、作用域与控制器
 
 - 作用域对象
-  - 一个JS实例对象，ng-app指令默认会创建一个根作用域对象($rootScope)
+  - 一个 JS 实例对象，ng-app 指令默认会创建一个根作用域对象（$rootScope）
   - 它的属性和方法与页面中的指令或表达式是关联的
 - 控制器
-  - 用来控制AngularJS应用数据的实例对象
-  - ng-controller：指定控制器构造函数，Angular会自动new此函数创建控制器对象
-  - 同时Angular还有创建一个新的域对象$scope，它是$rootScope的子对象
-  - 在控制器函数中声明`$scope`形参，Angular会自动将`$scope`传入
+  - 用来控制 AngularJS 应用数据的实例对象
+  - ng-controller：指定控制器构造函数，Angular 会自动 new 此函数创建控制器对象
+  - 同时 Angular 还有创建一个新的域对象 `$scope`，它是 `$rootScope` 的子对象
+  - 在控制器函数中声明 `$scope` 形参，Angular 会自动将 `$scope` 传入
 
 ```html
 <!DOCTYPE html>
@@ -340,32 +323,32 @@ console.log(newArr2)
 
 ### 1、表达式
 
-- 使用Angular表达式：
-  - 语法：{{expression}}
+- 使用 Angular 表达式：
+  - 语法：`{{expression}}`
   - 作用：显示表达式的结果数据
-  - 注意：表达式中引用的变量必须是当前域对象有的属性(包括其原型属性)
+  - 注意：表达式中引用的变量必须是当前域对象有的属性（包括其原型属性）
 - 操作的数据
-  - 基本类型数据：Number/String/Boolean
-  - undefined, Infinity,NaN,null解析为空串""，不显示任何效果
+  - 基本类型数据：`Number` / `String` / `Boolean`
+  - `undefined`, `Infinity`, `NaN`, `null` 解析为空串 `""`，不显示任何效果
   - 对象的属性或方法
   - 数组
 
 ### 2、常用指令
 
-- Angular指令
-  - Angular为HTML页面扩展的：自定义标签属性或标签
-  - 与Angular的作用域对象(scope)交互，扩展页面的动态表现力
+- Angular 指令
+  - Angular 为 HTML 页面扩展的：自定义标签属性或标签
+  - 与 Angular 的作用域对象（scope）交互，扩展页面的动态表现力
 - 常用指令
-  - ng-app：
-  - ng-model
-  - ng-init
-  - ng-click
-  - ng-controller
-  - ng-bind
-  - ng-repeat
-  - ng-show
-  - ng-hide
-  - ng-class
-  - ng-style
-  - ng-mouseenter
-  - ng-mouseleave
+  - `ng-app`：指定 AngularJS 应用的根作用域对象
+  - `ng-model`：指定表单元素与作用域对象属性的绑定
+  - `ng-init`：初始化作用域对象属性的值
+  - `ng-click`：指定点击事件的处理函数
+  - `ng-controller`：指定控制器构造函数
+  - `ng-bind`：指定元素的文本内容与作用域对象属性的绑定
+  - `ng-repeat`：指定元素的重复，与作用域对象数组的绑定
+  - `ng-show`：指定元素的显示与隐藏，与作用域对象属性的绑定
+  - `ng-hide`：指定元素的隐藏与显示，与作用域对象属性的绑定
+  - `ng-class`：指定元素的类样式，与作用域对象属性的绑定
+  - `ng-style`：指定元素的内联样式，与作用域对象属性的绑定
+  - `ng-mouseenter`：指定鼠标进入事件的处理函数
+  - `ng-mouseleave`：指定鼠标离开事件的处理函数

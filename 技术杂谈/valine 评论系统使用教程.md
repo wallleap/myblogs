@@ -16,7 +16,7 @@ description: valine 评论系统使用教程
 
 觉得它没有邮件提醒功能、而且有的时候还会报错，就没使用了
 
-改用的来必力和 gitment，gitment 使用起来挺方便的，能够邮件提醒，而且报的错误也能解决
+改用的来必力和 Gitment，Gitment 使用起来挺方便的，能够邮件提醒，而且报的错误也能解决
 
 emmmm……一直到现在，想接着用 valine，然后搜了很多篇教程，发现 valine 还是非常好用的
 
@@ -42,9 +42,9 @@ emmmm，版本 ` v1.4.0` 之后更新了很多内容，不得不说，这段时�
 
 前往 [LeanCloud 注册](https://leancloud.cn/dashboard/login.html#/signup)账号，如果已经有了账号，可以直接[登录](https://leancloud.cn/dashboard/login.html#/signin)
 
-接着进入[控制台](https://leancloud.cn/dashboard/applist.html#/apps),左下角有两个按钮`快速入门`和`创建应用`，我们点击<kbd>创建应用</kbd>，随便输入一个名字，例如 `valine`，其他默认，点击<kbd>创建</kbd>
+接着进入[控制台](https://leancloud.cn/dashboard/applist.html#/apps),左下角有两个按钮`快速入门`和`创建应用`，我们点击`创建应用`，随便输入一个名字，例如 `valine`，其他默认，点击`创建`
 
-现在在控制台出现了你刚刚创建的应用，点击这个应用的右上角设置**<i class="fa fa-cog" aria-hidden="true"></i>**图标
+现在在控制台出现了你刚刚创建的应用，点击这个应用的右上角设置图标
 
 进入了设置界面，点击 `valine 开发版`下面那栏里的`应用 Keys`
 
@@ -172,8 +172,9 @@ path: 'window.location.pathname'
 
 当前`文章页`路径，用于区分不同的`文章页`，用这个默认值就行
 
->- I. 请保证每个`文章页`路径的唯一性，否则可能会出现不同`文章页`下加载相同评论列表的情况。
->- II. 如果值为`window.location.href`，可能会出现随便加`不同参数`进入该页面，而被判断成新页面的情况。
+> I. 请保证每个`文章页`路径的唯一性，否则可能会出现不同`文章页`下加载相同评论列表的情况。
+> 
+> II. 如果值为`window.location.href`，可能会出现随便加`不同参数`进入该页面，而被判断成新页面的情况。
 
 ```yml
 avatar: 'mp'
@@ -254,7 +255,7 @@ enableQQ: true
 
 按照 valine 的说法：
 
-> 如果开启了阅读量统计，Valine 会自动检测 leancloud 应用中是否存在 Counter 类，如果不存在会自动创建，无需手动创建~
+> 如果开启了阅读量统计，Valine 会自动检测 LeanCloud 应用中是否存在 Counter 类，如果不存在会自动创建，无需手动创建~
 
 也就是如果没使用 valine 的话还需要自己添加一个 `Counter 类`，这个是在`LeanCloud` 的`存储`中，但是我们现在配置了 valine 了就可以省事了
 
